@@ -23,11 +23,15 @@ vc_lean_map( 'borderless_wpbakery_icon', null, $borderless_element_path . 'icon.
 
 vc_lean_map( 'borderless_wpbakery_infobox', null, $borderless_element_path . 'infobox.php' ); 
 
+vc_lean_map( 'borderless_wpbakery_pricing', null, $borderless_element_path . 'pricing.php' ); 
+
 vc_lean_map( 'borderless_wpbakery_progress_bar', null, $borderless_element_path . 'progress-bar.php' ); 
 
 vc_lean_map( 'borderless_wpbakery_semi_circular_progress_bar', null, $borderless_element_path . 'semi-circular-progress-bar.php' ); 
 
 vc_lean_map( 'borderless_wpbakery_svg', null, $borderless_element_path . 'svg.php' ); 
+
+//vc_lean_map( 'borderless_wpbakery_team_member', null, $borderless_element_path . 'team-member.php' ); 
 
 /*-----------------------------------------------------------------------------------*/
 /*	Essencial Nested Elements
@@ -37,8 +41,6 @@ require_once $borderless_element_path . 'icon-group.php';
 require_once $borderless_element_path . 'list-group.php'; 
 
 require_once $borderless_element_path . 'modal.php' ; 
-
-//require_once $borderless_element_path . 'pricing.php' ; 
 
 require_once $borderless_element_path . 'testimonial.php' ; 
 

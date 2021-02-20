@@ -7,13 +7,31 @@ if ( ! defined( 'ABSPATH' ) ) {
 /*	Pricing
 /*-----------------------------------------------------------------------------------*/
 
-class WPBakeryShortCode_borderless_wpbakery_pricing extends WPBakeryShortCodesContainer {
+class WPBakeryShortCode_borderless_wpbakery_pricing extends WPBakeryShortCode {
 	protected function content( $atts, $content = null ) {
 		extract( shortcode_atts( array(
 			'title' => '',
 			'price' => '',
 			'currency' => '',
 			'plan' => '',
+			'feature_1' => '',
+			'feature_2' => '',
+			'feature_3' => '',
+			'feature_4' => '',
+			'feature_5' => '',
+			'feature_6' => '',
+			'feature_7' => '',
+			'feature_8' => '',
+			'feature_9' => '',
+			'feature_10' => '',
+			'feature_11' => '',
+			'feature_12' => '',
+			'feature_13' => '',
+			'feature_14' => '',
+			'feature_15' => '',
+			'features_color' => '',
+			'features_icon' => 'features-arrow',
+			'features_icon_color' => '',
 			'features_spacing' => '',
 			'features_line_list' => '',
 			'features_line_list_color' => '',
@@ -79,8 +97,8 @@ class WPBakeryShortCode_borderless_wpbakery_pricing extends WPBakeryShortCodesCo
 			'css_animation' => ''
 		), $atts ) );
 		$output = '';
-		
-		
+
+
 		// Retrieve data from the database.
 		$options = get_option( 'borderless' );
 		
@@ -137,7 +155,7 @@ class WPBakeryShortCode_borderless_wpbakery_pricing extends WPBakeryShortCodesCo
 		} else {
 			
 			$iconClass = isset( $icon ) ? esc_attr( $icon ) : 'fa fa-adjust';
-
+			
 			$custom_icon_color = $icon_color ? 'color:'.$custom_icon_color.';' : 'color:'.$borderless_primary_color.';'; //Icon Color
 			
 			$font_size_reference = $icon_size;
@@ -151,7 +169,7 @@ class WPBakeryShortCode_borderless_wpbakery_pricing extends WPBakeryShortCodesCo
 			}
 			
 			if($shape != '') {
-
+				
 				if($shape == 'rounded' || $shape == 'square' || $shape == 'round') {
 					$color_shape = $color_shape ? 'background-color:'.$color_shape.';' : 'background-color:'.$borderless_primary_color.';'; //Background Color Shape
 				} else {
@@ -241,11 +259,11 @@ class WPBakeryShortCode_borderless_wpbakery_pricing extends WPBakeryShortCodesCo
 		//Button
 		
 		$link = vc_build_link( $button_link );
-
-		if($button_shape == 'rounded' || $button_shape == 'square' || $button_shape == 'round') {
-			$button_background_color = $button_background_color ? 'background-color:'.$button_background_color.';' : 'background-color:'.$borderless_primary_color.';'; 
+		
+		if( $button_shape == 'rounded' || $button_shape == 'square' || $button_shape == 'round' ){
+			$button_background_color = $button_background_color ? 'background-color:'.$button_background_color.';' : 'background-color:'.$borderless_primary_color.';'; //Background Color
 		} else {
-			$button_background_color = $button_background_color ? 'border-width: 2px;border-style: solid;border-color:'.$button_background_color.';' : 'border-width: 2px;border-style: solid;border-color:'.$borderless_primary_color.';'; 
+			$button_background_color = $button_background_color ? 'border-width: 2px;border-style: solid;border-color:'.$button_background_color.';' : 'border-width: 2px;border-style: solid;border-color:'.$borderless_primary_color.';'; //Border Color
 		}
 		
 		$pricing_button_content = '<div class="'.$button_alignment.'"><a style="'.$button_background_color.' color:'.$button_text_color.';padding:'.$button_extra_size.';" href="'.esc_attr( $link['url'] ).'" class="'.$button_shape.' pricing-button btn '.$button_size.'" role="button">'.$button_title.'</a></div>';
@@ -254,7 +272,7 @@ class WPBakeryShortCode_borderless_wpbakery_pricing extends WPBakeryShortCodesCo
 		
 		$layout = 1;
 		
-		$output .= '<div class="pricing-table '.$css_class.' '.$shadow_pricing_table.'">';
+		$output .= '<div class="borderless-wpbakery-pricing '.$css_class.' '.$shadow_pricing_table.'">';
 		
 		while( $layout <= 6 ){
 			if(${'area_' . $layout} != '' && ${'area_' . $layout} != 'disable'){
@@ -273,82 +291,13 @@ class WPBakeryShortCode_borderless_wpbakery_pricing extends WPBakeryShortCodesCo
 	}
 }
 
-class WPBakeryShortCode_borderless_wpbakery_feature extends WPBakeryShortCode {
-	protected function content( $atts, $content = null ) {
-		extract( shortcode_atts( array(
-			'description' => '',
-			'icon' => '',
-			'colors' => '',
-			'icon_color' => '',
-			'title_color' => '',
-			//Static
-			'el_id' => '',
-			'el_class' => '',
-			'css' => '',
-			'css_animation' => ''
-		), $atts ) );
-		$output = '';
-		
-		// URL Builder
-		
-		$link = vc_build_link( $link );
-		
-		// Start Default Extra Class, CSS and CSS animation
-		
-		$css = isset( $atts['css'] ) ? $atts['css'] : '';
-		$el_id = isset( $atts['el_id'] ) ? 'id="' . esc_attr( $el_id ) . '"' : '';
-		$el_class = isset( $atts['el_class'] ) ? $atts['el_class'] : '';
-		
-		if ( '' !== $css_animation ) {
-			wp_enqueue_script( 'waypoints' );
-			$css_animation_style = ' wpb_animate_when_almost_visible wpb_' . $css_animation;
-		}
-		
-		$class_to_filter = vc_shortcode_custom_css_class( $css, ' ' ) . $this->getExtraClass( $el_class ) . $this->getCSSAnimation( $css_animation );
-		$css_class = apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, $class_to_filter, $this->settings['base'], $atts );
-		
-		// End Default Extra Class, CSS and CSS animation
-		
-		// Start Custom Colors
-		
-		$icon_color = $icon_color ? 'style=color:'.$icon_color.'' : '';
-		$title_color = $title_color ? 'style=color:'.$title_color.'' : '';
-		
-		// End Custom Colors
-		
-		// Start Icon
-		
-		$icon = $icon ? '<i class="'.$icon.'" '.$icon_color.' aria-hidden="true"></i>' : '';
-		
-		//End Icon
-		
-		// Start Link		
-		if($link['url'] != ''){
-			$tag = 'a';
-			$href = 'href="'.esc_attr( $link['url'] ).'"';
-		} else {
-			$tag = 'span';
-			$href = '';
-		}
-		// End Link
-		
-		$output .= '<'.$tag.' '.$href.' '.$el_id.' class="borderless-wpbakery-list-group-item '.$css_class.'" '.$title_color.'>'.$icon.$title.'</'.$tag.'>';
-		
-		
-		return $output;
-	}
-}
-
-vc_map( array(
+return array(
 	'name' => __( 'Pricing', 'borderless' ),
 	'base' => 'borderless_wpbakery_pricing',
 	'icon' => plugins_url('../images/pricing.png', __FILE__),
-	"as_parent" => array('only' => 'borderless_wpbakery_feature'),
-	"content_element" => true,
-	"show_settings_on_create" => false,
-	"is_container" => true,
+	'show_settings_on_create' => true,
 	'category' => __( 'Borderless', 'borderless' ),
-	'description' => __( 'Show a flexible and powerful list', 'borderless' ),
+	'description' => __( 'Create nice looking pricing tables', 'borderless' ),
 	'params' => array(
 		
 		array(
@@ -381,14 +330,166 @@ vc_map( array(
 		
 		array(
 			'type' => 'textarea_html',
+			'holder' => 'div',
 			'heading' => __( 'Sub Heading', 'borderless' ),
 			'param_name' => 'content',
 			'description' => __( 'Enter short description.', 'borderless' ),
+			'value' => __( '<p>I am text block. Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>', 'borderless' ),
 		),
 		
 		/*
 		* Features Tab
 		*/
+		
+		array(
+			'type' => 'textfield',
+			'heading' => __( 'Feature 1', 'borderless' ),
+			'param_name' => 'feature_1',
+			'description' => __( 'Enter feature.', 'borderless' ),
+			'group' => 'Features',
+		),
+		
+		array(
+			'type' => 'textfield',
+			'heading' => __( 'Feature 2', 'borderless' ),
+			'param_name' => 'feature_2',
+			'description' => __( 'Enter feature.', 'borderless' ),
+			'group' => 'Features',
+		),
+		
+		array(
+			'type' => 'textfield',
+			'heading' => __( 'Feature 3', 'borderless' ),
+			'param_name' => 'feature_3',
+			'description' => __( 'Enter feature.', 'borderless' ),
+			'group' => 'Features',
+		),
+		
+		array(
+			'type' => 'textfield',
+			'heading' => __( 'Feature 4', 'borderless' ),
+			'param_name' => 'feature_4',
+			'description' => __( 'Enter feature.', 'borderless' ),
+			'group' => 'Features',
+		),
+		
+		array(
+			'type' => 'textfield',
+			'heading' => __( 'Feature 5', 'borderless' ),
+			'param_name' => 'feature_5',
+			'description' => __( 'Enter feature.', 'borderless' ),
+			'group' => 'Features',
+		),
+		
+		array(
+			'type' => 'textfield',
+			'heading' => __( 'Feature 6', 'borderless' ),
+			'param_name' => 'feature_6',
+			'description' => __( 'Enter feature.', 'borderless' ),
+			'group' => 'Features',
+		),
+		
+		array(
+			'type' => 'textfield',
+			'heading' => __( 'Feature 7', 'borderless' ),
+			'param_name' => 'feature_7',
+			'description' => __( 'Enter feature.', 'borderless' ),
+			'group' => 'Features',
+		),
+		
+		array(
+			'type' => 'textfield',
+			'heading' => __( 'Feature 8', 'borderless' ),
+			'param_name' => 'feature_8',
+			'description' => __( 'Enter feature.', 'borderless' ),
+			'group' => 'Features',
+		),
+		
+		array(
+			'type' => 'textfield',
+			'heading' => __( 'Feature 9', 'borderless' ),
+			'param_name' => 'feature_9',
+			'description' => __( 'Enter feature.', 'borderless' ),
+			'group' => 'Features',
+		),
+		
+		array(
+			'type' => 'textfield',
+			'heading' => __( 'Feature 10', 'borderless' ),
+			'param_name' => 'feature_10',
+			'description' => __( 'Enter feature.', 'borderless' ),
+			'group' => 'Features',
+		),
+		
+		array(
+			'type' => 'textfield',
+			'heading' => __( 'Feature 11', 'borderless' ),
+			'param_name' => 'feature_11',
+			'description' => __( 'Enter feature.', 'borderless' ),
+			'group' => 'Features',
+		),
+		
+		array(
+			'type' => 'textfield',
+			'heading' => __( 'Feature 12', 'borderless' ),
+			'param_name' => 'feature_12',
+			'description' => __( 'Enter feature.', 'borderless' ),
+			'group' => 'Features',
+		),
+		
+		array(
+			'type' => 'textfield',
+			'heading' => __( 'Feature 13', 'borderless' ),
+			'param_name' => 'feature_13',
+			'description' => __( 'Enter feature.', 'borderless' ),
+			'group' => 'Features',
+		),
+		
+		array(
+			'type' => 'textfield',
+			'heading' => __( 'Feature 14', 'borderless' ),
+			'param_name' => 'feature_14',
+			'description' => __( 'Enter feature.', 'borderless' ),
+			'group' => 'Features',
+		),
+		
+		array(
+			'type' => 'textfield',
+			'heading' => __( 'Feature 15', 'borderless' ),
+			'param_name' => 'feature_15',
+			'description' => __( 'Enter feature.', 'borderless' ),
+			'group' => 'Features',
+		),
+		
+		array(
+			'type' => 'colorpicker',
+			'heading' => __( 'Features Color', 'borderless' ),
+			'param_name' => 'features_color',
+			'description' => __( 'Select custom color.', 'borderless' ),
+			'group' => 'Features',
+		),
+		
+		array(
+			'type' => 'dropdown',
+			'heading' => __( 'Features Icon', 'borderless' ),
+			'param_name' => 'features_icon',
+			'group' => 'Features',
+			'value' => array(
+				__( 'Arrow', 'borderless' ) => 'features-arrow',
+				__( 'Check', 'borderless' ) => 'features-check',
+				__( 'More', 'borderless' ) => 'features-more',
+				__( 'Star', 'borderless' ) => 'features-star',
+			),
+			'description' => __( 'Select icon for featured list.', 'borderless' ),
+		),
+		
+		array(
+			'type' => 'colorpicker',
+			'heading' => __( 'Features Icon Color', 'borderless' ),
+			'param_name' => 'features_icon_color',
+			'description' => __( 'Select custom icon color.', 'borderless' ),
+			'group' => 'Features',
+		),
 		
 		array(
 			'type' => 'textfield',
@@ -1122,102 +1223,17 @@ vc_map( array(
 		vc_map_add_css_animation(),
 		
 		array(
-			'type' => 'el_id',
-			'heading' => __( 'Element ID', 'borderless' ),
-			'param_name' => 'el_id',
-			'description' => sprintf( __( 'Enter element ID (Note: make sure it is unique and valid according to %sw3c specification%s).', 'borderless' ), '<a href="https://www.w3schools.com/tags/att_global_id.asp" target="_blank">', '</a>' ),
-			),
-			
-			array(
-				'type' => 'textfield',
-				'heading' => __( 'Extra class name', 'borderless' ),
-				'param_name' => 'el_class',
-				'description' => __( 'Style particular content element differently - add a class name and refer to it in custom CSS.', 'borderless' ),
-			),
-			
-			array(
-				'type' => 'css_editor',
-				'heading' => __( 'CSS box', 'borderless' ),
-				'param_name' => 'css',
-				'group' => __( 'Design Options', 'borderless' ),
-			),
+			'type' => 'textfield',
+			'heading' => __( 'Extra class name', 'borderless' ),
+			'param_name' => 'el_class',
+			'description' => __( 'Style particular content element differently - add a class name and refer to it in custom CSS.', 'borderless' ),
 		),
-		"js_view" => 'VcColumnView'
-		) );
 		
-		vc_map( array(
-			"name" => __("Feature", 'borderless'),
-			'description' => __( 'Display List Group Item', 'borderless' ),
-			"base" => "borderless_wpbakery_feature",
-			'icon' => plugins_url('../images/feature.png', __FILE__),
-			"content_element" => true,
-			"as_child" => array('only' => 'borderless_wpbakery_pricing'), 
-			"params" => array(
-				array(
-					'type' => 'textarea_html',
-					'heading' => __( 'Description', 'borderless' ),
-					'param_name' => 'description',
-				),
-				
-				array(
-					'type' => 'iconmanager',
-					'heading' => __( 'Icon', 'borderless' ),
-					'param_name' => 'icon',
-					'description' => __( 'Select icon from library.', 'borderless' ),
-				),
-				
-				array(
-					'type' => 'dropdown',
-					'heading' => __( 'Colors', 'borderless' ),
-					'param_name' => 'colors',
-					'value' => array(
-						__( 'Preset Colors', 'borderless' ) => '',
-						__( 'Custom Colors', 'borderless' ) => 'custom',
-					),
-					'description' => __( 'Choose a color for icons and titles.', 'borderless' ),
-				),
-				
-				array(
-					'type' => 'colorpicker',
-					'heading' => __( 'Icon Color', 'borderless' ),
-					'param_name' => 'icon_color',
-					'description' => __( 'Select custom color for icons.', 'borderless' ),
-					'dependency' => array(
-						'element' => 'colors',
-						'value' => array( 'custom' ),
-					),
-				),
-				
-				array(
-					'type' => 'colorpicker',
-					'heading' => __( 'Title Color', 'borderless' ),
-					'param_name' => 'title_color',
-					'description' => __( 'Select custom color for titles.', 'borderless' ),
-					'dependency' => array(
-						'element' => 'colors',
-						'value' => array( 'custom' ),
-					),
-				),
-				
-				array(
-					'type' => 'el_id',
-					'heading' => __( 'Element ID', 'borderless' ),
-					'param_name' => 'el_id',
-					'description' => sprintf( __( 'Enter element ID (Note: make sure it is unique and valid according to %sw3c specification%s).', 'borderless' ), '<a href="https://www.w3schools.com/tags/att_global_id.asp" target="_blank">', '</a>' ),
-					),
-					
-					array(
-						'type' => 'textfield',
-						'heading' => __( 'Extra class name', 'borderless' ),
-						'param_name' => 'el_class',
-						'description' => __( 'Style particular content element differently - add a class name and refer to it in custom CSS.', 'borderless' ),
-					),
-					
-					array(
-						'type' => 'css_editor',
-						'heading' => __( 'CSS box', 'borderless' ),
-						'param_name' => 'css',
-						'group' => __( 'Design Options', 'borderless' ),
-					),
-					)
-					) );
+		array(
+			'type' => 'css_editor',
+			'heading' => __( 'CSS box', 'borderless' ),
+			'param_name' => 'css',
+			'group' => __( 'Design Options', 'borderless' ),
+		),
+	),
+);
