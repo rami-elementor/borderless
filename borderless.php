@@ -4,7 +4,7 @@
 Plugin Name: Borderless
 Plugin URI: https://borderless.visualmodo.com/
 Description: One service packed with powerful tools to help you reach your purposes.
-Version: 1.0.5
+Version: 1.0.6
 Author: Visualmodo
 Author URI: https://visualmodo.com
 License: GPLv3 or later
@@ -18,7 +18,7 @@ defined( 'ABSPATH' ) || exit;
 /**
 * Define Constants.
 */
-define( 'BORDERLESS__VERSION', '1.0.5' );
+define( 'BORDERLESS__VERSION', '1.0.6' );
 define( 'BORDERLESS__DIR', plugin_dir_path( __FILE__ ) );
 define( 'BORDERLESS__INC', BORDERLESS__DIR . '/includes' );
 define( 'BORDERLESS__WPBAKERY', BORDERLESS__DIR . '/modules/wpbakery' );

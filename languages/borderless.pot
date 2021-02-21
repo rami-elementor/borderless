@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Borderless\n"
-"POT-Creation-Date: 2021-02-14 12:12-0300\n"
-"PO-Revision-Date: 2021-02-14 12:10-0300\n"
+"POT-Creation-Date: 2021-02-21 18:05-0300\n"
+"PO-Revision-Date: 2021-02-21 18:05-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -20,6 +20,7 @@ msgstr ""
 "_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
+"X-Poedit-SearchPathExcluded-1: node_modules\n"
 
 #: borderless.php:112
 #, php-format
@@ -42,25 +43,26 @@ msgstr ""
 #: modules/wpbakery/elements/icon.php:98
 #: modules/wpbakery/elements/infobox.php:173
 #: modules/wpbakery/elements/list-group.php:140
-#: modules/wpbakery/elements/modal.php:221
-#: modules/wpbakery/elements/pricing.php:350
+#: modules/wpbakery/elements/modal.php:224
+#: modules/wpbakery/elements/pricing.php:299
 #: modules/wpbakery/elements/progress-bar.php:91
 #: modules/wpbakery/elements/semi-circular-progress-bar.php:90
 #: modules/wpbakery/elements/svg.php:66
+#: modules/wpbakery/elements/team-member.php:151
 #: modules/wpbakery/elements/testimonial.php:147
 #: modules/wpbakery/elements/testimonial.php:184
 msgid "Borderless"
 msgstr ""
 
-#: dashboard.php:50
+#: dashboard.php:50 modules/wpbakery/elements/team-member.php:391
 msgid "Primary Color"
 msgstr ""
 
-#: dashboard.php:57
+#: dashboard.php:57 modules/wpbakery/elements/team-member.php:392
 msgid "Secondary Color"
 msgstr ""
 
-#: dashboard.php:64 modules/wpbakery/elements/pricing.php:599
+#: dashboard.php:64 modules/wpbakery/elements/pricing.php:700
 msgid "Text Color"
 msgstr ""
 
@@ -236,62 +238,20 @@ msgid "No Pages Found!"
 msgstr ""
 
 #: modules/elementor/widgets/contact-form-7.php:35
+#: modules/elementor/widgets/team-member.php:35
 msgid "Contact Form 7"
 msgstr ""
 
 #: modules/elementor/widgets/contact-form-7.php:43
+#: modules/elementor/widgets/team-member.php:43
 msgid "Select Contact Form"
 msgstr ""
 
 #: modules/elementor/widgets/contact-form-7.php:44
+#: modules/elementor/widgets/team-member.php:44
 msgid ""
 "Contact form 7 - plugin must be installed and there must be some contact "
 "forms made with the contact form 7"
-msgstr ""
-
-#: modules/elementor/widgets/widget2.php:28
-#: modules/wpbakery/elements/testimonial.php:206
-msgid "Content"
-msgstr ""
-
-#: modules/elementor/widgets/widget2.php:35
-#: modules/wpbakery/elements/circular-progress-bar.php:90
-#: modules/wpbakery/elements/counter.php:92
-#: modules/wpbakery/elements/infobox.php:179
-#: modules/wpbakery/elements/list-group.php:227
-#: modules/wpbakery/elements/modal.php:239
-#: modules/wpbakery/elements/pricing.php:356
-#: modules/wpbakery/elements/pricing.php:583
-#: modules/wpbakery/elements/pricing.php:678
-#: modules/wpbakery/elements/pricing.php:732
-#: modules/wpbakery/elements/pricing.php:786
-#: modules/wpbakery/elements/pricing.php:840
-#: modules/wpbakery/elements/pricing.php:894
-#: modules/wpbakery/elements/pricing.php:948
-#: modules/wpbakery/elements/progress-bar.php:97
-#: modules/wpbakery/elements/semi-circular-progress-bar.php:96
-msgid "Title"
-msgstr ""
-
-#: modules/elementor/widgets/widget2.php:38
-msgid "Enter your title"
-msgstr ""
-
-#: modules/elementor/widgets/widget2.php:45
-msgid "Sub-title"
-msgstr ""
-
-#: modules/elementor/widgets/widget2.php:48
-msgid "Enter your sub-title"
-msgstr ""
-
-#: modules/elementor/widgets/widget2.php:55
-#: modules/wpbakery/elements/list-group.php:150
-msgid "Link"
-msgstr ""
-
-#: modules/elementor/widgets/widget2.php:57
-msgid "https://your-link.com"
 msgstr ""
 
 #: modules/wpbakery/elements/alert.php:62
@@ -350,12 +310,11 @@ msgstr ""
 #: modules/wpbakery/elements/infobox.php:589
 #: modules/wpbakery/elements/list-group.php:195
 #: modules/wpbakery/elements/list-group.php:282
-#: modules/wpbakery/elements/modal.php:722
-#: modules/wpbakery/elements/pricing.php:1126
-#: modules/wpbakery/elements/pricing.php:1204
+#: modules/wpbakery/elements/modal.php:725
 #: modules/wpbakery/elements/progress-bar.php:221
 #: modules/wpbakery/elements/semi-circular-progress-bar.php:215
 #: modules/wpbakery/elements/svg.php:104
+#: modules/wpbakery/elements/team-member.php:416
 #: modules/wpbakery/elements/testimonial.php:155
 #: modules/wpbakery/elements/testimonial.php:239
 msgid "Element ID"
@@ -369,12 +328,11 @@ msgstr ""
 #: modules/wpbakery/elements/infobox.php:591
 #: modules/wpbakery/elements/list-group.php:197
 #: modules/wpbakery/elements/list-group.php:284
-#: modules/wpbakery/elements/modal.php:724
-#: modules/wpbakery/elements/pricing.php:1128
-#: modules/wpbakery/elements/pricing.php:1206
+#: modules/wpbakery/elements/modal.php:727
 #: modules/wpbakery/elements/progress-bar.php:223
 #: modules/wpbakery/elements/semi-circular-progress-bar.php:217
 #: modules/wpbakery/elements/svg.php:106
+#: modules/wpbakery/elements/team-member.php:418
 #: modules/wpbakery/elements/testimonial.php:157
 #: modules/wpbakery/elements/testimonial.php:241
 #, php-format
@@ -391,12 +349,12 @@ msgstr ""
 #: modules/wpbakery/elements/infobox.php:596
 #: modules/wpbakery/elements/list-group.php:202
 #: modules/wpbakery/elements/list-group.php:289
-#: modules/wpbakery/elements/modal.php:729
-#: modules/wpbakery/elements/pricing.php:1133
-#: modules/wpbakery/elements/pricing.php:1211
+#: modules/wpbakery/elements/modal.php:732
+#: modules/wpbakery/elements/pricing.php:1227
 #: modules/wpbakery/elements/progress-bar.php:228
 #: modules/wpbakery/elements/semi-circular-progress-bar.php:222
 #: modules/wpbakery/elements/svg.php:111
+#: modules/wpbakery/elements/team-member.php:423
 #: modules/wpbakery/elements/testimonial.php:162
 #: modules/wpbakery/elements/testimonial.php:246
 msgid "Extra class name"
@@ -410,12 +368,12 @@ msgstr ""
 #: modules/wpbakery/elements/infobox.php:598
 #: modules/wpbakery/elements/list-group.php:204
 #: modules/wpbakery/elements/list-group.php:291
-#: modules/wpbakery/elements/modal.php:731
-#: modules/wpbakery/elements/pricing.php:1135
-#: modules/wpbakery/elements/pricing.php:1213
+#: modules/wpbakery/elements/modal.php:734
+#: modules/wpbakery/elements/pricing.php:1229
 #: modules/wpbakery/elements/progress-bar.php:230
 #: modules/wpbakery/elements/semi-circular-progress-bar.php:224
 #: modules/wpbakery/elements/svg.php:113
+#: modules/wpbakery/elements/team-member.php:425
 #: modules/wpbakery/elements/testimonial.php:164
 #: modules/wpbakery/elements/testimonial.php:248
 msgid ""
@@ -431,12 +389,12 @@ msgstr ""
 #: modules/wpbakery/elements/infobox.php:603
 #: modules/wpbakery/elements/list-group.php:209
 #: modules/wpbakery/elements/list-group.php:296
-#: modules/wpbakery/elements/modal.php:736
-#: modules/wpbakery/elements/pricing.php:1140
-#: modules/wpbakery/elements/pricing.php:1218
+#: modules/wpbakery/elements/modal.php:739
+#: modules/wpbakery/elements/pricing.php:1234
 #: modules/wpbakery/elements/progress-bar.php:235
 #: modules/wpbakery/elements/semi-circular-progress-bar.php:229
 #: modules/wpbakery/elements/svg.php:118
+#: modules/wpbakery/elements/team-member.php:430
 #: modules/wpbakery/elements/testimonial.php:169
 #: modules/wpbakery/elements/testimonial.php:253
 msgid "CSS box"
@@ -450,12 +408,12 @@ msgstr ""
 #: modules/wpbakery/elements/infobox.php:605
 #: modules/wpbakery/elements/list-group.php:211
 #: modules/wpbakery/elements/list-group.php:298
-#: modules/wpbakery/elements/modal.php:738
-#: modules/wpbakery/elements/pricing.php:1142
-#: modules/wpbakery/elements/pricing.php:1220
+#: modules/wpbakery/elements/modal.php:741
+#: modules/wpbakery/elements/pricing.php:1236
 #: modules/wpbakery/elements/progress-bar.php:237
 #: modules/wpbakery/elements/semi-circular-progress-bar.php:231
 #: modules/wpbakery/elements/svg.php:120
+#: modules/wpbakery/elements/team-member.php:432
 #: modules/wpbakery/elements/testimonial.php:171
 #: modules/wpbakery/elements/testimonial.php:255
 msgid "Design Options"
@@ -469,6 +427,24 @@ msgstr ""
 #: modules/wpbakery/elements/progress-bar.php:92
 #: modules/wpbakery/elements/semi-circular-progress-bar.php:91
 msgid "Animated progress bar"
+msgstr ""
+
+#: modules/wpbakery/elements/circular-progress-bar.php:90
+#: modules/wpbakery/elements/counter.php:92
+#: modules/wpbakery/elements/infobox.php:179
+#: modules/wpbakery/elements/list-group.php:227
+#: modules/wpbakery/elements/modal.php:242
+#: modules/wpbakery/elements/pricing.php:305
+#: modules/wpbakery/elements/pricing.php:684
+#: modules/wpbakery/elements/pricing.php:779
+#: modules/wpbakery/elements/pricing.php:833
+#: modules/wpbakery/elements/pricing.php:887
+#: modules/wpbakery/elements/pricing.php:941
+#: modules/wpbakery/elements/pricing.php:995
+#: modules/wpbakery/elements/pricing.php:1049
+#: modules/wpbakery/elements/progress-bar.php:97
+#: modules/wpbakery/elements/semi-circular-progress-bar.php:96
+msgid "Title"
 msgstr ""
 
 #: modules/wpbakery/elements/circular-progress-bar.php:92
@@ -493,15 +469,14 @@ msgstr ""
 #: modules/wpbakery/elements/icon.php:94 modules/wpbakery/elements/icon.php:103
 #: modules/wpbakery/elements/infobox.php:243
 #: modules/wpbakery/elements/list-group.php:240
-#: modules/wpbakery/elements/modal.php:471
-#: modules/wpbakery/elements/pricing.php:475
-#: modules/wpbakery/elements/pricing.php:677
-#: modules/wpbakery/elements/pricing.php:731
-#: modules/wpbakery/elements/pricing.php:785
-#: modules/wpbakery/elements/pricing.php:839
-#: modules/wpbakery/elements/pricing.php:893
-#: modules/wpbakery/elements/pricing.php:947
-#: modules/wpbakery/elements/pricing.php:1164
+#: modules/wpbakery/elements/modal.php:474
+#: modules/wpbakery/elements/pricing.php:576
+#: modules/wpbakery/elements/pricing.php:778
+#: modules/wpbakery/elements/pricing.php:832
+#: modules/wpbakery/elements/pricing.php:886
+#: modules/wpbakery/elements/pricing.php:940
+#: modules/wpbakery/elements/pricing.php:994
+#: modules/wpbakery/elements/pricing.php:1048
 #: modules/wpbakery/elements/progress-bar.php:207
 #: modules/wpbakery/elements/semi-circular-progress-bar.php:107
 #: modules/wpbakery/elements/semi-circular-progress-bar.php:121
@@ -530,9 +505,8 @@ msgstr ""
 #: modules/wpbakery/elements/icon.php:105
 #: modules/wpbakery/elements/infobox.php:245
 #: modules/wpbakery/elements/list-group.php:242
-#: modules/wpbakery/elements/modal.php:473
-#: modules/wpbakery/elements/pricing.php:477
-#: modules/wpbakery/elements/pricing.php:1166
+#: modules/wpbakery/elements/modal.php:476
+#: modules/wpbakery/elements/pricing.php:578
 #: modules/wpbakery/elements/progress-bar.php:209
 #: modules/wpbakery/elements/semi-circular-progress-bar.php:123
 msgid "Select icon from library."
@@ -569,10 +543,10 @@ msgstr ""
 #: modules/wpbakery/elements/circular-progress-bar.php:144
 #: modules/wpbakery/elements/icon.php:135
 #: modules/wpbakery/elements/infobox.php:292
-#: modules/wpbakery/elements/modal.php:324
-#: modules/wpbakery/elements/modal.php:520
-#: modules/wpbakery/elements/pricing.php:524
-#: modules/wpbakery/elements/pricing.php:623
+#: modules/wpbakery/elements/modal.php:327
+#: modules/wpbakery/elements/modal.php:523
+#: modules/wpbakery/elements/pricing.php:625
+#: modules/wpbakery/elements/pricing.php:724
 #: modules/wpbakery/elements/progress-bar.php:123
 #: modules/wpbakery/elements/semi-circular-progress-bar.php:150
 msgid "Square"
@@ -581,10 +555,10 @@ msgstr ""
 #: modules/wpbakery/elements/circular-progress-bar.php:145
 #: modules/wpbakery/elements/icon.php:136
 #: modules/wpbakery/elements/infobox.php:293
-#: modules/wpbakery/elements/modal.php:325
-#: modules/wpbakery/elements/modal.php:521
-#: modules/wpbakery/elements/pricing.php:525
-#: modules/wpbakery/elements/pricing.php:624
+#: modules/wpbakery/elements/modal.php:328
+#: modules/wpbakery/elements/modal.php:524
+#: modules/wpbakery/elements/pricing.php:626
+#: modules/wpbakery/elements/pricing.php:725
 #: modules/wpbakery/elements/progress-bar.php:124
 #: modules/wpbakery/elements/semi-circular-progress-bar.php:151
 msgid "Round"
@@ -592,7 +566,6 @@ msgstr ""
 
 #: modules/wpbakery/elements/circular-progress-bar.php:151
 #: modules/wpbakery/elements/list-group.php:247
-#: modules/wpbakery/elements/pricing.php:1171
 #: modules/wpbakery/elements/progress-bar.php:130
 #: modules/wpbakery/elements/semi-circular-progress-bar.php:157
 msgid "Colors"
@@ -601,9 +574,9 @@ msgstr ""
 #: modules/wpbakery/elements/circular-progress-bar.php:154
 #: modules/wpbakery/elements/icon.php:112
 #: modules/wpbakery/elements/infobox.php:258
-#: modules/wpbakery/elements/modal.php:359
-#: modules/wpbakery/elements/modal.php:486
-#: modules/wpbakery/elements/pricing.php:490
+#: modules/wpbakery/elements/modal.php:362
+#: modules/wpbakery/elements/modal.php:489
+#: modules/wpbakery/elements/pricing.php:591
 #: modules/wpbakery/elements/progress-bar.php:133
 #: modules/wpbakery/elements/semi-circular-progress-bar.php:160
 msgid "Preset Color"
@@ -612,11 +585,13 @@ msgstr ""
 #: modules/wpbakery/elements/circular-progress-bar.php:155
 #: modules/wpbakery/elements/icon.php:113
 #: modules/wpbakery/elements/infobox.php:259
-#: modules/wpbakery/elements/modal.php:360
-#: modules/wpbakery/elements/modal.php:487
-#: modules/wpbakery/elements/pricing.php:491
+#: modules/wpbakery/elements/modal.php:363
+#: modules/wpbakery/elements/modal.php:490
+#: modules/wpbakery/elements/pricing.php:592
 #: modules/wpbakery/elements/progress-bar.php:134
 #: modules/wpbakery/elements/semi-circular-progress-bar.php:161
+#: modules/wpbakery/elements/team-member.php:393
+#: modules/wpbakery/elements/team-member.php:401
 msgid "Custom Color"
 msgstr ""
 
@@ -630,10 +605,9 @@ msgstr ""
 #: modules/wpbakery/elements/counter.php:176
 #: modules/wpbakery/elements/infobox.php:578
 #: modules/wpbakery/elements/list-group.php:269
-#: modules/wpbakery/elements/modal.php:272
-#: modules/wpbakery/elements/modal.php:372
-#: modules/wpbakery/elements/pricing.php:1055
-#: modules/wpbakery/elements/pricing.php:1193
+#: modules/wpbakery/elements/modal.php:275
+#: modules/wpbakery/elements/modal.php:375
+#: modules/wpbakery/elements/pricing.php:1156
 #: modules/wpbakery/elements/progress-bar.php:141
 #: modules/wpbakery/elements/semi-circular-progress-bar.php:168
 msgid "Title Color"
@@ -642,7 +616,7 @@ msgstr ""
 #: modules/wpbakery/elements/circular-progress-bar.php:164
 #: modules/wpbakery/elements/counter.php:178
 #: modules/wpbakery/elements/infobox.php:580
-#: modules/wpbakery/elements/pricing.php:1057
+#: modules/wpbakery/elements/pricing.php:1158
 #: modules/wpbakery/elements/progress-bar.php:143
 #: modules/wpbakery/elements/semi-circular-progress-bar.php:170
 msgid "Select custom color for the title."
@@ -692,8 +666,8 @@ msgstr ""
 
 #: modules/wpbakery/elements/counter.php:94
 #: modules/wpbakery/elements/infobox.php:181
-#: modules/wpbakery/elements/pricing.php:358
-#: modules/wpbakery/elements/pricing.php:585
+#: modules/wpbakery/elements/pricing.php:307
+#: modules/wpbakery/elements/pricing.php:686
 msgid "Enter the title here."
 msgstr ""
 
@@ -732,77 +706,89 @@ msgstr ""
 
 #: modules/wpbakery/elements/counter.php:126
 #: modules/wpbakery/elements/infobox.php:213
-#: modules/wpbakery/elements/modal.php:437
-#: modules/wpbakery/elements/pricing.php:445
+#: modules/wpbakery/elements/modal.php:440
+#: modules/wpbakery/elements/pricing.php:546
 msgid "Enable Icon Library."
 msgstr ""
 
 #: modules/wpbakery/elements/counter.php:142
 #: modules/wpbakery/elements/infobox.php:523
-#: modules/wpbakery/elements/modal.php:250
-#: modules/wpbakery/elements/pricing.php:1001
+#: modules/wpbakery/elements/modal.php:253
+#: modules/wpbakery/elements/pricing.php:1102
 msgid "Title Tag"
 msgstr ""
 
 #: modules/wpbakery/elements/counter.php:146
 #: modules/wpbakery/elements/infobox.php:527
-#: modules/wpbakery/elements/pricing.php:1005
+#: modules/wpbakery/elements/pricing.php:1106
+#: modules/wpbakery/elements/team-member.php:189
+#: modules/wpbakery/elements/team-member.php:218
 msgid "H1"
 msgstr ""
 
 #: modules/wpbakery/elements/counter.php:147
 #: modules/wpbakery/elements/infobox.php:528
-#: modules/wpbakery/elements/pricing.php:1006
+#: modules/wpbakery/elements/pricing.php:1107
+#: modules/wpbakery/elements/team-member.php:190
+#: modules/wpbakery/elements/team-member.php:219
 msgid "H2"
 msgstr ""
 
 #: modules/wpbakery/elements/counter.php:148
 #: modules/wpbakery/elements/infobox.php:529
-#: modules/wpbakery/elements/pricing.php:1007
+#: modules/wpbakery/elements/pricing.php:1108
+#: modules/wpbakery/elements/team-member.php:220
 msgid "H3"
 msgstr ""
 
 #: modules/wpbakery/elements/counter.php:149
 #: modules/wpbakery/elements/infobox.php:530
-#: modules/wpbakery/elements/pricing.php:1008
+#: modules/wpbakery/elements/pricing.php:1109
+#: modules/wpbakery/elements/team-member.php:191
 msgid "H4"
 msgstr ""
 
 #: modules/wpbakery/elements/counter.php:150
 #: modules/wpbakery/elements/infobox.php:531
-#: modules/wpbakery/elements/pricing.php:1009
+#: modules/wpbakery/elements/pricing.php:1110
+#: modules/wpbakery/elements/team-member.php:192
+#: modules/wpbakery/elements/team-member.php:221
 msgid "H5"
 msgstr ""
 
 #: modules/wpbakery/elements/counter.php:151
 #: modules/wpbakery/elements/infobox.php:532
-#: modules/wpbakery/elements/pricing.php:1010
+#: modules/wpbakery/elements/pricing.php:1111
+#: modules/wpbakery/elements/team-member.php:193
+#: modules/wpbakery/elements/team-member.php:222
 msgid "H6"
 msgstr ""
 
 #: modules/wpbakery/elements/counter.php:152
 #: modules/wpbakery/elements/infobox.php:533
-#: modules/wpbakery/elements/modal.php:260
-#: modules/wpbakery/elements/pricing.php:1011
+#: modules/wpbakery/elements/modal.php:263
+#: modules/wpbakery/elements/pricing.php:1112
+#: modules/wpbakery/elements/team-member.php:195
+#: modules/wpbakery/elements/team-member.php:224
 msgid "p"
 msgstr ""
 
 #: modules/wpbakery/elements/counter.php:153
 #: modules/wpbakery/elements/infobox.php:534
-#: modules/wpbakery/elements/modal.php:261
-#: modules/wpbakery/elements/pricing.php:1012
+#: modules/wpbakery/elements/modal.php:264
+#: modules/wpbakery/elements/pricing.php:1113
 msgid "div"
 msgstr ""
 
 #: modules/wpbakery/elements/counter.php:155
 #: modules/wpbakery/elements/infobox.php:537
-#: modules/wpbakery/elements/pricing.php:1014
+#: modules/wpbakery/elements/pricing.php:1115
 msgid "Select title tag."
 msgstr ""
 
 #: modules/wpbakery/elements/counter.php:160
 #: modules/wpbakery/elements/infobox.php:542
-#: modules/wpbakery/elements/pricing.php:1019
+#: modules/wpbakery/elements/pricing.php:1120
 msgid "Title Font Size"
 msgstr ""
 
@@ -810,15 +796,15 @@ msgstr ""
 #: modules/wpbakery/elements/counter.php:186
 #: modules/wpbakery/elements/counter.php:210
 #: modules/wpbakery/elements/infobox.php:544
-#: modules/wpbakery/elements/pricing.php:1021
-#: modules/wpbakery/elements/pricing.php:1065
-#: modules/wpbakery/elements/pricing.php:1109
+#: modules/wpbakery/elements/pricing.php:1122
+#: modules/wpbakery/elements/pricing.php:1166
+#: modules/wpbakery/elements/pricing.php:1210
 msgid "Enter font size."
 msgstr ""
 
 #: modules/wpbakery/elements/counter.php:168
 #: modules/wpbakery/elements/infobox.php:550
-#: modules/wpbakery/elements/pricing.php:1027
+#: modules/wpbakery/elements/pricing.php:1128
 msgid "Title Line Height"
 msgstr ""
 
@@ -826,8 +812,8 @@ msgstr ""
 #: modules/wpbakery/elements/counter.php:194
 #: modules/wpbakery/elements/counter.php:222
 #: modules/wpbakery/elements/infobox.php:552
-#: modules/wpbakery/elements/pricing.php:1029
-#: modules/wpbakery/elements/pricing.php:1073
+#: modules/wpbakery/elements/pricing.php:1130
+#: modules/wpbakery/elements/pricing.php:1174
 msgid "Enter line height."
 msgstr ""
 
@@ -857,7 +843,6 @@ msgstr ""
 
 #: modules/wpbakery/elements/counter.php:232
 #: modules/wpbakery/elements/list-group.php:258
-#: modules/wpbakery/elements/pricing.php:1182
 #: modules/wpbakery/elements/progress-bar.php:152
 msgid "Icon Color"
 msgstr ""
@@ -871,7 +856,7 @@ msgid "Icon Group"
 msgstr ""
 
 #: modules/wpbakery/elements/icon-group.php:66
-#: modules/wpbakery/elements/modal.php:222
+#: modules/wpbakery/elements/modal.php:225
 msgid "Add and manage multiple icons"
 msgstr ""
 
@@ -908,11 +893,11 @@ msgstr ""
 #: modules/wpbakery/elements/icon.php:176
 #: modules/wpbakery/elements/infobox.php:568
 #: modules/wpbakery/elements/list-group.php:184
-#: modules/wpbakery/elements/modal.php:286
-#: modules/wpbakery/elements/pricing.php:569
-#: modules/wpbakery/elements/pricing.php:659
-#: modules/wpbakery/elements/pricing.php:1045
-#: modules/wpbakery/elements/pricing.php:1089
+#: modules/wpbakery/elements/modal.php:289
+#: modules/wpbakery/elements/pricing.php:670
+#: modules/wpbakery/elements/pricing.php:760
+#: modules/wpbakery/elements/pricing.php:1146
+#: modules/wpbakery/elements/pricing.php:1190
 #: modules/wpbakery/elements/svg.php:92
 msgid "Left"
 msgstr ""
@@ -921,11 +906,11 @@ msgstr ""
 #: modules/wpbakery/elements/icon.php:177
 #: modules/wpbakery/elements/infobox.php:569
 #: modules/wpbakery/elements/list-group.php:185
-#: modules/wpbakery/elements/modal.php:287
-#: modules/wpbakery/elements/pricing.php:570
-#: modules/wpbakery/elements/pricing.php:660
-#: modules/wpbakery/elements/pricing.php:1046
-#: modules/wpbakery/elements/pricing.php:1090
+#: modules/wpbakery/elements/modal.php:290
+#: modules/wpbakery/elements/pricing.php:671
+#: modules/wpbakery/elements/pricing.php:761
+#: modules/wpbakery/elements/pricing.php:1147
+#: modules/wpbakery/elements/pricing.php:1191
 #: modules/wpbakery/elements/svg.php:93
 msgid "Right"
 msgstr ""
@@ -935,11 +920,11 @@ msgstr ""
 #: modules/wpbakery/elements/infobox.php:381
 #: modules/wpbakery/elements/infobox.php:570
 #: modules/wpbakery/elements/list-group.php:186
-#: modules/wpbakery/elements/modal.php:288
-#: modules/wpbakery/elements/pricing.php:571
-#: modules/wpbakery/elements/pricing.php:661
-#: modules/wpbakery/elements/pricing.php:1047
-#: modules/wpbakery/elements/pricing.php:1091
+#: modules/wpbakery/elements/modal.php:291
+#: modules/wpbakery/elements/pricing.php:672
+#: modules/wpbakery/elements/pricing.php:762
+#: modules/wpbakery/elements/pricing.php:1148
+#: modules/wpbakery/elements/pricing.php:1192
 #: modules/wpbakery/elements/svg.php:94
 msgid "Center"
 msgstr ""
@@ -962,112 +947,113 @@ msgstr ""
 
 #: modules/wpbakery/elements/icon.php:109
 #: modules/wpbakery/elements/infobox.php:255
-#: modules/wpbakery/elements/modal.php:483
-#: modules/wpbakery/elements/pricing.php:487
+#: modules/wpbakery/elements/modal.php:486
+#: modules/wpbakery/elements/pricing.php:588
 msgid "Icon color"
 msgstr ""
 
 #: modules/wpbakery/elements/icon.php:115
 #: modules/wpbakery/elements/infobox.php:261
-#: modules/wpbakery/elements/modal.php:362
-#: modules/wpbakery/elements/modal.php:489
-#: modules/wpbakery/elements/pricing.php:493
+#: modules/wpbakery/elements/modal.php:365
+#: modules/wpbakery/elements/modal.php:492
+#: modules/wpbakery/elements/pricing.php:594
 msgid "Select icon color."
 msgstr ""
 
 #: modules/wpbakery/elements/icon.php:119
 #: modules/wpbakery/elements/infobox.php:270
-#: modules/wpbakery/elements/modal.php:498
-#: modules/wpbakery/elements/pricing.php:502
+#: modules/wpbakery/elements/modal.php:501
+#: modules/wpbakery/elements/pricing.php:603
 msgid "Custom Icon Color"
 msgstr ""
 
 #: modules/wpbakery/elements/icon.php:121
 #: modules/wpbakery/elements/infobox.php:272
-#: modules/wpbakery/elements/modal.php:500
-#: modules/wpbakery/elements/pricing.php:504
+#: modules/wpbakery/elements/modal.php:503
+#: modules/wpbakery/elements/pricing.php:490
+#: modules/wpbakery/elements/pricing.php:605
 msgid "Select custom icon color."
 msgstr ""
 
 #: modules/wpbakery/elements/icon.php:129
 #: modules/wpbakery/elements/infobox.php:281
-#: modules/wpbakery/elements/modal.php:319
-#: modules/wpbakery/elements/modal.php:509
-#: modules/wpbakery/elements/pricing.php:513
-#: modules/wpbakery/elements/pricing.php:617
+#: modules/wpbakery/elements/modal.php:322
+#: modules/wpbakery/elements/modal.php:512
+#: modules/wpbakery/elements/pricing.php:614
+#: modules/wpbakery/elements/pricing.php:718
 msgid "Shape"
 msgstr ""
 
 #: modules/wpbakery/elements/icon.php:130
 #: modules/wpbakery/elements/infobox.php:282
-#: modules/wpbakery/elements/modal.php:510
-#: modules/wpbakery/elements/pricing.php:514
+#: modules/wpbakery/elements/modal.php:513
+#: modules/wpbakery/elements/pricing.php:615
 msgid "Select icon shape."
 msgstr ""
 
 #: modules/wpbakery/elements/icon.php:133
 #: modules/wpbakery/elements/infobox.php:290
-#: modules/wpbakery/elements/modal.php:298
-#: modules/wpbakery/elements/modal.php:340
-#: modules/wpbakery/elements/modal.php:518
-#: modules/wpbakery/elements/pricing.php:522
+#: modules/wpbakery/elements/modal.php:301
+#: modules/wpbakery/elements/modal.php:343
+#: modules/wpbakery/elements/modal.php:521
+#: modules/wpbakery/elements/pricing.php:623
 msgid "None"
 msgstr ""
 
 #: modules/wpbakery/elements/icon.php:134
 #: modules/wpbakery/elements/infobox.php:291
-#: modules/wpbakery/elements/modal.php:323
-#: modules/wpbakery/elements/modal.php:519
-#: modules/wpbakery/elements/pricing.php:523
-#: modules/wpbakery/elements/pricing.php:622
+#: modules/wpbakery/elements/modal.php:326
+#: modules/wpbakery/elements/modal.php:522
+#: modules/wpbakery/elements/pricing.php:624
+#: modules/wpbakery/elements/pricing.php:723
 #: modules/wpbakery/elements/progress-bar.php:122
 msgid "Rounded"
 msgstr ""
 
 #: modules/wpbakery/elements/icon.php:137
 #: modules/wpbakery/elements/infobox.php:294
-#: modules/wpbakery/elements/modal.php:522
-#: modules/wpbakery/elements/pricing.php:526
-#: modules/wpbakery/elements/pricing.php:625
+#: modules/wpbakery/elements/modal.php:525
+#: modules/wpbakery/elements/pricing.php:627
+#: modules/wpbakery/elements/pricing.php:726
 msgid "Outline Rounded"
 msgstr ""
 
 #: modules/wpbakery/elements/icon.php:138
 #: modules/wpbakery/elements/infobox.php:295
-#: modules/wpbakery/elements/modal.php:523
-#: modules/wpbakery/elements/pricing.php:527
-#: modules/wpbakery/elements/pricing.php:626
+#: modules/wpbakery/elements/modal.php:526
+#: modules/wpbakery/elements/pricing.php:628
+#: modules/wpbakery/elements/pricing.php:727
 msgid "Outline Square"
 msgstr ""
 
 #: modules/wpbakery/elements/icon.php:139
 #: modules/wpbakery/elements/infobox.php:296
-#: modules/wpbakery/elements/modal.php:524
-#: modules/wpbakery/elements/pricing.php:528
-#: modules/wpbakery/elements/pricing.php:627
+#: modules/wpbakery/elements/modal.php:527
+#: modules/wpbakery/elements/pricing.php:629
+#: modules/wpbakery/elements/pricing.php:728
 msgid "Outline Round"
 msgstr ""
 
 #: modules/wpbakery/elements/icon.php:144
 #: modules/wpbakery/elements/infobox.php:301
-#: modules/wpbakery/elements/modal.php:529
-#: modules/wpbakery/elements/pricing.php:533
+#: modules/wpbakery/elements/modal.php:532
+#: modules/wpbakery/elements/pricing.php:634
 msgid "Color Shape"
 msgstr ""
 
 #: modules/wpbakery/elements/icon.php:146
 #: modules/wpbakery/elements/infobox.php:303
-#: modules/wpbakery/elements/modal.php:531
-#: modules/wpbakery/elements/pricing.php:535
+#: modules/wpbakery/elements/modal.php:534
+#: modules/wpbakery/elements/pricing.php:636
 msgid "Select custom shape background color."
 msgstr ""
 
 #: modules/wpbakery/elements/icon.php:154
 #: modules/wpbakery/elements/infobox.php:312
-#: modules/wpbakery/elements/modal.php:408
-#: modules/wpbakery/elements/modal.php:540
-#: modules/wpbakery/elements/pricing.php:544
-#: modules/wpbakery/elements/pricing.php:633
+#: modules/wpbakery/elements/modal.php:411
+#: modules/wpbakery/elements/modal.php:543
+#: modules/wpbakery/elements/pricing.php:645
+#: modules/wpbakery/elements/pricing.php:734
 msgid "Size"
 msgstr ""
 
@@ -1077,7 +1063,7 @@ msgstr ""
 
 #: modules/wpbakery/elements/icon.php:161
 #: modules/wpbakery/elements/infobox.php:323
-#: modules/wpbakery/elements/modal.php:551
+#: modules/wpbakery/elements/modal.php:554
 msgid "Spacing"
 msgstr ""
 
@@ -1097,16 +1083,16 @@ msgstr ""
 #: modules/wpbakery/elements/icon.php:173
 #: modules/wpbakery/elements/infobox.php:377
 #: modules/wpbakery/elements/list-group.php:181
-#: modules/wpbakery/elements/modal.php:283
-#: modules/wpbakery/elements/pricing.php:566
-#: modules/wpbakery/elements/pricing.php:656
+#: modules/wpbakery/elements/modal.php:286
+#: modules/wpbakery/elements/pricing.php:667
+#: modules/wpbakery/elements/pricing.php:757
 #: modules/wpbakery/elements/svg.php:89
 msgid "Alignment"
 msgstr ""
 
 #: modules/wpbakery/elements/icon.php:180
 #: modules/wpbakery/elements/infobox.php:384
-#: modules/wpbakery/elements/pricing.php:573
+#: modules/wpbakery/elements/pricing.php:674
 #: modules/wpbakery/elements/svg.php:96
 msgid "Select icon alignment."
 msgstr ""
@@ -1114,7 +1100,7 @@ msgstr ""
 #: modules/wpbakery/elements/icon.php:184
 #: modules/wpbakery/elements/infobox.php:186
 #: modules/wpbakery/elements/list-group.php:233
-#: modules/wpbakery/elements/pricing.php:591
+#: modules/wpbakery/elements/pricing.php:692
 msgid "URL (Link)"
 msgstr ""
 
@@ -1135,7 +1121,7 @@ msgid "Add link to infobox title."
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:194
-#: modules/wpbakery/elements/pricing.php:1158
+#: modules/wpbakery/elements/team-member.php:234
 msgid "Description"
 msgstr ""
 
@@ -1144,6 +1130,7 @@ msgid "Provide the description for this Infobox."
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:197
+#: modules/wpbakery/elements/pricing.php:337
 #: modules/wpbakery/elements/testimonial.php:208
 msgid ""
 "<p>I am text block. Click edit button to change this text. Lorem ipsum dolor "
@@ -1152,84 +1139,84 @@ msgid ""
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:206
-#: modules/wpbakery/elements/modal.php:430
-#: modules/wpbakery/elements/pricing.php:438
+#: modules/wpbakery/elements/modal.php:433
+#: modules/wpbakery/elements/pricing.php:539
 msgid "Icon to display"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:209
-#: modules/wpbakery/elements/modal.php:433
-#: modules/wpbakery/elements/pricing.php:441
+#: modules/wpbakery/elements/modal.php:436
+#: modules/wpbakery/elements/pricing.php:542
 msgid "Icon Manager"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:210
-#: modules/wpbakery/elements/modal.php:434
-#: modules/wpbakery/elements/pricing.php:442
+#: modules/wpbakery/elements/modal.php:437
+#: modules/wpbakery/elements/pricing.php:543
 msgid "Image Icon"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:211
-#: modules/wpbakery/elements/modal.php:435
-#: modules/wpbakery/elements/pricing.php:443
+#: modules/wpbakery/elements/modal.php:438
+#: modules/wpbakery/elements/pricing.php:544
 msgid "SVG Icon"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:219
-#: modules/wpbakery/elements/modal.php:447
-#: modules/wpbakery/elements/pricing.php:451
+#: modules/wpbakery/elements/modal.php:450
+#: modules/wpbakery/elements/pricing.php:552
 msgid "Upload Image Icon"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:221
-#: modules/wpbakery/elements/modal.php:449
-#: modules/wpbakery/elements/pricing.php:453
+#: modules/wpbakery/elements/modal.php:452
+#: modules/wpbakery/elements/pricing.php:554
 msgid "Upload the custom image icon."
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:231
-#: modules/wpbakery/elements/modal.php:459
-#: modules/wpbakery/elements/pricing.php:463
+#: modules/wpbakery/elements/modal.php:462
+#: modules/wpbakery/elements/pricing.php:564
 msgid "Upload SVG Icon"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:233
-#: modules/wpbakery/elements/modal.php:461
-#: modules/wpbakery/elements/pricing.php:465
+#: modules/wpbakery/elements/modal.php:464
+#: modules/wpbakery/elements/pricing.php:566
 msgid "Upload the custom svg icon."
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:314
-#: modules/wpbakery/elements/modal.php:542
-#: modules/wpbakery/elements/pricing.php:546
+#: modules/wpbakery/elements/modal.php:545
+#: modules/wpbakery/elements/pricing.php:647
 msgid "Icon size. Default value is 16px."
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:325
-#: modules/wpbakery/elements/modal.php:553
-#: modules/wpbakery/elements/pricing.php:557
+#: modules/wpbakery/elements/modal.php:556
+#: modules/wpbakery/elements/pricing.php:658
 msgid "Select icon spacing. e.g. 16px."
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:334
-#: modules/wpbakery/elements/modal.php:562
+#: modules/wpbakery/elements/modal.php:565
 #: modules/wpbakery/elements/progress-bar.php:111
 #: modules/wpbakery/elements/svg.php:77
 msgid "Height"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:336
-#: modules/wpbakery/elements/modal.php:564 modules/wpbakery/elements/svg.php:79
+#: modules/wpbakery/elements/modal.php:567 modules/wpbakery/elements/svg.php:79
 msgid "Insert the SVG height."
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:345
-#: modules/wpbakery/elements/modal.php:573 modules/wpbakery/elements/svg.php:83
+#: modules/wpbakery/elements/modal.php:576 modules/wpbakery/elements/svg.php:83
 msgid "Width"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:347
-#: modules/wpbakery/elements/modal.php:575 modules/wpbakery/elements/svg.php:85
+#: modules/wpbakery/elements/modal.php:578 modules/wpbakery/elements/svg.php:85
 msgid "Insert the SVG width."
 msgstr ""
 
@@ -1268,493 +1255,493 @@ msgid "End"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:390
-#: modules/wpbakery/elements/modal.php:586
+#: modules/wpbakery/elements/modal.php:589
 msgid "Animations"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:393
-#: modules/wpbakery/elements/modal.php:593
+#: modules/wpbakery/elements/modal.php:596
 msgid "No Animation"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:394
-#: modules/wpbakery/elements/modal.php:594
+#: modules/wpbakery/elements/modal.php:597
 msgid "Bounce"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:395
-#: modules/wpbakery/elements/modal.php:595
+#: modules/wpbakery/elements/modal.php:598
 msgid "Flash"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:396
-#: modules/wpbakery/elements/modal.php:596
+#: modules/wpbakery/elements/modal.php:599
 msgid "Pulse"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:397
-#: modules/wpbakery/elements/modal.php:597
+#: modules/wpbakery/elements/modal.php:600
 msgid "Rubber Band"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:398
-#: modules/wpbakery/elements/modal.php:598
+#: modules/wpbakery/elements/modal.php:601
 msgid "Shake"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:399
-#: modules/wpbakery/elements/modal.php:599
+#: modules/wpbakery/elements/modal.php:602
 msgid "Head Shake"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:400
-#: modules/wpbakery/elements/modal.php:600
+#: modules/wpbakery/elements/modal.php:603
 msgid "Swing"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:401
-#: modules/wpbakery/elements/modal.php:601
+#: modules/wpbakery/elements/modal.php:604
 msgid "Tada"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:402
-#: modules/wpbakery/elements/modal.php:602
+#: modules/wpbakery/elements/modal.php:605
 msgid "Wobble"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:403
-#: modules/wpbakery/elements/modal.php:603
+#: modules/wpbakery/elements/modal.php:606
 msgid "Jello"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:404
-#: modules/wpbakery/elements/modal.php:604
+#: modules/wpbakery/elements/modal.php:607
 msgid "Bounce In"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:405
-#: modules/wpbakery/elements/modal.php:605
+#: modules/wpbakery/elements/modal.php:608
 msgid "Bounce In Down"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:406
-#: modules/wpbakery/elements/modal.php:606
+#: modules/wpbakery/elements/modal.php:609
 msgid "Bounce In Left"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:407
-#: modules/wpbakery/elements/modal.php:607
+#: modules/wpbakery/elements/modal.php:610
 msgid "Bounce In Right"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:408
-#: modules/wpbakery/elements/modal.php:608
+#: modules/wpbakery/elements/modal.php:611
 msgid "Bounce In Up"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:409
-#: modules/wpbakery/elements/modal.php:609
+#: modules/wpbakery/elements/modal.php:612
 msgid "Bounce Out"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:410
-#: modules/wpbakery/elements/modal.php:610
+#: modules/wpbakery/elements/modal.php:613
 msgid "Bounce Out Down"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:411
-#: modules/wpbakery/elements/modal.php:611
+#: modules/wpbakery/elements/modal.php:614
 msgid "Bounce Out Left"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:412
-#: modules/wpbakery/elements/modal.php:612
+#: modules/wpbakery/elements/modal.php:615
 msgid "Bounce Out Right"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:413
-#: modules/wpbakery/elements/modal.php:613
+#: modules/wpbakery/elements/modal.php:616
 msgid "Bounce Out Up"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:414
-#: modules/wpbakery/elements/modal.php:614
+#: modules/wpbakery/elements/modal.php:617
 msgid "Fade In"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:415
-#: modules/wpbakery/elements/modal.php:615
+#: modules/wpbakery/elements/modal.php:618
 msgid "Fade In Down"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:416
-#: modules/wpbakery/elements/modal.php:616
+#: modules/wpbakery/elements/modal.php:619
 msgid "Fade In Down Big"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:417
-#: modules/wpbakery/elements/modal.php:617
+#: modules/wpbakery/elements/modal.php:620
 msgid "Fade In Left"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:418
-#: modules/wpbakery/elements/modal.php:618
+#: modules/wpbakery/elements/modal.php:621
 msgid "Fade In Left Big"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:419
-#: modules/wpbakery/elements/modal.php:619
+#: modules/wpbakery/elements/modal.php:622
 msgid "Fade In Right"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:420
-#: modules/wpbakery/elements/modal.php:620
+#: modules/wpbakery/elements/modal.php:623
 msgid "Fade In Right Big"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:421
-#: modules/wpbakery/elements/modal.php:621
+#: modules/wpbakery/elements/modal.php:624
 msgid "Fade In Up"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:422
-#: modules/wpbakery/elements/modal.php:622
+#: modules/wpbakery/elements/modal.php:625
 msgid "Fade In Up Big"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:423
-#: modules/wpbakery/elements/modal.php:623
+#: modules/wpbakery/elements/modal.php:626
 msgid "Fade Out"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:424
-#: modules/wpbakery/elements/modal.php:624
+#: modules/wpbakery/elements/modal.php:627
 msgid "Fade Out Down"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:425
-#: modules/wpbakery/elements/modal.php:625
+#: modules/wpbakery/elements/modal.php:628
 msgid "Fade Out Down Big"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:426
-#: modules/wpbakery/elements/modal.php:626
+#: modules/wpbakery/elements/modal.php:629
 msgid "Fade Out Left"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:427
-#: modules/wpbakery/elements/modal.php:627
+#: modules/wpbakery/elements/modal.php:630
 msgid "Fade Out Left Big"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:428
-#: modules/wpbakery/elements/modal.php:628
+#: modules/wpbakery/elements/modal.php:631
 msgid "Fade Out Right"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:429
-#: modules/wpbakery/elements/modal.php:629
+#: modules/wpbakery/elements/modal.php:632
 msgid "Fade Out Right Big"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:430
-#: modules/wpbakery/elements/modal.php:630
+#: modules/wpbakery/elements/modal.php:633
 msgid "Fade Out Up"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:431
-#: modules/wpbakery/elements/modal.php:631
+#: modules/wpbakery/elements/modal.php:634
 msgid "Fade Out Up Big"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:432
-#: modules/wpbakery/elements/modal.php:632
+#: modules/wpbakery/elements/modal.php:635
 msgid "Flip In X"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:433
-#: modules/wpbakery/elements/modal.php:633
+#: modules/wpbakery/elements/modal.php:636
 msgid "Flip In Y"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:434
-#: modules/wpbakery/elements/modal.php:634
+#: modules/wpbakery/elements/modal.php:637
 msgid "Flip Out X"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:435
-#: modules/wpbakery/elements/modal.php:635
+#: modules/wpbakery/elements/modal.php:638
 msgid "Flip Out Y"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:436
-#: modules/wpbakery/elements/modal.php:636
+#: modules/wpbakery/elements/modal.php:639
 msgid "Light Speed In"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:437
-#: modules/wpbakery/elements/modal.php:637
+#: modules/wpbakery/elements/modal.php:640
 msgid "Light Speed Out"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:438
-#: modules/wpbakery/elements/modal.php:638
+#: modules/wpbakery/elements/modal.php:641
 msgid "Rotate In"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:439
-#: modules/wpbakery/elements/modal.php:639
+#: modules/wpbakery/elements/modal.php:642
 msgid "Rotate In Down Left"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:440
-#: modules/wpbakery/elements/modal.php:640
+#: modules/wpbakery/elements/modal.php:643
 msgid "Rotate In Down Right"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:441
-#: modules/wpbakery/elements/modal.php:641
+#: modules/wpbakery/elements/modal.php:644
 msgid "Rotate In Up Left"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:442
-#: modules/wpbakery/elements/modal.php:642
+#: modules/wpbakery/elements/modal.php:645
 msgid "Rotate In Up Right"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:443
-#: modules/wpbakery/elements/modal.php:643
+#: modules/wpbakery/elements/modal.php:646
 msgid "Rotate Out"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:444
-#: modules/wpbakery/elements/modal.php:644
+#: modules/wpbakery/elements/modal.php:647
 msgid "Rotate Out Down Left"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:445
-#: modules/wpbakery/elements/modal.php:645
+#: modules/wpbakery/elements/modal.php:648
 msgid "Rotate Out Down Right"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:446
-#: modules/wpbakery/elements/modal.php:646
+#: modules/wpbakery/elements/modal.php:649
 msgid "Rotate Out Up Left"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:447
-#: modules/wpbakery/elements/modal.php:647
+#: modules/wpbakery/elements/modal.php:650
 msgid "Rotate Out Up Right"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:448
-#: modules/wpbakery/elements/modal.php:648
+#: modules/wpbakery/elements/modal.php:651
 msgid "Hinge"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:449
-#: modules/wpbakery/elements/modal.php:649
+#: modules/wpbakery/elements/modal.php:652
 msgid "Jack In The Box"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:450
-#: modules/wpbakery/elements/modal.php:650
+#: modules/wpbakery/elements/modal.php:653
 msgid "Roll In"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:451
-#: modules/wpbakery/elements/modal.php:651
+#: modules/wpbakery/elements/modal.php:654
 msgid "Roll Out"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:452
-#: modules/wpbakery/elements/modal.php:652
+#: modules/wpbakery/elements/modal.php:655
 msgid "Zoom In"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:453
-#: modules/wpbakery/elements/modal.php:653
+#: modules/wpbakery/elements/modal.php:656
 msgid "Zoom In Down"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:454
-#: modules/wpbakery/elements/modal.php:654
+#: modules/wpbakery/elements/modal.php:657
 msgid "Zoom In Left"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:455
-#: modules/wpbakery/elements/modal.php:655
+#: modules/wpbakery/elements/modal.php:658
 msgid "Zoom In Right"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:456
-#: modules/wpbakery/elements/modal.php:656
+#: modules/wpbakery/elements/modal.php:659
 msgid "Zoom In Up"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:457
-#: modules/wpbakery/elements/modal.php:657
+#: modules/wpbakery/elements/modal.php:660
 msgid "Zoom Out"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:458
-#: modules/wpbakery/elements/modal.php:658
+#: modules/wpbakery/elements/modal.php:661
 msgid "Zoom Out Down"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:459
-#: modules/wpbakery/elements/modal.php:659
+#: modules/wpbakery/elements/modal.php:662
 msgid "Zoom Out Left"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:460
-#: modules/wpbakery/elements/modal.php:660
+#: modules/wpbakery/elements/modal.php:663
 msgid "Zoom Out Right"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:461
-#: modules/wpbakery/elements/modal.php:661
+#: modules/wpbakery/elements/modal.php:664
 msgid "Zoom Out Up"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:462
-#: modules/wpbakery/elements/modal.php:662
+#: modules/wpbakery/elements/modal.php:665
 msgid "Slide In Down"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:463
-#: modules/wpbakery/elements/modal.php:663
+#: modules/wpbakery/elements/modal.php:666
 msgid "Slide In Left"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:464
-#: modules/wpbakery/elements/modal.php:664
+#: modules/wpbakery/elements/modal.php:667
 msgid "Slide In Right"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:465
-#: modules/wpbakery/elements/modal.php:665
+#: modules/wpbakery/elements/modal.php:668
 msgid "Slide In Up"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:466
-#: modules/wpbakery/elements/modal.php:666
+#: modules/wpbakery/elements/modal.php:669
 msgid "Slide Out Down"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:467
-#: modules/wpbakery/elements/modal.php:667
+#: modules/wpbakery/elements/modal.php:670
 msgid "Slide Out Left"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:468
-#: modules/wpbakery/elements/modal.php:668
+#: modules/wpbakery/elements/modal.php:671
 msgid "Slide Out Right"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:469
-#: modules/wpbakery/elements/modal.php:669
+#: modules/wpbakery/elements/modal.php:672
 msgid "Slide Out Up"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:470
-#: modules/wpbakery/elements/modal.php:670
+#: modules/wpbakery/elements/modal.php:673
 msgid "Heart Beat"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:473
-#: modules/wpbakery/elements/modal.php:673
+#: modules/wpbakery/elements/modal.php:676
 msgid "Select the type of animation you want on hover."
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:479
-#: modules/wpbakery/elements/modal.php:679
+#: modules/wpbakery/elements/modal.php:682
 msgid "Animation Delay"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:482
-#: modules/wpbakery/elements/modal.php:682
+#: modules/wpbakery/elements/modal.php:685
 msgid "No Delay"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:483
-#: modules/wpbakery/elements/modal.php:683
+#: modules/wpbakery/elements/modal.php:686
 msgid "Delay 1 second"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:484
-#: modules/wpbakery/elements/modal.php:684
+#: modules/wpbakery/elements/modal.php:687
 msgid "Delay 2 seconds"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:485
-#: modules/wpbakery/elements/modal.php:685
+#: modules/wpbakery/elements/modal.php:688
 msgid "Delay 3 seconds"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:486
-#: modules/wpbakery/elements/modal.php:686
+#: modules/wpbakery/elements/modal.php:689
 msgid "Delay 4 seconds"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:487
-#: modules/wpbakery/elements/modal.php:687
+#: modules/wpbakery/elements/modal.php:690
 msgid "Delay 5 seconds"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:494
-#: modules/wpbakery/elements/modal.php:694
+#: modules/wpbakery/elements/modal.php:697
 msgid "Select delay for animation."
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:500
-#: modules/wpbakery/elements/modal.php:700
+#: modules/wpbakery/elements/modal.php:703
 msgid "Animation Speed"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:503
-#: modules/wpbakery/elements/modal.php:703
+#: modules/wpbakery/elements/modal.php:706
 msgid "Slower - 3s"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:504
-#: modules/wpbakery/elements/modal.php:704
+#: modules/wpbakery/elements/modal.php:707
 msgid "Slow - 2s"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:505
-#: modules/wpbakery/elements/modal.php:705
+#: modules/wpbakery/elements/modal.php:708
 msgid "Fast - 800ms"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:506
-#: modules/wpbakery/elements/modal.php:706
+#: modules/wpbakery/elements/modal.php:709
 msgid "Faster - 500ms"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:513
-#: modules/wpbakery/elements/modal.php:713
+#: modules/wpbakery/elements/modal.php:716
 msgid "Select Speed for animation."
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:558
-#: modules/wpbakery/elements/pricing.php:1035
+#: modules/wpbakery/elements/pricing.php:1136
 msgid "Title Spacing"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:560
-#: modules/wpbakery/elements/pricing.php:1037
-#: modules/wpbakery/elements/pricing.php:1081
+#: modules/wpbakery/elements/pricing.php:1138
+#: modules/wpbakery/elements/pricing.php:1182
 msgid "Select title spacing. e.g. 16px."
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:565
-#: modules/wpbakery/elements/pricing.php:1042
+#: modules/wpbakery/elements/pricing.php:1143
 msgid "Title Alignment"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:572
-#: modules/wpbakery/elements/pricing.php:1049
+#: modules/wpbakery/elements/pricing.php:1150
 msgid "Select title alignment."
 msgstr ""
 
@@ -1763,7 +1750,6 @@ msgid "List Group"
 msgstr ""
 
 #: modules/wpbakery/elements/list-group.php:141
-#: modules/wpbakery/elements/pricing.php:351
 msgid "Show a flexible and powerful list"
 msgstr ""
 
@@ -1772,8 +1758,12 @@ msgid "List Mode"
 msgstr ""
 
 #: modules/wpbakery/elements/list-group.php:149
-#: modules/wpbakery/elements/modal.php:232
+#: modules/wpbakery/elements/modal.php:235
 msgid "Text"
+msgstr ""
+
+#: modules/wpbakery/elements/list-group.php:150
+msgid "Link"
 msgstr ""
 
 #: modules/wpbakery/elements/list-group.php:152
@@ -1825,7 +1815,6 @@ msgid "List Item"
 msgstr ""
 
 #: modules/wpbakery/elements/list-group.php:219
-#: modules/wpbakery/elements/pricing.php:1150
 msgid "Display List Group Item"
 msgstr ""
 
@@ -1834,556 +1823,669 @@ msgid "Add link to List Item."
 msgstr ""
 
 #: modules/wpbakery/elements/list-group.php:250
-#: modules/wpbakery/elements/pricing.php:1174
 msgid "Preset Colors"
 msgstr ""
 
 #: modules/wpbakery/elements/list-group.php:251
-#: modules/wpbakery/elements/pricing.php:1175
 msgid "Custom Colors"
 msgstr ""
 
 #: modules/wpbakery/elements/list-group.php:253
-#: modules/wpbakery/elements/pricing.php:1177
 msgid "Choose a color for icons and titles."
 msgstr ""
 
 #: modules/wpbakery/elements/list-group.php:260
-#: modules/wpbakery/elements/pricing.php:1184
 msgid "Select custom color for icons."
 msgstr ""
 
 #: modules/wpbakery/elements/list-group.php:271
-#: modules/wpbakery/elements/pricing.php:1195
 msgid "Select custom color for titles."
 msgstr ""
 
-#: modules/wpbakery/elements/modal.php:215
+#: modules/wpbakery/elements/modal.php:218
 msgid "Modal"
 msgstr ""
 
-#: modules/wpbakery/elements/modal.php:227
+#: modules/wpbakery/elements/modal.php:230
 msgid "Start From"
 msgstr ""
 
-#: modules/wpbakery/elements/modal.php:230
-#: modules/wpbakery/elements/pricing.php:682
-#: modules/wpbakery/elements/pricing.php:736
-#: modules/wpbakery/elements/pricing.php:790
-#: modules/wpbakery/elements/pricing.php:844
-#: modules/wpbakery/elements/pricing.php:898
-#: modules/wpbakery/elements/pricing.php:952
+#: modules/wpbakery/elements/modal.php:233
+#: modules/wpbakery/elements/pricing.php:783
+#: modules/wpbakery/elements/pricing.php:837
+#: modules/wpbakery/elements/pricing.php:891
+#: modules/wpbakery/elements/pricing.php:945
+#: modules/wpbakery/elements/pricing.php:999
+#: modules/wpbakery/elements/pricing.php:1053
 msgid "Button"
 msgstr ""
 
-#: modules/wpbakery/elements/modal.php:231
+#: modules/wpbakery/elements/modal.php:234
 msgid "Image"
 msgstr ""
 
-#: modules/wpbakery/elements/modal.php:234
+#: modules/wpbakery/elements/modal.php:237
 msgid "Select start mode."
 msgstr ""
 
-#: modules/wpbakery/elements/modal.php:241
+#: modules/wpbakery/elements/modal.php:244
 msgid "Enter Title."
 msgstr ""
 
-#: modules/wpbakery/elements/modal.php:253
+#: modules/wpbakery/elements/modal.php:256
+#: modules/wpbakery/elements/team-member.php:196
+#: modules/wpbakery/elements/team-member.php:225
 msgid "span"
 msgstr ""
 
-#: modules/wpbakery/elements/modal.php:254
+#: modules/wpbakery/elements/modal.php:257
 msgid "h1"
 msgstr ""
 
-#: modules/wpbakery/elements/modal.php:255
+#: modules/wpbakery/elements/modal.php:258
 msgid "h2"
 msgstr ""
 
-#: modules/wpbakery/elements/modal.php:256
+#: modules/wpbakery/elements/modal.php:259
 msgid "h3"
 msgstr ""
 
-#: modules/wpbakery/elements/modal.php:257
+#: modules/wpbakery/elements/modal.php:260
 msgid "h4"
 msgstr ""
 
-#: modules/wpbakery/elements/modal.php:258
+#: modules/wpbakery/elements/modal.php:261
 msgid "h5"
 msgstr ""
 
-#: modules/wpbakery/elements/modal.php:259
+#: modules/wpbakery/elements/modal.php:262
 msgid "h6"
 msgstr ""
 
-#: modules/wpbakery/elements/modal.php:263
+#: modules/wpbakery/elements/modal.php:266
 msgid "Select element tag."
 msgstr ""
 
-#: modules/wpbakery/elements/modal.php:274
+#: modules/wpbakery/elements/modal.php:277
 msgid "Select custom title color."
 msgstr ""
 
-#: modules/wpbakery/elements/modal.php:290
+#: modules/wpbakery/elements/modal.php:293
 msgid "Select alignment."
 msgstr ""
 
-#: modules/wpbakery/elements/modal.php:295
+#: modules/wpbakery/elements/modal.php:298
 msgid "Initial Height"
 msgstr ""
 
-#: modules/wpbakery/elements/modal.php:299
+#: modules/wpbakery/elements/modal.php:302
 msgid "5"
 msgstr ""
 
-#: modules/wpbakery/elements/modal.php:300
+#: modules/wpbakery/elements/modal.php:303
 msgid "10"
 msgstr ""
 
-#: modules/wpbakery/elements/modal.php:301
+#: modules/wpbakery/elements/modal.php:304
 msgid "15"
 msgstr ""
 
-#: modules/wpbakery/elements/modal.php:302
+#: modules/wpbakery/elements/modal.php:305
 msgid "20"
 msgstr ""
 
-#: modules/wpbakery/elements/modal.php:303
+#: modules/wpbakery/elements/modal.php:306
 msgid "25"
 msgstr ""
 
-#: modules/wpbakery/elements/modal.php:304
+#: modules/wpbakery/elements/modal.php:307
 msgid "30"
 msgstr ""
 
-#: modules/wpbakery/elements/modal.php:305
+#: modules/wpbakery/elements/modal.php:308
 msgid "35"
 msgstr ""
 
-#: modules/wpbakery/elements/modal.php:306
+#: modules/wpbakery/elements/modal.php:309
 msgid "40"
 msgstr ""
 
-#: modules/wpbakery/elements/modal.php:307
+#: modules/wpbakery/elements/modal.php:310
 msgid "45"
 msgstr ""
 
-#: modules/wpbakery/elements/modal.php:308
+#: modules/wpbakery/elements/modal.php:311
 msgid "50"
 msgstr ""
 
-#: modules/wpbakery/elements/modal.php:310
+#: modules/wpbakery/elements/modal.php:313
 msgid "Select the initial height for modal."
 msgstr ""
 
-#: modules/wpbakery/elements/modal.php:320
+#: modules/wpbakery/elements/modal.php:323
 msgid "Select shape."
 msgstr ""
 
-#: modules/wpbakery/elements/modal.php:336
+#: modules/wpbakery/elements/modal.php:339
 msgid "Outline Shape"
 msgstr ""
 
-#: modules/wpbakery/elements/modal.php:337
+#: modules/wpbakery/elements/modal.php:340
 msgid "Select outilne shape."
 msgstr ""
 
-#: modules/wpbakery/elements/modal.php:341
+#: modules/wpbakery/elements/modal.php:344
 msgid "Outline"
 msgstr ""
 
-#: modules/wpbakery/elements/modal.php:342
+#: modules/wpbakery/elements/modal.php:345
 msgid "Outline 2x"
 msgstr ""
 
-#: modules/wpbakery/elements/modal.php:343
+#: modules/wpbakery/elements/modal.php:346
 msgid "Outline 3x"
 msgstr ""
 
-#: modules/wpbakery/elements/modal.php:344
+#: modules/wpbakery/elements/modal.php:347
 msgid "Outline 4x"
 msgstr ""
 
-#: modules/wpbakery/elements/modal.php:345
+#: modules/wpbakery/elements/modal.php:348
 msgid "Outline 5x"
 msgstr ""
 
-#: modules/wpbakery/elements/modal.php:356
+#: modules/wpbakery/elements/modal.php:359
 msgid "Button Color"
 msgstr ""
 
-#: modules/wpbakery/elements/modal.php:374
-#: modules/wpbakery/elements/modal.php:386
-#: modules/wpbakery/elements/modal.php:398
+#: modules/wpbakery/elements/modal.php:377
+#: modules/wpbakery/elements/modal.php:389
+#: modules/wpbakery/elements/modal.php:401
 msgid "Select color."
 msgstr ""
 
-#: modules/wpbakery/elements/modal.php:384
-#: modules/wpbakery/elements/pricing.php:609
+#: modules/wpbakery/elements/modal.php:387
+#: modules/wpbakery/elements/pricing.php:710
 msgid "Background Color"
 msgstr ""
 
-#: modules/wpbakery/elements/modal.php:396
+#: modules/wpbakery/elements/modal.php:399
 msgid "Outline Color"
 msgstr ""
 
-#: modules/wpbakery/elements/modal.php:409
+#: modules/wpbakery/elements/modal.php:412
 msgid "Select button size."
 msgstr ""
 
-#: modules/wpbakery/elements/modal.php:412
-#: modules/wpbakery/elements/pricing.php:637
+#: modules/wpbakery/elements/modal.php:415
+#: modules/wpbakery/elements/pricing.php:738
 msgid "Small"
 msgstr ""
 
-#: modules/wpbakery/elements/modal.php:413
+#: modules/wpbakery/elements/modal.php:416
 msgid "Normal"
 msgstr ""
 
-#: modules/wpbakery/elements/modal.php:414
-#: modules/wpbakery/elements/pricing.php:639
+#: modules/wpbakery/elements/modal.php:417
+#: modules/wpbakery/elements/pricing.php:740
 msgid "Large"
 msgstr ""
 
-#: modules/wpbakery/elements/modal.php:415
-#: modules/wpbakery/elements/pricing.php:640
+#: modules/wpbakery/elements/modal.php:418
+#: modules/wpbakery/elements/pricing.php:741
 msgid "Block"
 msgstr ""
 
-#: modules/wpbakery/elements/pricing.php:343
+#: modules/wpbakery/elements/pricing.php:295
 msgid "Pricing"
 msgstr ""
 
-#: modules/wpbakery/elements/pricing.php:363
+#: modules/wpbakery/elements/pricing.php:300
+msgid "Create nice looking pricing tables"
+msgstr ""
+
+#: modules/wpbakery/elements/pricing.php:312
 msgid "Price"
 msgstr ""
 
-#: modules/wpbakery/elements/pricing.php:365
+#: modules/wpbakery/elements/pricing.php:314
 msgid "Enter the price for this package. e.g. 999."
 msgstr ""
 
-#: modules/wpbakery/elements/pricing.php:370
+#: modules/wpbakery/elements/pricing.php:319
 msgid "Currency"
 msgstr ""
 
-#: modules/wpbakery/elements/pricing.php:372
+#: modules/wpbakery/elements/pricing.php:321
 msgid "Enter the price unit for this package. e.g. $."
 msgstr ""
 
-#: modules/wpbakery/elements/pricing.php:377
+#: modules/wpbakery/elements/pricing.php:326
 msgid "Plan"
 msgstr ""
 
-#: modules/wpbakery/elements/pricing.php:379
+#: modules/wpbakery/elements/pricing.php:328
 msgid "Enter the plan for this package. e.g. per month."
 msgstr ""
 
-#: modules/wpbakery/elements/pricing.php:384
-#: modules/wpbakery/elements/pricing.php:679
-#: modules/wpbakery/elements/pricing.php:733
+#: modules/wpbakery/elements/pricing.php:334
+#: modules/wpbakery/elements/pricing.php:780
+#: modules/wpbakery/elements/pricing.php:834
+#: modules/wpbakery/elements/pricing.php:888
+#: modules/wpbakery/elements/pricing.php:942
+#: modules/wpbakery/elements/pricing.php:996
+#: modules/wpbakery/elements/pricing.php:1050
+msgid "Sub Heading"
+msgstr ""
+
+#: modules/wpbakery/elements/pricing.php:336
+msgid "Enter short description."
+msgstr ""
+
+#: modules/wpbakery/elements/pricing.php:346
+msgid "Feature 1"
+msgstr ""
+
+#: modules/wpbakery/elements/pricing.php:348
+#: modules/wpbakery/elements/pricing.php:356
+#: modules/wpbakery/elements/pricing.php:364
+#: modules/wpbakery/elements/pricing.php:372
+#: modules/wpbakery/elements/pricing.php:380
+#: modules/wpbakery/elements/pricing.php:388
+#: modules/wpbakery/elements/pricing.php:396
+#: modules/wpbakery/elements/pricing.php:404
+#: modules/wpbakery/elements/pricing.php:412
+#: modules/wpbakery/elements/pricing.php:420
+#: modules/wpbakery/elements/pricing.php:428
+#: modules/wpbakery/elements/pricing.php:436
+#: modules/wpbakery/elements/pricing.php:444
+#: modules/wpbakery/elements/pricing.php:452
+#: modules/wpbakery/elements/pricing.php:460
+msgid "Enter feature."
+msgstr ""
+
+#: modules/wpbakery/elements/pricing.php:354
+msgid "Feature 2"
+msgstr ""
+
+#: modules/wpbakery/elements/pricing.php:362
+msgid "Feature 3"
+msgstr ""
+
+#: modules/wpbakery/elements/pricing.php:370
+msgid "Feature 4"
+msgstr ""
+
+#: modules/wpbakery/elements/pricing.php:378
+msgid "Feature 5"
+msgstr ""
+
+#: modules/wpbakery/elements/pricing.php:386
+msgid "Feature 6"
+msgstr ""
+
+#: modules/wpbakery/elements/pricing.php:394
+msgid "Feature 7"
+msgstr ""
+
+#: modules/wpbakery/elements/pricing.php:402
+msgid "Feature 8"
+msgstr ""
+
+#: modules/wpbakery/elements/pricing.php:410
+msgid "Feature 9"
+msgstr ""
+
+#: modules/wpbakery/elements/pricing.php:418
+msgid "Feature 10"
+msgstr ""
+
+#: modules/wpbakery/elements/pricing.php:426
+msgid "Feature 11"
+msgstr ""
+
+#: modules/wpbakery/elements/pricing.php:434
+msgid "Feature 12"
+msgstr ""
+
+#: modules/wpbakery/elements/pricing.php:442
+msgid "Feature 13"
+msgstr ""
+
+#: modules/wpbakery/elements/pricing.php:450
+msgid "Feature 14"
+msgstr ""
+
+#: modules/wpbakery/elements/pricing.php:458
+msgid "Feature 15"
+msgstr ""
+
+#: modules/wpbakery/elements/pricing.php:466
+msgid "Features Color"
+msgstr ""
+
+#: modules/wpbakery/elements/pricing.php:468
+#: modules/wpbakery/elements/team-member.php:403
+msgid "Select custom color."
+msgstr ""
+
+#: modules/wpbakery/elements/pricing.php:474
+msgid "Features Icon"
+msgstr ""
+
+#: modules/wpbakery/elements/pricing.php:478
+msgid "Arrow"
+msgstr ""
+
+#: modules/wpbakery/elements/pricing.php:479
+msgid "Check"
+msgstr ""
+
+#: modules/wpbakery/elements/pricing.php:480
+msgid "More"
+msgstr ""
+
+#: modules/wpbakery/elements/pricing.php:481
+msgid "Star"
+msgstr ""
+
+#: modules/wpbakery/elements/pricing.php:483
+msgid "Select icon for featured list."
+msgstr ""
+
+#: modules/wpbakery/elements/pricing.php:488
+msgid "Features Icon Color"
+msgstr ""
+
+#: modules/wpbakery/elements/pricing.php:496
+msgid "Features Spacing"
+msgstr ""
+
+#: modules/wpbakery/elements/pricing.php:498
+msgid "Select features spacing. e.g. 16px."
+msgstr ""
+
+#: modules/wpbakery/elements/pricing.php:504
+msgid "Features Line List"
+msgstr ""
+
+#: modules/wpbakery/elements/pricing.php:508
+msgid "Enable Features Line List."
+msgstr ""
+
+#: modules/wpbakery/elements/pricing.php:514
+msgid "Features Line List Color"
+msgstr ""
+
+#: modules/wpbakery/elements/pricing.php:516
+msgid "Select custom line color."
+msgstr ""
+
+#: modules/wpbakery/elements/pricing.php:526
+msgid "Shadow Pricing Table"
+msgstr ""
+
+#: modules/wpbakery/elements/pricing.php:529
+msgid "Apply shadow on the Pricing table."
+msgstr ""
+
+#: modules/wpbakery/elements/pricing.php:656
+msgid "Icon Spacing"
+msgstr ""
+
+#: modules/wpbakery/elements/pricing.php:694
+msgid "Add link to button."
+msgstr ""
+
+#: modules/wpbakery/elements/pricing.php:702
+msgid "Select button text color."
+msgstr ""
+
+#: modules/wpbakery/elements/pricing.php:712
+msgid "Select button background color."
+msgstr ""
+
+#: modules/wpbakery/elements/pricing.php:719
+msgid "Select button shape."
+msgstr ""
+
+#: modules/wpbakery/elements/pricing.php:737
+msgid "Extra Small"
+msgstr ""
+
+#: modules/wpbakery/elements/pricing.php:739
+#: modules/wpbakery/elements/team-member.php:289
+msgid "Medium"
+msgstr ""
+
+#: modules/wpbakery/elements/pricing.php:743
+msgid "Select button display size."
+msgstr ""
+
+#: modules/wpbakery/elements/pricing.php:749
+msgid "Extra Size"
+msgstr ""
+
+#: modules/wpbakery/elements/pricing.php:751
+msgid "Enter extra size."
+msgstr ""
+
+#: modules/wpbakery/elements/pricing.php:764
+msgid "Select button alignment."
+msgstr ""
+
+#: modules/wpbakery/elements/pricing.php:774
+msgid "First Area"
+msgstr ""
+
+#: modules/wpbakery/elements/pricing.php:781
+#: modules/wpbakery/elements/pricing.php:835
+#: modules/wpbakery/elements/pricing.php:889
+#: modules/wpbakery/elements/pricing.php:943
+#: modules/wpbakery/elements/pricing.php:997
+#: modules/wpbakery/elements/pricing.php:1051
+msgid "Price and Plan"
+msgstr ""
+
+#: modules/wpbakery/elements/pricing.php:782
+#: modules/wpbakery/elements/pricing.php:836
+#: modules/wpbakery/elements/pricing.php:890
+#: modules/wpbakery/elements/pricing.php:944
+#: modules/wpbakery/elements/pricing.php:998
+#: modules/wpbakery/elements/pricing.php:1052
+msgid "Featured List"
+msgstr ""
+
+#: modules/wpbakery/elements/pricing.php:784
+#: modules/wpbakery/elements/pricing.php:838
+#: modules/wpbakery/elements/pricing.php:892
+#: modules/wpbakery/elements/pricing.php:946
+#: modules/wpbakery/elements/pricing.php:1000
+#: modules/wpbakery/elements/pricing.php:1054
+msgid "Disable"
+msgstr ""
+
 #: modules/wpbakery/elements/pricing.php:787
 #: modules/wpbakery/elements/pricing.php:841
 #: modules/wpbakery/elements/pricing.php:895
 #: modules/wpbakery/elements/pricing.php:949
-msgid "Sub Heading"
+#: modules/wpbakery/elements/pricing.php:1003
+#: modules/wpbakery/elements/pricing.php:1057
+msgid "Choose the element."
 msgstr ""
 
-#: modules/wpbakery/elements/pricing.php:386
-msgid "Enter short description."
+#: modules/wpbakery/elements/pricing.php:792
+msgid "Margin First Area"
 msgstr ""
 
-#: modules/wpbakery/elements/pricing.php:395
-msgid "Features Spacing"
-msgstr ""
-
-#: modules/wpbakery/elements/pricing.php:397
-msgid "Select features spacing. e.g. 16px."
-msgstr ""
-
-#: modules/wpbakery/elements/pricing.php:403
-msgid "Features Line List"
-msgstr ""
-
-#: modules/wpbakery/elements/pricing.php:407
-msgid "Enable Features Line List."
-msgstr ""
-
-#: modules/wpbakery/elements/pricing.php:413
-msgid "Features Line List Color"
-msgstr ""
-
-#: modules/wpbakery/elements/pricing.php:415
-msgid "Select custom line color."
-msgstr ""
-
-#: modules/wpbakery/elements/pricing.php:425
-msgid "Shadow Pricing Table"
-msgstr ""
-
-#: modules/wpbakery/elements/pricing.php:428
-msgid "Apply shadow on the Pricing table."
-msgstr ""
-
-#: modules/wpbakery/elements/pricing.php:555
-msgid "Icon Spacing"
-msgstr ""
-
-#: modules/wpbakery/elements/pricing.php:593
-msgid "Add link to button."
-msgstr ""
-
-#: modules/wpbakery/elements/pricing.php:601
-msgid "Select button text color."
-msgstr ""
-
-#: modules/wpbakery/elements/pricing.php:611
-msgid "Select button background color."
-msgstr ""
-
-#: modules/wpbakery/elements/pricing.php:618
-msgid "Select button shape."
-msgstr ""
-
-#: modules/wpbakery/elements/pricing.php:636
-msgid "Extra Small"
-msgstr ""
-
-#: modules/wpbakery/elements/pricing.php:638
-msgid "Medium"
-msgstr ""
-
-#: modules/wpbakery/elements/pricing.php:642
-msgid "Select button display size."
-msgstr ""
-
-#: modules/wpbakery/elements/pricing.php:648
-msgid "Extra Size"
-msgstr ""
-
-#: modules/wpbakery/elements/pricing.php:650
-msgid "Enter extra size."
-msgstr ""
-
-#: modules/wpbakery/elements/pricing.php:663
-msgid "Select button alignment."
-msgstr ""
-
-#: modules/wpbakery/elements/pricing.php:673
-msgid "First Area"
-msgstr ""
-
-#: modules/wpbakery/elements/pricing.php:680
-#: modules/wpbakery/elements/pricing.php:734
-#: modules/wpbakery/elements/pricing.php:788
-#: modules/wpbakery/elements/pricing.php:842
-#: modules/wpbakery/elements/pricing.php:896
-#: modules/wpbakery/elements/pricing.php:950
-msgid "Price and Plan"
-msgstr ""
-
-#: modules/wpbakery/elements/pricing.php:681
-#: modules/wpbakery/elements/pricing.php:735
-#: modules/wpbakery/elements/pricing.php:789
-#: modules/wpbakery/elements/pricing.php:843
-#: modules/wpbakery/elements/pricing.php:897
-#: modules/wpbakery/elements/pricing.php:951
-msgid "Featured List"
-msgstr ""
-
-#: modules/wpbakery/elements/pricing.php:683
-#: modules/wpbakery/elements/pricing.php:737
-#: modules/wpbakery/elements/pricing.php:791
-#: modules/wpbakery/elements/pricing.php:845
-#: modules/wpbakery/elements/pricing.php:899
-#: modules/wpbakery/elements/pricing.php:953
-msgid "Disable"
-msgstr ""
-
-#: modules/wpbakery/elements/pricing.php:686
-#: modules/wpbakery/elements/pricing.php:740
 #: modules/wpbakery/elements/pricing.php:794
 #: modules/wpbakery/elements/pricing.php:848
 #: modules/wpbakery/elements/pricing.php:902
 #: modules/wpbakery/elements/pricing.php:956
-msgid "Choose the element."
-msgstr ""
-
-#: modules/wpbakery/elements/pricing.php:691
-msgid "Margin First Area"
-msgstr ""
-
-#: modules/wpbakery/elements/pricing.php:693
-#: modules/wpbakery/elements/pricing.php:747
-#: modules/wpbakery/elements/pricing.php:801
-#: modules/wpbakery/elements/pricing.php:855
-#: modules/wpbakery/elements/pricing.php:909
-#: modules/wpbakery/elements/pricing.php:963
+#: modules/wpbakery/elements/pricing.php:1010
+#: modules/wpbakery/elements/pricing.php:1064
 msgid "Enter margin. e.g. 16px."
 msgstr ""
 
-#: modules/wpbakery/elements/pricing.php:703
+#: modules/wpbakery/elements/pricing.php:804
 msgid "Padding First Area"
 msgstr ""
 
-#: modules/wpbakery/elements/pricing.php:705
-#: modules/wpbakery/elements/pricing.php:759
-#: modules/wpbakery/elements/pricing.php:813
-#: modules/wpbakery/elements/pricing.php:867
-#: modules/wpbakery/elements/pricing.php:921
-#: modules/wpbakery/elements/pricing.php:975
+#: modules/wpbakery/elements/pricing.php:806
+#: modules/wpbakery/elements/pricing.php:860
+#: modules/wpbakery/elements/pricing.php:914
+#: modules/wpbakery/elements/pricing.php:968
+#: modules/wpbakery/elements/pricing.php:1022
+#: modules/wpbakery/elements/pricing.php:1076
 msgid "Enter padding. e.g. 16px."
 msgstr ""
 
-#: modules/wpbakery/elements/pricing.php:715
+#: modules/wpbakery/elements/pricing.php:816
 msgid "Background First Area"
 msgstr ""
 
-#: modules/wpbakery/elements/pricing.php:717
+#: modules/wpbakery/elements/pricing.php:818
 msgid "Select custom background color for first area."
 msgstr ""
 
-#: modules/wpbakery/elements/pricing.php:727
+#: modules/wpbakery/elements/pricing.php:828
 msgid "Second Area"
 msgstr ""
 
-#: modules/wpbakery/elements/pricing.php:745
+#: modules/wpbakery/elements/pricing.php:846
 msgid "Margin Second Area"
 msgstr ""
 
-#: modules/wpbakery/elements/pricing.php:757
+#: modules/wpbakery/elements/pricing.php:858
 msgid "Padding Second Area"
 msgstr ""
 
-#: modules/wpbakery/elements/pricing.php:769
+#: modules/wpbakery/elements/pricing.php:870
 msgid "Background Second Area"
 msgstr ""
 
-#: modules/wpbakery/elements/pricing.php:771
+#: modules/wpbakery/elements/pricing.php:872
 msgid "Select custom background color for second area."
 msgstr ""
 
-#: modules/wpbakery/elements/pricing.php:781
+#: modules/wpbakery/elements/pricing.php:882
 msgid "Third Area"
 msgstr ""
 
-#: modules/wpbakery/elements/pricing.php:799
+#: modules/wpbakery/elements/pricing.php:900
 msgid "Margin Third Area"
 msgstr ""
 
-#: modules/wpbakery/elements/pricing.php:811
+#: modules/wpbakery/elements/pricing.php:912
 msgid "Padding Third Area"
 msgstr ""
 
-#: modules/wpbakery/elements/pricing.php:823
+#: modules/wpbakery/elements/pricing.php:924
 msgid "Background Third Area"
 msgstr ""
 
-#: modules/wpbakery/elements/pricing.php:825
+#: modules/wpbakery/elements/pricing.php:926
 msgid "Select custom background color for third area."
 msgstr ""
 
-#: modules/wpbakery/elements/pricing.php:835
+#: modules/wpbakery/elements/pricing.php:936
 msgid "Fourth Area"
 msgstr ""
 
-#: modules/wpbakery/elements/pricing.php:853
+#: modules/wpbakery/elements/pricing.php:954
 msgid "Margin Fourth Area"
 msgstr ""
 
-#: modules/wpbakery/elements/pricing.php:865
+#: modules/wpbakery/elements/pricing.php:966
 msgid "Padding Fourth Area"
 msgstr ""
 
-#: modules/wpbakery/elements/pricing.php:877
+#: modules/wpbakery/elements/pricing.php:978
 msgid "Background Fourth Area"
 msgstr ""
 
-#: modules/wpbakery/elements/pricing.php:879
+#: modules/wpbakery/elements/pricing.php:980
 msgid "Select custom background color for fourth area."
 msgstr ""
 
-#: modules/wpbakery/elements/pricing.php:889
+#: modules/wpbakery/elements/pricing.php:990
 msgid "Fifth Area"
 msgstr ""
 
-#: modules/wpbakery/elements/pricing.php:907
+#: modules/wpbakery/elements/pricing.php:1008
 msgid "Margin Fifth Area"
 msgstr ""
 
-#: modules/wpbakery/elements/pricing.php:919
+#: modules/wpbakery/elements/pricing.php:1020
 msgid "Padding Fifth Area"
 msgstr ""
 
-#: modules/wpbakery/elements/pricing.php:931
+#: modules/wpbakery/elements/pricing.php:1032
 msgid "Background Fifth Area"
 msgstr ""
 
-#: modules/wpbakery/elements/pricing.php:933
+#: modules/wpbakery/elements/pricing.php:1034
 msgid "Select custom background color for fifth area."
 msgstr ""
 
-#: modules/wpbakery/elements/pricing.php:943
+#: modules/wpbakery/elements/pricing.php:1044
 msgid "Sixth Area"
 msgstr ""
 
-#: modules/wpbakery/elements/pricing.php:961
+#: modules/wpbakery/elements/pricing.php:1062
 msgid "Margin Sixth Area"
 msgstr ""
 
-#: modules/wpbakery/elements/pricing.php:973
+#: modules/wpbakery/elements/pricing.php:1074
 msgid "Padding Sixth Area"
 msgstr ""
 
-#: modules/wpbakery/elements/pricing.php:985
+#: modules/wpbakery/elements/pricing.php:1086
 msgid "Background Sixth Area"
 msgstr ""
 
-#: modules/wpbakery/elements/pricing.php:987
+#: modules/wpbakery/elements/pricing.php:1088
 msgid "Select custom background color for sixth area."
 msgstr ""
 
-#: modules/wpbakery/elements/pricing.php:1063
+#: modules/wpbakery/elements/pricing.php:1164
 msgid "Price Font Size"
 msgstr ""
 
-#: modules/wpbakery/elements/pricing.php:1071
+#: modules/wpbakery/elements/pricing.php:1172
 msgid "Price Line Height"
 msgstr ""
 
-#: modules/wpbakery/elements/pricing.php:1079
+#: modules/wpbakery/elements/pricing.php:1180
 msgid "Price Spacing"
 msgstr ""
 
-#: modules/wpbakery/elements/pricing.php:1086
+#: modules/wpbakery/elements/pricing.php:1187
 msgid "Price Alignment"
 msgstr ""
 
-#: modules/wpbakery/elements/pricing.php:1093
+#: modules/wpbakery/elements/pricing.php:1194
 msgid "Select price alignment."
 msgstr ""
 
-#: modules/wpbakery/elements/pricing.php:1099
+#: modules/wpbakery/elements/pricing.php:1200
 msgid "Price Color"
 msgstr ""
 
-#: modules/wpbakery/elements/pricing.php:1101
+#: modules/wpbakery/elements/pricing.php:1202
 msgid "Select custom color for the price."
 msgstr ""
 
-#: modules/wpbakery/elements/pricing.php:1107
+#: modules/wpbakery/elements/pricing.php:1208
 msgid "Currency Font Size"
 msgstr ""
 
-#: modules/wpbakery/elements/pricing.php:1115
+#: modules/wpbakery/elements/pricing.php:1216
 msgid "Currency Spacing"
 msgstr ""
 
-#: modules/wpbakery/elements/pricing.php:1117
+#: modules/wpbakery/elements/pricing.php:1218
 msgid "Select spacing. e.g. 16px."
-msgstr ""
-
-#: modules/wpbakery/elements/pricing.php:1149
-msgid "Feature"
 msgstr ""
 
 #: modules/wpbakery/elements/progress-bar.php:87
@@ -2431,6 +2533,145 @@ msgstr ""
 msgid "Select a SVG Icon from media library."
 msgstr ""
 
+#: modules/wpbakery/elements/team-member.php:147
+msgid "Team Member"
+msgstr ""
+
+#: modules/wpbakery/elements/team-member.php:152
+msgid "Create a stylish team member with the impressive options"
+msgstr ""
+
+#: modules/wpbakery/elements/team-member.php:157
+msgid "Picture"
+msgstr ""
+
+#: modules/wpbakery/elements/team-member.php:159
+msgid "Upload team member picture."
+msgstr ""
+
+#: modules/wpbakery/elements/team-member.php:164
+msgid "Picture Size"
+msgstr ""
+
+#: modules/wpbakery/elements/team-member.php:166
+msgid ""
+"Enter image size (Example: \"thumbnail\", \"medium\", \"large\", \"full\" or "
+"other sizes defined by theme). Alternatively enter size in pixels (Example: "
+"200x100 (Width x Height))."
+msgstr ""
+
+#: modules/wpbakery/elements/team-member.php:176
+#: modules/wpbakery/elements/testimonial.php:188
+msgid "Name"
+msgstr ""
+
+#: modules/wpbakery/elements/team-member.php:185
+#: modules/wpbakery/elements/team-member.php:214
+msgid "Tag"
+msgstr ""
+
+#: modules/wpbakery/elements/team-member.php:188
+#: modules/wpbakery/elements/team-member.php:217
+msgid "Default"
+msgstr ""
+
+#: modules/wpbakery/elements/team-member.php:194
+#: modules/wpbakery/elements/team-member.php:223
+msgid "Div"
+msgstr ""
+
+#: modules/wpbakery/elements/team-member.php:198
+msgid "Default is H3"
+msgstr ""
+
+#: modules/wpbakery/elements/team-member.php:205
+msgid "Job Position"
+msgstr ""
+
+#: modules/wpbakery/elements/team-member.php:227
+msgid "Default is H4"
+msgstr ""
+
+#: modules/wpbakery/elements/team-member.php:247
+msgid "Behance"
+msgstr ""
+
+#: modules/wpbakery/elements/team-member.php:254
+msgid "Dribbble"
+msgstr ""
+
+#: modules/wpbakery/elements/team-member.php:261
+msgid "Facebook"
+msgstr ""
+
+#: modules/wpbakery/elements/team-member.php:268
+msgid "Github"
+msgstr ""
+
+#: modules/wpbakery/elements/team-member.php:275
+msgid "Instagram"
+msgstr ""
+
+#: modules/wpbakery/elements/team-member.php:282
+msgid "Linkedin"
+msgstr ""
+
+#: modules/wpbakery/elements/team-member.php:296
+msgid "Pinterest"
+msgstr ""
+
+#: modules/wpbakery/elements/team-member.php:303
+msgid "Reddit"
+msgstr ""
+
+#: modules/wpbakery/elements/team-member.php:310
+msgid "Snapchat"
+msgstr ""
+
+#: modules/wpbakery/elements/team-member.php:317
+msgid "TikTok"
+msgstr ""
+
+#: modules/wpbakery/elements/team-member.php:324
+msgid "Twitch"
+msgstr ""
+
+#: modules/wpbakery/elements/team-member.php:331
+msgid "Twitter"
+msgstr ""
+
+#: modules/wpbakery/elements/team-member.php:338
+msgid "Vimeo"
+msgstr ""
+
+#: modules/wpbakery/elements/team-member.php:345
+msgid "WeChat"
+msgstr ""
+
+#: modules/wpbakery/elements/team-member.php:352
+msgid "WhatsApp"
+msgstr ""
+
+#: modules/wpbakery/elements/team-member.php:359
+msgid "Youtube"
+msgstr ""
+
+#: modules/wpbakery/elements/team-member.php:366
+msgid "Open in new window"
+msgstr ""
+
+#: modules/wpbakery/elements/team-member.php:374
+msgid "Add nofollow"
+msgstr ""
+
+#: modules/wpbakery/elements/team-member.php:388
+msgid "Color"
+msgstr ""
+
+#: modules/wpbakery/elements/team-member.php:395
+msgid "Default is Primary Color"
+msgstr ""
+
 #: modules/wpbakery/elements/testimonial.php:140
 msgid "Testimonial"
 msgstr ""
@@ -2447,10 +2688,6 @@ msgstr ""
 msgid "Testimonial content panels item."
 msgstr ""
 
-#: modules/wpbakery/elements/testimonial.php:188
-msgid "Name"
-msgstr ""
-
 #: modules/wpbakery/elements/testimonial.php:193
 msgid "Occupation"
 msgstr ""
@@ -2461,6 +2698,10 @@ msgstr ""
 
 #: modules/wpbakery/elements/testimonial.php:201
 msgid "Select image from media library."
+msgstr ""
+
+#: modules/wpbakery/elements/testimonial.php:206
+msgid "Content"
 msgstr ""
 
 #: modules/wpbakery/elements/testimonial.php:213

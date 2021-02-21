@@ -31,7 +31,7 @@ vc_lean_map( 'borderless_wpbakery_semi_circular_progress_bar', null, $borderless
 
 vc_lean_map( 'borderless_wpbakery_svg', null, $borderless_element_path . 'svg.php' ); 
 
-//vc_lean_map( 'borderless_wpbakery_team_member', null, $borderless_element_path . 'team-member.php' ); 
+vc_lean_map( 'borderless_wpbakery_team_member', null, $borderless_element_path . 'team-member.php' ); 
 
 /*-----------------------------------------------------------------------------------*/
 /*	Essencial Nested Elements
