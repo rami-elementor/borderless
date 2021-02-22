@@ -4,7 +4,7 @@
 Plugin Name: Borderless
 Plugin URI: https://borderless.visualmodo.com/
 Description: One service packed with powerful tools to help you reach your purposes.
-Version: 1.0.7
+Version: 1.0.8
 Author: Visualmodo
 Author URI: https://visualmodo.com
 License: GPLv3 or later
@@ -18,7 +18,7 @@ defined( 'ABSPATH' ) || exit;
 /**
 * Define Constants.
 */
-define( 'BORDERLESS__VERSION', '1.0.7' );
+define( 'BORDERLESS__VERSION', '1.0.8' );
 define( 'BORDERLESS__DIR', plugin_dir_path( __FILE__ ) );
 define( 'BORDERLESS__INC', BORDERLESS__DIR . '/includes' );
 define( 'BORDERLESS__WPBAKERY', BORDERLESS__DIR . '/modules/wpbakery' );
@@ -34,7 +34,7 @@ $options = get_option( 'borderless' ); // Just for enable/disable requires.
 require_once( BORDERLESS__DIR . "/dashboard.php");
 require_once( BORDERLESS__INC . "/icon-manager/icon-manager.php");
 require_once( BORDERLESS__INC . "/svg/svg.php");
-if ( isset( $options['elementor'] ) ) { require_once( BORDERLESS__ELEMENTOR . "/elementor.php"); }
+if ( isset( $options['elementor'] ) && did_action( 'elementor/loaded' ) ) { require_once( BORDERLESS__ELEMENTOR . "/elementor.php"); }
 if ( isset( $options['related_posts'] ) ) { require_once( BORDERLESS__RELATED_POSTS . "/related-posts.php"); }
 
 /*-----------------------------------------------------------------------------------*/
@@ -72,9 +72,9 @@ class Borderless {
 				$scheme = 'http';
 			}
 			$this->paths = wp_upload_dir();
-			$this->paths['fonts']   = 'borderless_ip';
+			$this->paths['fonts']   = 'borderless_icon_fonts';
 			$this->paths['fonturl'] = set_url_scheme($this->paths['baseurl'].'/'.$this->paths['fonts'], $scheme);
-			$fonts = get_option('borderless_ip');
+			$fonts = get_option('borderless_icon_fonts');
 			if(is_array($fonts))
 			{
 				foreach($fonts as $font => $info)

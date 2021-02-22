@@ -15,7 +15,7 @@ if ( ! class_exists( 'BORDERLESS_IPM' ) ) {
 		
 		function __construct() {
 			$this->paths            = wp_upload_dir();
-			$this->paths['fonts']   = 'borderless_ip';
+			$this->paths['fonts']   = 'borderless_icon_fonts';
 			$this->paths['temp']    = trailingslashit( $this->paths['fonts'] ) . 'borderless_temp';
 			$this->paths['fontdir'] = trailingslashit( $this->paths['basedir'] ) . $this->paths['fonts'];
 			$this->paths['tempdir'] = trailingslashit( $this->paths['basedir'] ) . $this->paths['temp'];
@@ -33,13 +33,13 @@ if ( ! class_exists( 'BORDERLESS_IPM' ) ) {
 			wp_enqueue_script( 'media-upload' );
 			wp_enqueue_media();
 			wp_enqueue_style( 'borderless-wpbakery-icon-manager-admin', plugin_dir_url( __FILE__ ) . 'assets/css/icon-manager.css' );
-			$custom_fonts = get_option( 'borderless_ip' );
+			$custom_fonts = get_option( 'borderless_icon_fonts' );
 			if ( is_array( $custom_fonts ) ) {
 				foreach ( $custom_fonts as $font => $info ) {
 					if ( strpos( $info['style'], 'http://' ) !== false ) {
 						wp_enqueue_style( 'borderless-' . $font, $info['style'], null, '1.0', 'all' );
 					} else {
-						wp_enqueue_style( 'borderless-' . $font, trailingslashit( $upload_paths['baseurl'] . '/borderless_ip/' ) . $info['style'], null, '1.0', 'all' );
+						wp_enqueue_style( 'borderless-' . $font, trailingslashit( $upload_paths['baseurl'] . '/borderless_icon_fonts/' ) . $info['style'], null, '1.0', 'all' );
 					}
 				}
 			}
@@ -76,7 +76,7 @@ if ( ! class_exists( 'BORDERLESS_IPM' ) ) {
 		
 		public function get_font_manager( $id ) {
 			
-			$fonts  = get_option( 'borderless_ip' );
+			$fonts  = get_option( 'borderless_icon_fonts' );
 			$output = '<div class="icon-manager-preview"><div class="icon-manager-preview-icon preview-icon-' . $id . '"><i class=""></i></div><input class="icon-manager-search-icon" type="text" placeholder="Search for a suitable icon.." /></div>';
 			$output .= '<div id="icon-manager-search-icon-inner">';
 			$output .= '<ul class="icons-list borderless_icon icon-list-' . $id . '">';
@@ -146,7 +146,7 @@ if ( ! class_exists( 'BORDERLESS_IPM' ) ) {
 			</a> &nbsp;<span class="spinner"></span></h2>
 			<div id="msg"></div>
 			<?php
-			$fonts = get_option( 'borderless_ip' );
+			$fonts = get_option( 'borderless_icon_fonts' );
 			if ( is_array( $fonts ) ) :
 				?>
 				<div class="metabox-holder meta-search">
@@ -174,7 +174,7 @@ if ( ! class_exists( 'BORDERLESS_IPM' ) ) {
 		
 		// Generate Icon Pack Preview and settings page
 		static function get_ipm() {
-			$fonts = get_option( 'borderless_ip' );
+			$fonts = get_option( 'borderless_icon_fonts' );
 			$n     = count( $fonts );
 			foreach ( $fonts as $font => $info ) {
 				$icon_set   = array();
@@ -252,7 +252,7 @@ if ( ! class_exists( 'BORDERLESS_IPM' ) ) {
 				die( esc_html__( "Using this feature is reserved for Super Admins. You unfortunately don't have the necessary permissions.", "borderless" ) );
 			}
 			//get the file path of the zip file
-			$attachment = sanitize_text_field( $_POST['values'] );
+			$attachment = $_POST['values'];
 			$path       = realpath( get_attached_file( sanitize_text_field( $attachment['id'] ) ) );
 			$unzipped   = $this->zip_flatten( $path, array( '\.eot', '\.svg', '\.ttf', '\.woff', '\.json', '\.css' ) );
 			// if we were able to unzip the file and save it to our temp folder extract the svg file
@@ -472,7 +472,7 @@ if ( ! class_exists( 'BORDERLESS_IPM' ) ) {
 				}
 				
 				function add_font() {
-					$fonts = get_option( 'borderless_ip' );
+					$fonts = get_option( 'borderless_icon_fonts' );
 					if ( empty( $fonts ) ) {
 						$fonts = array();
 					}
@@ -482,14 +482,14 @@ if ( ! class_exists( 'BORDERLESS_IPM' ) ) {
 						'style'   => $this->ip_name . '/' . $this->ip_name . '.css',
 						'config'  => sanitize_text_field( $this->paths['config'] )
 					);
-					update_option( 'borderless_ip', $fonts );
+					update_option( 'borderless_icon_fonts', $fonts );
 				}
 				
 				function remove_font( $font ) {
-					$fonts = get_option( 'borderless_ip' );
+					$fonts = get_option( 'borderless_icon_fonts' );
 					if ( isset( $fonts[ $font ] ) ) {
 						unset( $fonts[ $font ] );
-						update_option( 'borderless_ip', $fonts );
+						update_option( 'borderless_icon_fonts', $fonts );
 					}
 				}
 				
@@ -517,7 +517,7 @@ if ( ! class_exists( 'BORDERLESS_IPM' ) ) {
 					if ( ! empty( self::$ip_list ) ) {
 						return self::$ip_list;
 					}
-					$extra_fonts = get_option( 'borderless_ip' );
+					$extra_fonts = get_option( 'borderless_icon_fonts' );
 					if ( empty( $extra_fonts ) ) {
 						$extra_fonts = array();
 					}
@@ -567,7 +567,7 @@ if ( ! class_exists( 'BORDERLESS_IPM' ) ) {
 					return $created;
 				}
 			}
-			// Instantiate the Icon Pack Manager
+			// Instantiate the Icon Fonts
 			new BORDERLESS_IPM;
 		}
 		
@@ -577,10 +577,10 @@ if ( ! class_exists( 'BORDERLESS_IPM' ) ) {
 			function borderless_icon_manager_menu() {
 				$icon_manager_page = add_submenu_page(
 					'borderless.php',
-					esc_html__( "Icon Pack Manager", "borderless" ),
-					esc_html__( "Icon Pack Manager", "borderless" ),
+					esc_html__( "Icon Fonts", "borderless" ),
+					esc_html__( "Icon Fonts", "borderless" ),
 					"manage_options",
-					"icon-manager",
+					"borderless-fonts",
 					"borderless_custom_icons_menu"
 				);
 				$BORDERLESS_IPM  = new BORDERLESS_IPM;
@@ -595,13 +595,13 @@ if ( ! class_exists( 'BORDERLESS_IPM' ) ) {
 		
 		function borderless_custom_icons() {
 			$upload_paths = wp_upload_dir();
-			$custom_fonts = get_option( 'borderless_ip' );
+			$custom_fonts = get_option( 'borderless_icon_fonts' );
 			if ( is_array( $custom_fonts ) ) {
 				foreach ( $custom_fonts as $font => $info ) {
 					if ( strpos( $info['style'], 'http://' ) !== false ) {
 						wp_enqueue_style( 'borderless-' . $font, $info['style'], null, '1.0', 'all' );
 					} else {
-						wp_enqueue_style( 'borderless-' . $font, trailingslashit( $upload_paths['baseurl'] . '/borderless_ip/' ) . $info['style'], null, '1.0', 'all' );
+						wp_enqueue_style( 'borderless-' . $font, trailingslashit( $upload_paths['baseurl'] . '/borderless_icon_fonts/' ) . $info['style'], null, '1.0', 'all' );
 					}
 				}
 			}

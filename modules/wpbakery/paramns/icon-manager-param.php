@@ -28,8 +28,8 @@ if(!class_exists('Icon_Manager_Param'))
 			$GLOBALS['pid'] = $GLOBALS['pid'] + 1;
 			$pcnt=$GLOBALS['pid'];
 			
-			$BORDERLESS_IPM = new BORDERLESS_IPM;
-			$font_manager = $BORDERLESS_IPM->get_font_manager($pcnt);
+			$Borderless_IF = new Borderless_IF;
+			$font_manager = $Borderless_IF->get_font_manager($pcnt);
 			$dependency = '';
 			
 			$params = parse_url($_SERVER['HTTP_REFERER']);
