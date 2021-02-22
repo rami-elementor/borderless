@@ -99,16 +99,16 @@ class BorderlessDashboard {
         
         // Admin Page Layout
         
-        ?><div class="wrap ve-page-welcome about-wrap">
+        ?><div class="wrap borderless-page-welcome about-wrap">
         <h1><?php echo sprintf( __( 'Welcome to Borderless %s', 'borderless' ), isset( $matches[0] ) ? $matches[0] : BORDERLESS__VERSION ) ?></h1>
         
         <div class="about-text">
         <?php _e( 'Congratulations! Within minutes you can build complex layouts on the basis of our content elements and without touching a single line of code.', 'borderless' ) ?>
         </div>
-        <div class="wp-badge ve-page-logo">
+        <div class="wp-badge borderless-page-logo">
         <?php echo sprintf( __( 'Version %s', 'borderless' ), BORDERLESS__VERSION ) ?>
         </div>
-        <p class="ve-page-actions">
+        <p class="borderless-page-actions">
         <a href="https://twitter.com/share" class="twitter-share-button"
         data-via="visualmodo"
         data-text="Take full control over your WordPress site with Borderless"
