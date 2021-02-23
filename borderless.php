@@ -4,7 +4,7 @@
 Plugin Name: Borderless
 Plugin URI: https://borderless.visualmodo.com/
 Description: One service packed with powerful tools to help you reach your purposes.
-Version: 1.0.8
+Version: 1.0.9
 Author: Visualmodo
 Author URI: https://visualmodo.com
 License: GPLv3 or later
@@ -18,7 +18,7 @@ defined( 'ABSPATH' ) || exit;
 /**
 * Define Constants.
 */
-define( 'BORDERLESS__VERSION', '1.0.8' );
+define( 'BORDERLESS__VERSION', '1.0.9' );
 define( 'BORDERLESS__DIR', plugin_dir_path( __FILE__ ) );
 define( 'BORDERLESS__INC', BORDERLESS__DIR . '/includes' );
 define( 'BORDERLESS__WPBAKERY', BORDERLESS__DIR . '/modules/wpbakery' );
@@ -57,7 +57,7 @@ class Borderless {
 		wp_enqueue_style( 'borderless_frontend_style' );
 		
 		// If you need any javascript files on front end, here is how you can load them.
-		wp_enqueue_script( 'borderless_frontend_script', plugins_url('assets/scripts/borderless.min.js', __FILE__), array(), BORDERLESS__VERSION, true );
+		wp_enqueue_script( 'borderless_frontend_script', plugins_url('assets/scripts/borderless.min.js', __FILE__), array('jquery'), BORDERLESS__VERSION, true );
 	}
 	
 	function backendAssets($hook) {

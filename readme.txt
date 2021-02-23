@@ -46,6 +46,10 @@ Borderless works like other page builder addon plugin. Go to 'Pages. 'Add new' t
 
 == Changelog ==
 
+= 1.0.9 =
+* Fixed - Jquery load sequence.
+* Fixed - WPBakery Icon Fonts Paramn.
+
 = 1.0.8 =
 * Fixed - Icon Fonts.
 * Fixed - Check if Elementor is Installed

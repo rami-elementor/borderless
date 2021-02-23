@@ -3,8 +3,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 }
 
-if ( ! class_exists( 'BORDERLESS_IPM' ) ) {
-	class BORDERLESS_IPM {
+if ( ! class_exists( 'Borderless_IF' ) ) {
+	class Borderless_IF {
 		var $paths = array();
 		var $svg_file;
 		var $json_file;
@@ -568,7 +568,7 @@ if ( ! class_exists( 'BORDERLESS_IPM' ) ) {
 				}
 			}
 			// Instantiate the Icon Fonts
-			new BORDERLESS_IPM;
+			new Borderless_IF;
 		}
 		
 		add_action( 'admin_menu', 'borderless_icon_manager_menu', 99 );
@@ -583,14 +583,14 @@ if ( ! class_exists( 'BORDERLESS_IPM' ) ) {
 					"borderless-fonts",
 					"borderless_custom_icons_menu"
 				);
-				$BORDERLESS_IPM  = new BORDERLESS_IPM;
-				add_action('admin_print_styles-' . $icon_manager_page, array( $BORDERLESS_IPM, 'admin_scripts' ) );
+				$Borderless_IF  = new Borderless_IF;
+				add_action('admin_print_styles-' . $icon_manager_page, array( $Borderless_IF, 'admin_scripts' ) );
 			}
 		}
 		
 		function borderless_custom_icons_menu() {
-			$BORDERLESS_IPM = new BORDERLESS_IPM;
-			$BORDERLESS_IPM->icon_pack_manager();
+			$Borderless_IF = new Borderless_IF;
+			$Borderless_IF->icon_pack_manager();
 		}
 		
 		function borderless_custom_icons() {

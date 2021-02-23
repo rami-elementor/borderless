@@ -131,7 +131,7 @@ add_filter('wp_prepare_attachment_for_js', 'borderless_svg_prepare_attachment_fo
 //Define styles and scripts for site's front-end
 
 function borderless_svg_scripts() {
-	wp_enqueue_script( 'borderless_svg_js', plugins_url( '/svg.min.js', __FILE__ ), array(), BORDERLESS__VERSION, true );
+	wp_enqueue_script( 'borderless_svg_js', plugins_url( '/svg.min.js', __FILE__ ), array('jquery'), BORDERLESS__VERSION, true );
 	
 	wp_enqueue_script( 'borderless_svg_js' );
 }
