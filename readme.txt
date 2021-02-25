@@ -4,7 +4,7 @@ Tags: page builder, editor, landing page, drag-and-drop, visual composer, WPBake
 Requires at least: 4.7
 Tested up to: 5.6
 Requires PHP: 5.4
-Stable tag: 1.0.8
+Stable tag: 1.1.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -46,6 +46,10 @@ Borderless works like other page builder addon plugin. Go to 'Pages. 'Add new' t
 
 == Changelog ==
 
+= 1.1.0 =
+* New - Elementor Team Member Widget.
+* Removed - fancybox.js.
+
 = 1.0.9 =
 * Fixed - Jquery load sequence.
 * Fixed - WPBakery Icon Fonts Paramn.
@@ -58,7 +62,7 @@ Borderless works like other page builder addon plugin. Go to 'Pages. 'Add new' t
 * Fixed - Visualmodo Icons Conflicting with others Icon Packs.
 
 = 1.0.6 =
-* Added - WPBakery Team Member Element.
+* New - WPBakery Team Member Element.
 * Added - Visualmodo Icon Font.
 
 = 1.0.5 =

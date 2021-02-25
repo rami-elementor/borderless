@@ -38,11 +38,13 @@ class Borderless_Widgets {
 	protected function __construct() {
         include('helper.php');
         include('widgets/contact-form-7.php');
+		include('widgets/team-member.php');
 		add_action( 'elementor/widgets/widgets_registered', [ $this, 'register_widgets' ] );
 	}
 
 	public function register_widgets() {
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Borderless\Widgets\Contact_Form_7() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Borderless\Widgets\Team_Member() );
 	}
 
 }
