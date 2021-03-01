@@ -1,10 +1,9 @@
 <?php
-if(!class_exists('Icon_Manager_Param'))
-{
-	class Icon_Manager_Param
-	{
-		function __construct()
-		{
+if(!class_exists('Icon_Manager_Param')) {
+	class Icon_Manager_Param {
+		function __construct() {
+
+			add_action( 'admin_enqueue_scripts', array( $this, 'icon_fonts_styles' ) );
 			
 			$GLOBALS['pid']=0;
 			$id=null;
@@ -110,6 +109,14 @@ if(!class_exists('Icon_Manager_Param'))
 			}
 			$output .= '<div class="icon-manager-section" data-old-icon-value="'.esc_attr($pcnt).'">'.$font_manager.'</div>';
 			return $output;
+		}
+
+		public function icon_fonts_styles( $hook ) {
+			wp_register_style( 'borderless_wpbakery_icon_fonts', BORDERLESS__URL . 'assets/styles/wpbakery-icon-fonts.css', null, BORDERLESS__VERSION );
+
+			if ( 'post.php' == $hook || 'post-new.php' == $hook ) {
+					wp_enqueue_style( 'borderless_wpbakery_icon_fonts' );
+			}
 		}
 		
 	}

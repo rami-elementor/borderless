@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Borderless\n"
-"POT-Creation-Date: 2021-02-21 18:05-0300\n"
-"PO-Revision-Date: 2021-02-21 18:05-0300\n"
+"POT-Creation-Date: 2021-02-28 12:45-0300\n"
+"PO-Revision-Date: 2021-02-28 12:45-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 "X-Poedit-SearchPathExcluded-1: node_modules\n"
 
-#: borderless.php:112
+#: borderless.php:113
 #, php-format
 msgid ""
 "<strong>%s</strong> requires <strong><a href=\"https://wpbakery.com/\" "
@@ -30,12 +30,8 @@ msgid ""
 "and activated on your site."
 msgstr ""
 
-#: dashboard.php:23
-msgid "Settings"
-msgstr ""
-
 #. Plugin Name of the plugin/theme
-#: dashboard.php:24 modules/elementor/elementor.php:14
+#: dashboard.php:23 dashboard.php:24 modules/elementor/elementor.php:14
 #: modules/wpbakery/elements/alert.php:66
 #: modules/wpbakery/elements/circular-progress-bar.php:84
 #: modules/wpbakery/elements/counter.php:86
@@ -54,77 +50,94 @@ msgstr ""
 msgid "Borderless"
 msgstr ""
 
-#: dashboard.php:50 modules/wpbakery/elements/team-member.php:391
+#: dashboard.php:34 dashboard.php:35
+msgid "Settings"
+msgstr ""
+
+#: dashboard.php:61 dashboard.php:62
+msgid "Icon Fonts"
+msgstr ""
+
+#: dashboard.php:89 modules/elementor/widgets/team-member.php:277
+#: modules/elementor/widgets/team-member.php:820
+#: modules/wpbakery/elements/team-member.php:391
 msgid "Primary Color"
 msgstr ""
 
-#: dashboard.php:57 modules/wpbakery/elements/team-member.php:392
+#: dashboard.php:96 modules/elementor/widgets/team-member.php:291
+#: modules/elementor/widgets/team-member.php:834
+#: modules/wpbakery/elements/team-member.php:392
 msgid "Secondary Color"
 msgstr ""
 
-#: dashboard.php:64 modules/wpbakery/elements/pricing.php:700
+#: dashboard.php:103 modules/wpbakery/elements/pricing.php:700
 msgid "Text Color"
 msgstr ""
 
-#: dashboard.php:71
+#: dashboard.php:110
 msgid "Accent Color"
 msgstr ""
 
-#: dashboard.php:78
+#: dashboard.php:117
 msgid "Elementor"
 msgstr ""
 
-#: dashboard.php:85
+#: dashboard.php:124 dashboard.php:276
 msgid "Related Posts"
 msgstr ""
 
-#: dashboard.php:97
+#: dashboard.php:136
 msgid "You do not have sufficient permissions to access this page."
 msgstr ""
 
-#: dashboard.php:103
-#, php-format
-msgid "Welcome to Borderless %s"
+#: dashboard.php:142
+msgid "Good Evening "
 msgstr ""
 
-#: dashboard.php:106
+#: dashboard.php:145
+msgid "Good Morning "
+msgstr ""
+
+#: dashboard.php:147
+msgid "Good Afternoon "
+msgstr ""
+
+#: dashboard.php:157
+msgid "You are running Borderless "
+msgstr ""
+
+#: dashboard.php:158
 msgid ""
-"Congratulations! Within minutes you can build complex layouts on the basis "
-"of our content elements and without touching a single line of code."
+"Within minutes you can build complex layouts on the basis of our content "
+"elements and without touching a single line of code."
 msgstr ""
 
-#: dashboard.php:109
+#: dashboard.php:161
 #, php-format
 msgid "Version %s"
 msgstr ""
 
-#: dashboard.php:152
+#: dashboard.php:206
 msgid "Pick a primary color for the elements."
 msgstr ""
 
-#: dashboard.php:166
+#: dashboard.php:220
 msgid "Pick a secondary color for the elements."
 msgstr ""
 
-#: dashboard.php:180
+#: dashboard.php:234
 msgid "Pick a text color for the elements."
 msgstr ""
 
-#: dashboard.php:194
+#: dashboard.php:248
 msgid "Pick a accent color for the elements."
 msgstr ""
 
-#: dashboard.php:208
-msgid "Enable or Disable Elementor Support"
-msgstr ""
-
-#: dashboard.php:222
-msgid "Enable or Disable Related Posts"
+#: dashboard.php:262
+msgid "Elementor Website Builder"
 msgstr ""
 
 #: includes/icon-manager/icon-manager.php:139
-#: includes/icon-manager/icon-manager.php:580
-#: includes/icon-manager/icon-manager.php:581
 msgid "Icon Pack Manager"
 msgstr ""
 
@@ -238,20 +251,362 @@ msgid "No Pages Found!"
 msgstr ""
 
 #: modules/elementor/widgets/contact-form-7.php:35
-#: modules/elementor/widgets/team-member.php:35
 msgid "Contact Form 7"
 msgstr ""
 
 #: modules/elementor/widgets/contact-form-7.php:43
-#: modules/elementor/widgets/team-member.php:43
 msgid "Select Contact Form"
 msgstr ""
 
 #: modules/elementor/widgets/contact-form-7.php:44
-#: modules/elementor/widgets/team-member.php:44
 msgid ""
 "Contact form 7 - plugin must be installed and there must be some contact "
 "forms made with the contact form 7"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:26
+#: modules/wpbakery/elements/team-member.php:147
+msgid "Team Member"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:69
+#: modules/elementor/widgets/team-member.php:358
+#: modules/wpbakery/elements/team-member.php:157
+msgid "Picture"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:77
+msgid "Upload Picture"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:104
+#: modules/elementor/widgets/team-member.php:658
+#: modules/wpbakery/elements/testimonial.php:206
+msgid "Content"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:111
+#: modules/wpbakery/elements/team-member.php:176
+#: modules/wpbakery/elements/testimonial.php:188
+msgid "Name"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:116
+msgid "John Doe"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:123
+#: modules/wpbakery/elements/team-member.php:205
+msgid "Job Position"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:128
+msgid "Full Stack Web Developer"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:135
+#: modules/wpbakery/elements/infobox.php:194
+#: modules/wpbakery/elements/team-member.php:234
+msgid "Description"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:140
+msgid "Add team member description here. Remove the text if not necessary."
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:154
+#: modules/elementor/widgets/team-member.php:799
+msgid "Social Profiles"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:161
+msgid "Enable Social Profiles?"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:172
+#: modules/wpbakery/elements/circular-progress-bar.php:101
+#: modules/wpbakery/elements/circular-progress-bar.php:115
+#: modules/wpbakery/elements/counter.php:131
+#: modules/wpbakery/elements/icon.php:94 modules/wpbakery/elements/icon.php:103
+#: modules/wpbakery/elements/infobox.php:243
+#: modules/wpbakery/elements/list-group.php:240
+#: modules/wpbakery/elements/modal.php:474
+#: modules/wpbakery/elements/pricing.php:576
+#: modules/wpbakery/elements/pricing.php:778
+#: modules/wpbakery/elements/pricing.php:832
+#: modules/wpbakery/elements/pricing.php:886
+#: modules/wpbakery/elements/pricing.php:940
+#: modules/wpbakery/elements/pricing.php:994
+#: modules/wpbakery/elements/pricing.php:1048
+#: modules/wpbakery/elements/progress-bar.php:207
+#: modules/wpbakery/elements/semi-circular-progress-bar.php:107
+#: modules/wpbakery/elements/semi-circular-progress-bar.php:121
+msgid "Icon"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:249
+#: modules/wpbakery/elements/list-group.php:150
+msgid "Link"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:257
+msgid "Place URL here"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:264
+#: modules/elementor/widgets/team-member.php:807
+#: modules/wpbakery/elements/team-member.php:388
+msgid "Color"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:268
+#: modules/elementor/widgets/team-member.php:811
+msgid "Official Color"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:269
+#: modules/elementor/widgets/team-member.php:812
+msgid "Custom"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:306
+msgid "Social Icons"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:339
+msgid "View"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:366
+#: modules/wpbakery/elements/infobox.php:345
+#: modules/wpbakery/elements/modal.php:576 modules/wpbakery/elements/svg.php:83
+msgid "Width"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:403
+msgid "Max Width"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:438
+#: modules/elementor/widgets/team-member.php:675
+#: modules/wpbakery/elements/infobox.php:334
+#: modules/wpbakery/elements/modal.php:565
+#: modules/wpbakery/elements/progress-bar.php:111
+#: modules/wpbakery/elements/svg.php:77
+msgid "Height"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:469
+#: modules/elementor/widgets/team-member.php:748
+#: modules/elementor/widgets/team-member.php:1053
+msgid "Margin"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:481
+#: modules/elementor/widgets/team-member.php:760
+#: modules/elementor/widgets/team-member.php:897
+#: modules/elementor/widgets/team-member.php:1065
+msgid "Padding"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:493
+msgid "Object Fit"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:499
+#: modules/wpbakery/elements/team-member.php:188
+#: modules/wpbakery/elements/team-member.php:217
+msgid "Default"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:500
+msgid "Fill"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:501
+msgid "Cover"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:502
+msgid "Contain"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:523
+#: modules/wpbakery/elements/modal.php:416
+msgid "Normal"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:530
+#: modules/elementor/widgets/team-member.php:564
+msgid "Opacity"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:557
+msgid "Hover"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:590
+msgid "Transition Duration"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:607
+#: modules/elementor/widgets/team-member.php:1036
+msgid "Hover Animation"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:628
+#: modules/elementor/widgets/team-member.php:781
+#: modules/elementor/widgets/team-member.php:981
+msgid "Border Radius"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:666
+msgid "Content Card"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:701
+msgid "Content Background Color"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:718
+#: modules/wpbakery/elements/icon.php:173
+#: modules/wpbakery/elements/infobox.php:377
+#: modules/wpbakery/elements/list-group.php:181
+#: modules/wpbakery/elements/modal.php:286
+#: modules/wpbakery/elements/pricing.php:667
+#: modules/wpbakery/elements/pricing.php:757
+#: modules/wpbakery/elements/svg.php:89
+msgid "Alignment"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:725
+#: modules/wpbakery/elements/icon-group.php:87
+#: modules/wpbakery/elements/icon.php:176
+#: modules/wpbakery/elements/infobox.php:568
+#: modules/wpbakery/elements/list-group.php:184
+#: modules/wpbakery/elements/modal.php:289
+#: modules/wpbakery/elements/pricing.php:670
+#: modules/wpbakery/elements/pricing.php:760
+#: modules/wpbakery/elements/pricing.php:1146
+#: modules/wpbakery/elements/pricing.php:1190
+#: modules/wpbakery/elements/svg.php:92
+msgid "Left"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:729
+#: modules/wpbakery/elements/icon-group.php:89
+#: modules/wpbakery/elements/icon.php:178
+#: modules/wpbakery/elements/infobox.php:381
+#: modules/wpbakery/elements/infobox.php:570
+#: modules/wpbakery/elements/list-group.php:186
+#: modules/wpbakery/elements/modal.php:291
+#: modules/wpbakery/elements/pricing.php:672
+#: modules/wpbakery/elements/pricing.php:762
+#: modules/wpbakery/elements/pricing.php:1148
+#: modules/wpbakery/elements/pricing.php:1192
+#: modules/wpbakery/elements/svg.php:94
+msgid "Center"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:733
+#: modules/wpbakery/elements/icon-group.php:88
+#: modules/wpbakery/elements/icon.php:177
+#: modules/wpbakery/elements/infobox.php:569
+#: modules/wpbakery/elements/list-group.php:185
+#: modules/wpbakery/elements/modal.php:290
+#: modules/wpbakery/elements/pricing.php:671
+#: modules/wpbakery/elements/pricing.php:761
+#: modules/wpbakery/elements/pricing.php:1147
+#: modules/wpbakery/elements/pricing.php:1191
+#: modules/wpbakery/elements/svg.php:93
+msgid "Right"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:773
+msgid "Border"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:849
+msgid "Hover Primary Color"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:864
+msgid "Hover Secondary Color"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:880
+#: modules/wpbakery/elements/icon.php:154
+#: modules/wpbakery/elements/infobox.php:312
+#: modules/wpbakery/elements/modal.php:411
+#: modules/wpbakery/elements/modal.php:543
+#: modules/wpbakery/elements/pricing.php:645
+#: modules/wpbakery/elements/pricing.php:734
+msgid "Size"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:923
+#: modules/wpbakery/elements/icon.php:161
+#: modules/wpbakery/elements/infobox.php:323
+#: modules/wpbakery/elements/modal.php:554
+msgid "Spacing"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:943
+msgid "Rows Gap"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:966
+msgid "Hover Color"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:993
+#: modules/wpbakery/elements/icon.php:129
+#: modules/wpbakery/elements/infobox.php:281
+#: modules/wpbakery/elements/modal.php:322
+#: modules/wpbakery/elements/modal.php:512
+#: modules/wpbakery/elements/pricing.php:614
+#: modules/wpbakery/elements/pricing.php:718
+msgid "Shape"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:1000
+#: modules/wpbakery/elements/icon.php:134
+#: modules/wpbakery/elements/infobox.php:291
+#: modules/wpbakery/elements/modal.php:326
+#: modules/wpbakery/elements/modal.php:522
+#: modules/wpbakery/elements/pricing.php:624
+#: modules/wpbakery/elements/pricing.php:723
+#: modules/wpbakery/elements/progress-bar.php:122
+msgid "Rounded"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:1001
+#: modules/wpbakery/elements/circular-progress-bar.php:144
+#: modules/wpbakery/elements/icon.php:135
+#: modules/wpbakery/elements/infobox.php:292
+#: modules/wpbakery/elements/modal.php:327
+#: modules/wpbakery/elements/modal.php:523
+#: modules/wpbakery/elements/pricing.php:625
+#: modules/wpbakery/elements/pricing.php:724
+#: modules/wpbakery/elements/progress-bar.php:123
+#: modules/wpbakery/elements/semi-circular-progress-bar.php:150
+msgid "Square"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:1002
+msgid "Circle"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:1011
+msgid "Columns"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:1018
+msgid "Auto"
+msgstr ""
+
+#: modules/elementor/widgets/team-member.php:1044
+msgid "Social Profiles Section"
 msgstr ""
 
 #: modules/wpbakery/elements/alert.php:62
@@ -463,26 +818,6 @@ msgstr ""
 msgid "Percentage"
 msgstr ""
 
-#: modules/wpbakery/elements/circular-progress-bar.php:101
-#: modules/wpbakery/elements/circular-progress-bar.php:115
-#: modules/wpbakery/elements/counter.php:131
-#: modules/wpbakery/elements/icon.php:94 modules/wpbakery/elements/icon.php:103
-#: modules/wpbakery/elements/infobox.php:243
-#: modules/wpbakery/elements/list-group.php:240
-#: modules/wpbakery/elements/modal.php:474
-#: modules/wpbakery/elements/pricing.php:576
-#: modules/wpbakery/elements/pricing.php:778
-#: modules/wpbakery/elements/pricing.php:832
-#: modules/wpbakery/elements/pricing.php:886
-#: modules/wpbakery/elements/pricing.php:940
-#: modules/wpbakery/elements/pricing.php:994
-#: modules/wpbakery/elements/pricing.php:1048
-#: modules/wpbakery/elements/progress-bar.php:207
-#: modules/wpbakery/elements/semi-circular-progress-bar.php:107
-#: modules/wpbakery/elements/semi-circular-progress-bar.php:121
-msgid "Icon"
-msgstr ""
-
 #: modules/wpbakery/elements/circular-progress-bar.php:103
 #: modules/wpbakery/elements/semi-circular-progress-bar.php:109
 msgid "Choose a style."
@@ -538,18 +873,6 @@ msgstr ""
 #: modules/wpbakery/elements/progress-bar.php:119
 #: modules/wpbakery/elements/semi-circular-progress-bar.php:147
 msgid "Select style."
-msgstr ""
-
-#: modules/wpbakery/elements/circular-progress-bar.php:144
-#: modules/wpbakery/elements/icon.php:135
-#: modules/wpbakery/elements/infobox.php:292
-#: modules/wpbakery/elements/modal.php:327
-#: modules/wpbakery/elements/modal.php:523
-#: modules/wpbakery/elements/pricing.php:625
-#: modules/wpbakery/elements/pricing.php:724
-#: modules/wpbakery/elements/progress-bar.php:123
-#: modules/wpbakery/elements/semi-circular-progress-bar.php:150
-msgid "Square"
 msgstr ""
 
 #: modules/wpbakery/elements/circular-progress-bar.php:145
@@ -889,46 +1212,6 @@ msgstr ""
 msgid "Justify Content"
 msgstr ""
 
-#: modules/wpbakery/elements/icon-group.php:87
-#: modules/wpbakery/elements/icon.php:176
-#: modules/wpbakery/elements/infobox.php:568
-#: modules/wpbakery/elements/list-group.php:184
-#: modules/wpbakery/elements/modal.php:289
-#: modules/wpbakery/elements/pricing.php:670
-#: modules/wpbakery/elements/pricing.php:760
-#: modules/wpbakery/elements/pricing.php:1146
-#: modules/wpbakery/elements/pricing.php:1190
-#: modules/wpbakery/elements/svg.php:92
-msgid "Left"
-msgstr ""
-
-#: modules/wpbakery/elements/icon-group.php:88
-#: modules/wpbakery/elements/icon.php:177
-#: modules/wpbakery/elements/infobox.php:569
-#: modules/wpbakery/elements/list-group.php:185
-#: modules/wpbakery/elements/modal.php:290
-#: modules/wpbakery/elements/pricing.php:671
-#: modules/wpbakery/elements/pricing.php:761
-#: modules/wpbakery/elements/pricing.php:1147
-#: modules/wpbakery/elements/pricing.php:1191
-#: modules/wpbakery/elements/svg.php:93
-msgid "Right"
-msgstr ""
-
-#: modules/wpbakery/elements/icon-group.php:89
-#: modules/wpbakery/elements/icon.php:178
-#: modules/wpbakery/elements/infobox.php:381
-#: modules/wpbakery/elements/infobox.php:570
-#: modules/wpbakery/elements/list-group.php:186
-#: modules/wpbakery/elements/modal.php:291
-#: modules/wpbakery/elements/pricing.php:672
-#: modules/wpbakery/elements/pricing.php:762
-#: modules/wpbakery/elements/pricing.php:1148
-#: modules/wpbakery/elements/pricing.php:1192
-#: modules/wpbakery/elements/svg.php:94
-msgid "Center"
-msgstr ""
-
 #: modules/wpbakery/elements/icon-group.php:90
 msgid "Space Around"
 msgstr ""
@@ -975,15 +1258,6 @@ msgstr ""
 msgid "Select custom icon color."
 msgstr ""
 
-#: modules/wpbakery/elements/icon.php:129
-#: modules/wpbakery/elements/infobox.php:281
-#: modules/wpbakery/elements/modal.php:322
-#: modules/wpbakery/elements/modal.php:512
-#: modules/wpbakery/elements/pricing.php:614
-#: modules/wpbakery/elements/pricing.php:718
-msgid "Shape"
-msgstr ""
-
 #: modules/wpbakery/elements/icon.php:130
 #: modules/wpbakery/elements/infobox.php:282
 #: modules/wpbakery/elements/modal.php:513
@@ -998,16 +1272,6 @@ msgstr ""
 #: modules/wpbakery/elements/modal.php:521
 #: modules/wpbakery/elements/pricing.php:623
 msgid "None"
-msgstr ""
-
-#: modules/wpbakery/elements/icon.php:134
-#: modules/wpbakery/elements/infobox.php:291
-#: modules/wpbakery/elements/modal.php:326
-#: modules/wpbakery/elements/modal.php:522
-#: modules/wpbakery/elements/pricing.php:624
-#: modules/wpbakery/elements/pricing.php:723
-#: modules/wpbakery/elements/progress-bar.php:122
-msgid "Rounded"
 msgstr ""
 
 #: modules/wpbakery/elements/icon.php:137
@@ -1048,23 +1312,8 @@ msgstr ""
 msgid "Select custom shape background color."
 msgstr ""
 
-#: modules/wpbakery/elements/icon.php:154
-#: modules/wpbakery/elements/infobox.php:312
-#: modules/wpbakery/elements/modal.php:411
-#: modules/wpbakery/elements/modal.php:543
-#: modules/wpbakery/elements/pricing.php:645
-#: modules/wpbakery/elements/pricing.php:734
-msgid "Size"
-msgstr ""
-
 #: modules/wpbakery/elements/icon.php:156
 msgid "Icon size. Default value is 32px."
-msgstr ""
-
-#: modules/wpbakery/elements/icon.php:161
-#: modules/wpbakery/elements/infobox.php:323
-#: modules/wpbakery/elements/modal.php:554
-msgid "Spacing"
 msgstr ""
 
 #: modules/wpbakery/elements/icon.php:163
@@ -1078,16 +1327,6 @@ msgstr ""
 
 #: modules/wpbakery/elements/icon.php:169
 msgid "Select icon gap."
-msgstr ""
-
-#: modules/wpbakery/elements/icon.php:173
-#: modules/wpbakery/elements/infobox.php:377
-#: modules/wpbakery/elements/list-group.php:181
-#: modules/wpbakery/elements/modal.php:286
-#: modules/wpbakery/elements/pricing.php:667
-#: modules/wpbakery/elements/pricing.php:757
-#: modules/wpbakery/elements/svg.php:89
-msgid "Alignment"
 msgstr ""
 
 #: modules/wpbakery/elements/icon.php:180
@@ -1118,11 +1357,6 @@ msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:188
 msgid "Add link to infobox title."
-msgstr ""
-
-#: modules/wpbakery/elements/infobox.php:194
-#: modules/wpbakery/elements/team-member.php:234
-msgid "Description"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:196
@@ -1198,21 +1432,9 @@ msgstr ""
 msgid "Select icon spacing. e.g. 16px."
 msgstr ""
 
-#: modules/wpbakery/elements/infobox.php:334
-#: modules/wpbakery/elements/modal.php:565
-#: modules/wpbakery/elements/progress-bar.php:111
-#: modules/wpbakery/elements/svg.php:77
-msgid "Height"
-msgstr ""
-
 #: modules/wpbakery/elements/infobox.php:336
 #: modules/wpbakery/elements/modal.php:567 modules/wpbakery/elements/svg.php:79
 msgid "Insert the SVG height."
-msgstr ""
-
-#: modules/wpbakery/elements/infobox.php:345
-#: modules/wpbakery/elements/modal.php:576 modules/wpbakery/elements/svg.php:83
-msgid "Width"
 msgstr ""
 
 #: modules/wpbakery/elements/infobox.php:347
@@ -1762,10 +1984,6 @@ msgstr ""
 msgid "Text"
 msgstr ""
 
-#: modules/wpbakery/elements/list-group.php:150
-msgid "Link"
-msgstr ""
-
 #: modules/wpbakery/elements/list-group.php:152
 msgid "Choose a mode for list group."
 msgstr ""
@@ -2020,10 +2238,6 @@ msgstr ""
 #: modules/wpbakery/elements/modal.php:415
 #: modules/wpbakery/elements/pricing.php:738
 msgid "Small"
-msgstr ""
-
-#: modules/wpbakery/elements/modal.php:416
-msgid "Normal"
 msgstr ""
 
 #: modules/wpbakery/elements/modal.php:417
@@ -2533,16 +2747,8 @@ msgstr ""
 msgid "Select a SVG Icon from media library."
 msgstr ""
 
-#: modules/wpbakery/elements/team-member.php:147
-msgid "Team Member"
-msgstr ""
-
 #: modules/wpbakery/elements/team-member.php:152
 msgid "Create a stylish team member with the impressive options"
-msgstr ""
-
-#: modules/wpbakery/elements/team-member.php:157
-msgid "Picture"
 msgstr ""
 
 #: modules/wpbakery/elements/team-member.php:159
@@ -2560,19 +2766,9 @@ msgid ""
 "200x100 (Width x Height))."
 msgstr ""
 
-#: modules/wpbakery/elements/team-member.php:176
-#: modules/wpbakery/elements/testimonial.php:188
-msgid "Name"
-msgstr ""
-
 #: modules/wpbakery/elements/team-member.php:185
 #: modules/wpbakery/elements/team-member.php:214
 msgid "Tag"
-msgstr ""
-
-#: modules/wpbakery/elements/team-member.php:188
-#: modules/wpbakery/elements/team-member.php:217
-msgid "Default"
 msgstr ""
 
 #: modules/wpbakery/elements/team-member.php:194
@@ -2582,10 +2778,6 @@ msgstr ""
 
 #: modules/wpbakery/elements/team-member.php:198
 msgid "Default is H3"
-msgstr ""
-
-#: modules/wpbakery/elements/team-member.php:205
-msgid "Job Position"
 msgstr ""
 
 #: modules/wpbakery/elements/team-member.php:227
@@ -2664,10 +2856,6 @@ msgstr ""
 msgid "Add nofollow"
 msgstr ""
 
-#: modules/wpbakery/elements/team-member.php:388
-msgid "Color"
-msgstr ""
-
 #: modules/wpbakery/elements/team-member.php:395
 msgid "Default is Primary Color"
 msgstr ""
@@ -2698,10 +2886,6 @@ msgstr ""
 
 #: modules/wpbakery/elements/testimonial.php:201
 msgid "Select image from media library."
-msgstr ""
-
-#: modules/wpbakery/elements/testimonial.php:206
-msgid "Content"
 msgstr ""
 
 #: modules/wpbakery/elements/testimonial.php:213

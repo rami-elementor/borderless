@@ -4,7 +4,7 @@
 Plugin Name: Borderless
 Plugin URI: https://borderless.visualmodo.com/
 Description: One service packed with powerful tools to help you reach your purposes.
-Version: 1.1.0
+Version: 1.1.1
 Author: Visualmodo
 Author URI: https://visualmodo.com
 License: GPLv3 or later
@@ -18,9 +18,11 @@ defined( 'ABSPATH' ) || exit;
 /**
 * Define Constants.
 */
-define( 'BORDERLESS__VERSION', '1.1.0' );
+define( 'BORDERLESS__VERSION', '1.1.1' );
 define( 'BORDERLESS__DIR', plugin_dir_path( __FILE__ ) );
+define( 'BORDERLESS__URL', plugins_url( '/', __FILE__ ) );
 define( 'BORDERLESS__INC', BORDERLESS__DIR . '/includes' );
+define( 'BORDERLESS__ASSETS', BORDERLESS__DIR . '/assets' );
 define( 'BORDERLESS__WPBAKERY', BORDERLESS__DIR . '/modules/wpbakery' );
 define( 'BORDERLESS__ELEMENTOR', BORDERLESS__DIR . '/modules/elementor' );
 define( 'BORDERLESS__RELATED_POSTS', BORDERLESS__DIR . '/modules/related-posts' );
@@ -61,7 +63,6 @@ class Borderless {
 	}
 	
 	function backendAssets($hook) {
-		wp_enqueue_style('borderless_backend_style', plugins_url('assets/styles/backend.min.css', __FILE__) );
 		
 		// enqueue css files on backend
 		if($hook == "post.php" || $hook == "post-new.php" || $hook == 'visual-composer_page_vc-roles'){

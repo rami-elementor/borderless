@@ -571,23 +571,6 @@ if ( ! class_exists( 'Borderless_IF' ) ) {
 			new Borderless_IF;
 		}
 		
-		add_action( 'admin_menu', 'borderless_icon_manager_menu', 99 );
-		
-		if ( ! function_exists( 'borderless_icon_manager_menu' ) ) {
-			function borderless_icon_manager_menu() {
-				$icon_manager_page = add_submenu_page(
-					'borderless.php',
-					esc_html__( "Icon Fonts", "borderless" ),
-					esc_html__( "Icon Fonts", "borderless" ),
-					"manage_options",
-					"borderless-fonts",
-					"borderless_custom_icons_menu"
-				);
-				$Borderless_IF  = new Borderless_IF;
-				add_action('admin_print_styles-' . $icon_manager_page, array( $Borderless_IF, 'admin_scripts' ) );
-			}
-		}
-		
 		function borderless_custom_icons_menu() {
 			$Borderless_IF = new Borderless_IF;
 			$Borderless_IF->icon_pack_manager();

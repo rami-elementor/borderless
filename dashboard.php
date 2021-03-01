@@ -20,7 +20,7 @@ class BorderlessDashboard {
     public function add_admin_menu() {
         
         add_menu_page(
-            esc_html__( 'Settings', 'borderless' ),
+            esc_html__( 'Borderless', 'borderless' ),
             esc_html__( 'Borderless', 'borderless' ),
             'manage_options',
             'borderless.php',
@@ -29,6 +29,45 @@ class BorderlessDashboard {
             2
         );
         
+        add_submenu_page(
+            'borderless.php',                         // parent slug
+            esc_html__( 'Settings', 'borderless' ),   // page title
+            esc_html__( 'Settings', 'borderless' ),   // menu title
+            'manage_options',                         // capability
+            'borderless.php',                         // slug
+        );
+        
+        add_action('admin_enqueue_scripts', 'borderless_dashboard_style');
+        
+        function borderless_dashboard_style($hook)
+        {
+            
+            $current_screen = get_current_screen();
+            
+            if ( strpos($current_screen->base, 'toplevel_page_borderless') === false) {
+                return;
+            } else {
+                
+                wp_enqueue_style('borderless_backend_style', plugins_url('assets/styles/dashboard.min.css', __FILE__) );
+            }
+        }
+        
+        add_action( 'admin_menu', 'borderless_icon_fonts_submenu', 99 );
+        
+        if ( ! function_exists( 'borderless_icon_fonts_submenu' ) ) {
+            function borderless_icon_fonts_submenu() {
+                $icon_manager_page = add_submenu_page(
+                    'borderless.php',
+                    esc_html__( "Icon Fonts", "borderless" ),
+                    esc_html__( "Icon Fonts", "borderless" ),
+                    'manage_options',
+                    'borderless-fonts',
+                    'borderless_custom_icons_menu'
+                );
+                $Borderless_IF  = new Borderless_IF;
+                add_action('admin_print_styles-' . $icon_manager_page, array( $Borderless_IF, 'admin_scripts' ) );
+            }
+        }
     }
     
     public function init_settings() {
@@ -74,19 +113,19 @@ class BorderlessDashboard {
             'borderless_section'
         );
         add_settings_field(
-			'elementor',
-			__( 'Elementor', 'borderless' ),
-			array( $this, 'render_elementor_field' ),
-			'borderless',
-			'borderless_section'
-		);
+            'elementor',
+            __( 'Elementor', 'borderless' ),
+            array( $this, 'render_elementor_field' ),
+            'borderless',
+            'borderless_section'
+        );
         add_settings_field(
-			'related_posts',
-			__( 'Related Posts', 'borderless' ),
-			array( $this, 'render_related_posts_field' ),
-			'borderless',
-			'borderless_section'
-		);
+            'related_posts',
+            __( 'Related Posts', 'borderless' ),
+            array( $this, 'render_related_posts_field' ),
+            'borderless',
+            'borderless_section'
+        );
         
     }
     
@@ -97,13 +136,26 @@ class BorderlessDashboard {
             wp_die( esc_html__( 'You do not have sufficient permissions to access this page.', 'borderless' ) );
         }
         
+        $current_user	= wp_get_current_user();
+        $time			= date('H');
+        $timezone		= date('e');
+        $hi				= __('Good Evening ', 'borderless');
+        //$selling 		= $rsaf->get_addition('selling');
+        if($time < '12'){
+            $hi = __('Good Morning ', 'borderless');
+        }elseif($time >= '12' && $time < '17'){
+            $hi = __('Good Afternoon ', 'borderless');
+        }
+        
         // Admin Page Layout
         
         ?><div class="wrap borderless-page-welcome about-wrap">
-        <h1><?php echo sprintf( __( 'Welcome to Borderless %s', 'borderless' ), isset( $matches[0] ) ? $matches[0] : BORDERLESS__VERSION ) ?></h1>
         
-        <div class="about-text">
-        <?php _e( 'Congratulations! Within minutes you can build complex layouts on the basis of our content elements and without touching a single line of code.', 'borderless' ) ?>
+        <!-- WELCOME TO BORDERLESS -->
+        <div class="borderless-dashboard-header">
+        <h1 class="borderless-dashboard-title"><?php echo $hi; echo $current_user->display_name; echo '!'; ?></h1>
+        <h2 class="borderless-dashboard-subtitle"><?php _e('You are running Borderless ', 'borderless'); echo BORDERLESS__VERSION; ?></h2>	
+        <p class="about-text"><?php _e('Within minutes you can build complex layouts on the basis of our content elements and without touching a single line of code.', 'borderless') ?></p>
         </div>
         <div class="wp-badge borderless-page-logo">
         <?php echo sprintf( __( 'Version %s', 'borderless' ), BORDERLESS__VERSION ) ?>
@@ -125,6 +177,7 @@ class BorderlessDashboard {
         </p>
         
         <?php
+        echo '<div class="borderless-dashboard-settings">' . "\n";
         echo '<h3>Settings</h3>' . "\n";
         echo '	<form action="options.php" method="post">' . "\n";
         
@@ -132,7 +185,8 @@ class BorderlessDashboard {
         do_settings_sections( 'borderless' );
         submit_button();
         
-        echo '	</form>' . "\n";
+        echo '</form>' . "\n";
+        echo '</div>' . "\n";
         echo '</div>' . "\n";
         
         ?></div><?php
@@ -148,8 +202,8 @@ class BorderlessDashboard {
         $value = isset( $options['primary_color'] ) ? $options['primary_color'] : '#3379fc';
         
         // Field output.
-        echo '<input type="color" name="borderless[primary_color]" class="regular-text primary_color_field" placeholder="' . esc_attr__( '', 'borderless' ) . '" value="' . esc_attr( $value ) . '">';
-        echo '<p class="description">' . __( 'Pick a primary color for the elements.', 'borderless' ) . '</p>';
+        echo '<input type="color"  name="borderless[primary_color]" class="regular-text primary_color_field" placeholder="' . esc_attr__( '', 'borderless' ) . '" value="' . esc_attr( $value ) . '">';
+        echo '<span class="description">' . __( 'Pick a primary color for the elements.', 'borderless' ) . '</span>';
         
     }
     
@@ -163,7 +217,7 @@ class BorderlessDashboard {
         
         // Field output.
         echo '<input type="color" name="borderless[secondary_color]" class="regular-text secondary_color_field" placeholder="' . esc_attr__( '', 'borderless' ) . '" value="' . esc_attr( $value ) . '">';
-        echo '<p class="description">' . __( 'Pick a secondary color for the elements.', 'borderless' ) . '</p>';
+        echo '<span class="description">' . __( 'Pick a secondary color for the elements.', 'borderless' ) . '</span>';
         
     }
     
@@ -177,7 +231,7 @@ class BorderlessDashboard {
         
         // Field output.
         echo '<input type="color" name="borderless[text_color]" class="regular-text text_color_field" placeholder="' . esc_attr__( '', 'borderless' ) . '" value="' . esc_attr( $value ) . '">';
-        echo '<p class="description">' . __( 'Pick a text color for the elements.', 'borderless' ) . '</p>';
+        echo '<span class="description">' . __( 'Pick a text color for the elements.', 'borderless' ) . '</span>';
         
     }
     
@@ -191,37 +245,37 @@ class BorderlessDashboard {
         
         // Field output.
         echo '<input type="color" name="borderless[accent_color]" class="regular-text accent_color_field" placeholder="' . esc_attr__( '', 'borderless' ) . '" value="' . esc_attr( $value ) . '">';
-        echo '<p class="description">' . __( 'Pick a accent color for the elements.', 'borderless' ) . '</p>';
+        echo '<span class="description">' . __( 'Pick a accent color for the elements.', 'borderless' ) . '</span>';
         
     }
-
+    
     function render_elementor_field() {
-
-		// Retrieve data from the database.
-		$options = get_option( 'borderless' );
-
-		// Set default value.
-		$value = isset( $options['elementor'] ) ? $options['elementor'] : true;
-
-		// Field output.
-		echo '<input type="checkbox" name="borderless[elementor]" class="elementor_field" value="checked" ' . checked( $value, 'checked', false ) . '> ' . __( '', 'borderless' );
-		echo '<span class="description">' . __( 'Enable or Disable Elementor Support', 'borderless' ) . '</span>';
-
-	}
+        
+        // Retrieve data from the database.
+        $options = get_option( 'borderless' );
+        
+        // Set default value.
+        $value = isset( $options['elementor'] ) ? $options['elementor'] : true;
+        
+        // Field output.
+        echo '<input type="checkbox" name="borderless[elementor]" class="switch elementor_field" value="checked" ' . checked( $value, 'checked', false ) . '> ' . __( '', 'borderless' );
+        echo '<span class="description">' . __( 'Elementor Website Builder', 'borderless' ) . '</span>';
+        
+    }
     
     function render_related_posts_field() {
-
-		// Retrieve data from the database.
-		$options = get_option( 'borderless' );
-
-		// Set default value.
-		$value = isset( $options['related_posts'] ) ? $options['related_posts'] : '';
-
-		// Field output.
-		echo '<input type="checkbox" name="borderless[related_posts]" class="related_posts_field" value="checked" ' . checked( $value, 'checked', false ) . '> ' . __( '', 'borderless' );
-		echo '<span class="description">' . __( 'Enable or Disable Related Posts', 'borderless' ) . '</span>';
-
-	}
+        
+        // Retrieve data from the database.
+        $options = get_option( 'borderless' );
+        
+        // Set default value.
+        $value = isset( $options['related_posts'] ) ? $options['related_posts'] : '';
+        
+        // Field output.
+        echo '<input type="checkbox" name="borderless[related_posts]" class="switch related_posts_field" value="checked" ' . checked( $value, 'checked', false ) . '> ' . __( '', 'borderless' );
+        echo '<span class="description">' . __( 'Related Posts', 'borderless' ) . '</span>';
+        
+    }
     
 }
 
