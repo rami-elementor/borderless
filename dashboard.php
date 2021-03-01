@@ -36,7 +36,7 @@ class BorderlessDashboard {
             'manage_options',                         // capability
             'borderless.php',                         // slug
         );
-        
+
         add_action('admin_enqueue_scripts', 'borderless_dashboard_style');
         
         function borderless_dashboard_style($hook)
@@ -52,7 +52,7 @@ class BorderlessDashboard {
             }
         }
         
-        add_action( 'admin_menu', 'borderless_icon_fonts_submenu', 99 );
+        add_action( 'admin_menu', 'borderless_icon_fonts_submenu', 50 );
         
         if ( ! function_exists( 'borderless_icon_fonts_submenu' ) ) {
             function borderless_icon_fonts_submenu() {
@@ -68,6 +68,17 @@ class BorderlessDashboard {
                 add_action('admin_print_styles-' . $icon_manager_page, array( $Borderless_IF, 'admin_scripts' ) );
             }
         }
+
+        add_submenu_page(
+            'borderless.php',
+            esc_html__( 'System Info', 'borderless' ),
+            esc_html__( 'System Info', 'borderless' ),
+            'manage_options',                        
+            'borderless-system-info',  
+            'borderless_system_info', 
+            99                      
+        );
+        
     }
     
     public function init_settings() {
@@ -139,22 +150,27 @@ class BorderlessDashboard {
         $current_user	= wp_get_current_user();
         $time			= date('H');
         $timezone		= date('e');
-        $hi				= __('Good Evening ', 'borderless');
-        //$selling 		= $rsaf->get_addition('selling');
+        $hi				= __('Good Evening, ', 'borderless');
+        $avatar = wp_get_current_user();
         if($time < '12'){
-            $hi = __('Good Morning ', 'borderless');
+            $hi = __('Good Morning, ', 'borderless');
         }elseif($time >= '12' && $time < '17'){
-            $hi = __('Good Afternoon ', 'borderless');
+            $hi = __('Good Afternoon, ', 'borderless');
         }
         
         // Admin Page Layout
         
         ?><div class="wrap borderless-page-welcome about-wrap">
         
-        <!-- WELCOME TO BORDERLESS -->
+        <!-- Welcome to Borderless -->
         <div class="borderless-dashboard-header">
-        <h1 class="borderless-dashboard-title"><?php echo $hi; echo $current_user->display_name; echo '!'; ?></h1>
-        <h2 class="borderless-dashboard-subtitle"><?php _e('You are running Borderless ', 'borderless'); echo BORDERLESS__VERSION; ?></h2>	
+        <div class="borderless-dashboard-howdy">
+        <div class="borderless-dashboard-avatar"><?php echo get_avatar( $current_user->ID, 64 ); ?></div>
+        <div class="borderless-dashboard-title-subtitle">
+        <h1 class="borderless-dashboard-title"><?php echo $hi .'<strong>'.$current_user->display_name.'</strong>'; ?></h1>
+        <h2 class="borderless-dashboard-subtitle"><?php _e('You are running Borderless ', 'borderless'); echo BORDERLESS__VERSION; ?></h2>
+        </div>	
+        </div>	
         <p class="about-text"><?php _e('Within minutes you can build complex layouts on the basis of our content elements and without touching a single line of code.', 'borderless') ?></p>
         </div>
         <div class="wp-badge borderless-page-logo">
