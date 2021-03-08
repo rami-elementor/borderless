@@ -2,9 +2,9 @@
 Contributors: Visualmodo
 Tags: page builder, editor, landing page, drag-and-drop, visual composer, WPBakery Page Builder, elementor, elementor widgets, related posts, visual composer addon, visual editor, wysiwyg, design, maintenance mode, coming soon, under construction, website builder, landing page builder, front-end builder
 Requires at least: 4.7
-Tested up to: 5.6
+Tested up to: 5.7
 Requires PHP: 5.6
-Stable tag: 1.1.2
+Stable tag: 1.1.3
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -45,6 +45,9 @@ Borderless works like other page builder addon plugin. Go to 'Pages. 'Add new' t
 
 
 == Changelog ==
+
+= 1.1.3 =
+* Dev - Tested up to WordPress 5.7.
 
 = 1.1.2 =
 * Added - System Info.
