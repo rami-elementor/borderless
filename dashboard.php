@@ -34,7 +34,7 @@ class BorderlessDashboard {
             esc_html__( 'Settings', 'borderless' ),   // page title
             esc_html__( 'Settings', 'borderless' ),   // menu title
             'manage_options',                         // capability
-            'borderless.php',                         // slug
+            'borderless.php'                          // slug
         );
 
         add_action('admin_enqueue_scripts', 'borderless_dashboard_style');
