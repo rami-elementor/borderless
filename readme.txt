@@ -4,7 +4,7 @@ Tags: page builder, editor, landing page, drag-and-drop, visual composer, WPBake
 Requires at least: 4.7
 Tested up to: 5.7
 Requires PHP: 5.6
-Stable tag: 1.1.5
+Stable tag: 1.1.6
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -45,6 +45,9 @@ Borderless works like other page builder addon plugin. Go to 'Pages. 'Add new' t
 
 
 == Changelog ==
+
+= 1.1.6 =
+* Improvements - Elementor Init.
 
 = 1.1.5 =
 * Fixed - Fatal Error on dashboard.php - L38

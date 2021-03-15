@@ -271,7 +271,7 @@ class BorderlessDashboard {
         $options = get_option( 'borderless' );
         
         // Set default value.
-        $value = isset( $options['elementor'] ) ? $options['elementor'] : true;
+        $value = isset( $options['elementor'] ) ? $options['elementor'] : '';
         
         // Field output.
         echo '<input type="checkbox" name="borderless[elementor]" class="switch elementor_field" value="checked" ' . checked( $value, 'checked', false ) . '> ' . __( '', 'borderless' );
@@ -289,7 +289,7 @@ class BorderlessDashboard {
         
         // Field output.
         echo '<input type="checkbox" name="borderless[related_posts]" class="switch related_posts_field" value="checked" ' . checked( $value, 'checked', false ) . '> ' . __( '', 'borderless' );
-        echo '<span class="description">' . __( 'Related Posts', 'borderless' ) . '</span>';
+        echo '<span class="description">' . __( 'Related Posts.', 'borderless' ) . '</span>';
         
     }
     

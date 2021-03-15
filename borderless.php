@@ -4,7 +4,7 @@
 Plugin Name: Borderless
 Plugin URI: https://borderless.visualmodo.com/
 Description: One service packed with powerful tools to help you reach your purposes.
-Version: 1.1.5
+Version: 1.1.6
 Author: Visualmodo
 Author URI: https://visualmodo.com
 License: GPLv3 or later
@@ -18,7 +18,7 @@ defined( 'ABSPATH' ) || exit;
 /**
 * Define Constants.
 */
-define( 'BORDERLESS__VERSION', '1.1.5' );
+define( 'BORDERLESS__VERSION', '1.1.6' );
 define( 'BORDERLESS__DIR', plugin_dir_path( __FILE__ ) );
 define( 'BORDERLESS__URL', plugins_url( '/', __FILE__ ) );
 define( 'BORDERLESS__INC', BORDERLESS__DIR . '/includes' );
@@ -37,7 +37,7 @@ require_once( BORDERLESS__DIR . "/dashboard.php");
 require_once( BORDERLESS__DIR . "/system-info.php");
 require_once( BORDERLESS__INC . "/icon-manager/icon-manager.php");
 require_once( BORDERLESS__INC . "/svg/svg.php");
-if ( isset( $options['elementor'] ) && in_array( 'elementor/elementor.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) { require_once( BORDERLESS__ELEMENTOR . "/elementor.php"); }
+if ( isset( $options['elementor'] ) ) { require_once( BORDERLESS__ELEMENTOR . "/elementor.php"); }
 if ( isset( $options['related_posts'] ) ) { require_once( BORDERLESS__RELATED_POSTS . "/related-posts.php"); }
 
 /*-----------------------------------------------------------------------------------*/
