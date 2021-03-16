@@ -8,7 +8,7 @@ defined( 'ABSPATH' ) || exit;
 /*  *.  Borderless Dashboard
 /*-----------------------------------------------------------------------------------*/
 
-class BorderlessDashboard {
+class Borderless_Dashboard {
     
     public function __construct() {
         
@@ -25,7 +25,7 @@ class BorderlessDashboard {
             'manage_options',
             'borderless.php',
             array( $this, 'page_layout' ),
-            plugin_dir_url(__FILE__) . "/assets/img/borderless.svg",
+            BORDERLESS__URL . '/assets/img/borderless.svg',
             2
         );
         
@@ -48,7 +48,7 @@ class BorderlessDashboard {
                 return;
             } else {
                 
-                wp_enqueue_style('borderless_backend_style', plugins_url('assets/styles/dashboard.min.css', __FILE__) );
+                wp_enqueue_style('borderless_backend_style', BORDERLESS__URL . '/assets/styles/dashboard.min.css', array(), BORDERLESS__VERSION );
             }
         }
         
@@ -75,7 +75,7 @@ class BorderlessDashboard {
             esc_html__( 'System Info', 'borderless' ),
             'manage_options',                        
             'borderless-system-info',  
-            'borderless_system_info', 
+            'Borderless_System_Info', 
             99                      
         );
         
@@ -295,4 +295,4 @@ class BorderlessDashboard {
     
 }
 
-new BorderlessDashboard;
+new Borderless_Dashboard;

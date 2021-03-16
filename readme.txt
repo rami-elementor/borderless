@@ -4,7 +4,7 @@ Tags: page builder, editor, landing page, drag-and-drop, visual composer, WPBake
 Requires at least: 4.7
 Tested up to: 5.7
 Requires PHP: 5.6
-Stable tag: 1.1.6
+Stable tag: 1.1.7
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -45,6 +45,15 @@ Borderless works like other page builder addon plugin. Go to 'Pages. 'Add new' t
 
 
 == Changelog ==
+
+= 1.1.7 =
+* Added - borderless Define Public Hooks.
+* Added - Borderless Loader.
+* Improvements - Borderless Init.
+* Improvements - All WPBakery dependencies have been moved to their specific module.
+* Improvements - dashboard.php moved to templates folder.
+* Improvements - system-info.php moved to templates folder.
+* Fixed - WPBakery element Icon - global color.
 
 = 1.1.6 =
 * Improvements - Elementor Init.

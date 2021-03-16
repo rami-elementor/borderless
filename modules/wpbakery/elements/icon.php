@@ -53,7 +53,7 @@ class WPBakeryShortCode_borderless_wpbakery_icon extends WPBakeryShortCode {
 		
 		// Set custom values
 		$link = vc_build_link( $link );
-		$color = ($icon_color == 'custom') ? 'color:'.$custom_icon_color.';' : 'color:'.$ve_global_color.';'; //Icon Color
+		$color = ($icon_color == 'custom') ? 'color:'.$custom_icon_color.';' : 'color:'.$borderless_primary_color.';'; //Icon Color
 		$font_size_reference = $icon_size;
 		$icon_size = $icon_size ? 'font-size:'.$icon_size.';' : ' font-size:4rem;'; //Font Size
 		$icon_alignment = $icon_alignment ? 'text-align:'.$icon_alignment.';' : ''; //Icon Alignment

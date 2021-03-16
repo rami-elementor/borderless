@@ -8,7 +8,7 @@ defined( 'ABSPATH' ) || exit;
 /*  *.  Borderless - System Info
 /*-----------------------------------------------------------------------------------*/
 
-function borderless_system_info() { ?>
+function Borderless_System_Info() { ?>
 
 <div class="wrap borderless-system-info">
 
