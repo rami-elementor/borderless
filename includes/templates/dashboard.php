@@ -118,16 +118,16 @@ class Borderless_Dashboard {
             'borderless_section'
         );
         add_settings_field(
-            'text_color',
-            __( 'Text Color', 'borderless' ),
-            array( $this, 'render_text_color_field' ),
+            'tertiary_color',
+            __( 'Tertiary Color', 'borderless' ),
+            array( $this, 'render_tertiary_color_field' ),
             'borderless',
             'borderless_section'
         );
         add_settings_field(
-            'accent_color',
-            __( 'Accent Color', 'borderless' ),
-            array( $this, 'render_accent_color_field' ),
+            'text_color',
+            __( 'Text Color', 'borderless' ),
+            array( $this, 'render_text_color_field' ),
             'borderless',
             'borderless_section'
         );
@@ -223,7 +223,7 @@ class Borderless_Dashboard {
         $options = get_option( 'borderless' );
         
         // Set default value.
-        $value = isset( $options['primary_color'] ) ? $options['primary_color'] : '#3379fc';
+        $value = isset( $options['primary_color'] ) ? $options['primary_color'] : '#0000FF';
         
         // Field output.
         echo '<input type="color"  name="borderless[primary_color]" class="regular-text primary_color_field" placeholder="' . esc_attr__( '', 'borderless' ) . '" value="' . esc_attr( $value ) . '">';
@@ -237,11 +237,25 @@ class Borderless_Dashboard {
         $options = get_option( 'borderless' );
         
         // Set default value.
-        $value = isset( $options['secondary_color'] ) ? $options['secondary_color'] : '#3379fc';
+        $value = isset( $options['secondary_color'] ) ? $options['secondary_color'] : '#FF6819';
         
         // Field output.
         echo '<input type="color" name="borderless[secondary_color]" class="regular-text secondary_color_field" placeholder="' . esc_attr__( '', 'borderless' ) . '" value="' . esc_attr( $value ) . '">';
         echo '<span class="description">' . __( 'Pick a secondary color for the elements.', 'borderless' ) . '</span>';
+        
+    }
+
+    function render_tertiary_color_field() {
+        
+        // Retrieve data from the database.
+        $options = get_option( 'borderless' );
+        
+        // Set default value.
+        $value = isset( $options['tertiary_color'] ) ? $options['tertiary_color'] : '#3FCC14';
+        
+        // Field output.
+        echo '<input type="color" name="borderless[tertiary_color]" class="regular-text tertiary_color_field" placeholder="' . esc_attr__( '', 'borderless' ) . '" value="' . esc_attr( $value ) . '">';
+        echo '<span class="description">' . __( 'Pick a tertiary color for the elements.', 'borderless' ) . '</span>';
         
     }
     
@@ -256,20 +270,6 @@ class Borderless_Dashboard {
         // Field output.
         echo '<input type="color" name="borderless[text_color]" class="regular-text text_color_field" placeholder="' . esc_attr__( '', 'borderless' ) . '" value="' . esc_attr( $value ) . '">';
         echo '<span class="description">' . __( 'Pick a text color for the elements.', 'borderless' ) . '</span>';
-        
-    }
-    
-    function render_accent_color_field() {
-        
-        // Retrieve data from the database.
-        $options = get_option( 'borderless' );
-        
-        // Set default value.
-        $value = isset( $options['accent_color'] ) ? $options['accent_color'] : '#3379fc';
-        
-        // Field output.
-        echo '<input type="color" name="borderless[accent_color]" class="regular-text accent_color_field" placeholder="' . esc_attr__( '', 'borderless' ) . '" value="' . esc_attr( $value ) . '">';
-        echo '<span class="description">' . __( 'Pick a accent color for the elements.', 'borderless' ) . '</span>';
         
     }
     
