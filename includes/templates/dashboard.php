@@ -37,6 +37,14 @@ class Borderless_Dashboard {
             'borderless.php'                          // slug
         );
 
+        add_submenu_page(
+            'borderless.php',                         
+            esc_html__( 'Post Types', 'borderless' ),   
+            esc_html__( 'Post Types', 'borderless' ),  
+            'manage_options',                         
+            'edit.php?post_type=borderless_cpt'                          
+        );
+
         add_action('admin_enqueue_scripts', 'borderless_dashboard_style');
         
         function borderless_dashboard_style($hook)

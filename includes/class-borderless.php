@@ -89,6 +89,7 @@ class Borderless {
 		require_once( BORDERLESS__INC . "/templates/dashboard.php" );
 		require_once( BORDERLESS__INC . "/templates/system-info.php" );
 		require_once( BORDERLESS__INC . "/icon-manager/icon-manager.php" );
+		require_once( BORDERLESS__INC . "/custom-post-types/custom-post-types.php" );
 		require_once( BORDERLESS__INC . "/svg/svg.php" );
 		require_once( BORDERLESS__WPBAKERY . "/wpbakery.php" );
 		
