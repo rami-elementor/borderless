@@ -1,8 +1,8 @@
 <?php
 /**
- * Adds Borderless_Divider widget.
+ * Adds Borderless_Widget_Divider widget.
  */
-class Borderless_Divider extends WP_Widget {
+class Borderless_Widget_Divider extends WP_Widget {
 
 	/**
 	 * Register widget with WordPress.
@@ -29,18 +29,51 @@ class Borderless_Divider extends WP_Widget {
 		$color = apply_filters('widget_color', $instance['color']);
 		$size = apply_filters('widget_size', $instance['size']);
 		$space = apply_filters('widget_space', $instance['space']);
+
+		// Retrieve data from the database.
+        $options = get_option( 'borderless' );
+        $borderless_primary_color = isset( $options['primary_color'] ) ? $options['primary_color'] : '#0000FF'; //Primary Color
+        $borderless_secondary_color = isset( $options['secondary_color'] ) ? $options['secondary_color'] : '#FF6819'; //Secondary Color
+        $borderless_tertiary_color = isset( $options['tertiary_color'] ) ? $options['tertiary_color'] : '#3FCC14'; //Accent Color
+        $borderless_text_color = isset( $options['text_color'] ) ? $options['text_color'] : '#333333'; //Text Color
+        
+        ?>
+        <style type="text/css">
+        :root {
+            --borderless-color-primary-lighter: <?php echo luminanceLight ( $borderless_primary_color, 0.4 ); ?>;
+            --borderless-color-primary-light: <?php echo luminanceLight ( $borderless_primary_color, 0.2 ); ?>;
+            --borderless-color-primary: <?php echo $borderless_primary_color; ?>;
+            --borderless-color-primary-dark: <?php echo luminanceDark ( $borderless_primary_color, 0.2 ); ?>;
+            --borderless-color-primary-darker: <?php echo luminanceDark ( $borderless_primary_color, 0.4 ); ?>;
+            
+            --borderless-color-secondary-lighter: <?php echo luminanceLight ( $borderless_secondary_color, 0.4 ); ?>;
+            --borderless-color-secondary-light: <?php echo luminanceLight ( $borderless_secondary_color, 0.2 ); ?>;
+            --borderless-color-secondary: <?php echo $borderless_secondary_color; ?>;
+            --borderless-color-secondary-dark: <?php echo luminanceDark ( $borderless_secondary_color, 0.2 ); ?>;
+            --borderless-color-secondary-darker: <?php echo luminanceDark ( $borderless_secondary_color, 0.4 ); ?>;
+            
+            --borderless-color-tertiary-lighter: <?php echo luminanceLight ( $borderless_tertiary_color, 0.4 ); ?>;
+            --borderless-color-tertiary-light: <?php echo luminanceLight ( $borderless_tertiary_color, 0.2 ); ?>;
+            --borderless-color-tertiary: <?php echo $borderless_tertiary_color; ?>;
+            --borderless-color-tertiary-dark: <?php echo luminanceDark ( $borderless_tertiary_color, 0.2 ); ?>;
+            --borderless-color-tertiary-darker: <?php echo luminanceDark ( $borderless_tertiary_color, 0.4 ); ?>;
+            
+            --borderless-text-color: <?php echo $borderless_text_color; ?>;
+        }
+        </style>
+        <?php
 		
 		echo $before_widget;
 		
-		if ( $axis == 'divider--horizontal' ) {
+		if ( $axis == 'borderless-divider--horizontal' ) {
 		$size = 'width:'.$size.';';
 		$space = 'margin:'.$space.' 0;';
-		} else if ( $axis == 'divider--vertical' ) {
+		} else if ( $axis == 'borderless-divider--vertical' ) {
 			$size = 'height:'.$size.';';
 			$space = 'margin:0 '.$space.';';
 		} ?>
 			
-		<div class="borderless-widget divider <?php echo $axis.' '.$color; ?>" style="<?php echo $size.' '.$space; ?>"></div>
+		<div class="borderless-divider <?php echo $axis.' '.$color; ?>" style="<?php echo $size.' '.$space; ?>"></div>
 
 		<?php echo $after_widget;
 	}
@@ -54,38 +87,10 @@ class Borderless_Divider extends WP_Widget {
 	 * @param array $instance Previously saved values from database.
 	 */
         public function form( $instance ) {
-		 
-			// Axis
-			if ( isset( $instance[ 'axis' ] ) ) {
-				$axis = $instance[ 'axis' ];
-			}
-			else {
-				$axis = 'divider--horizontal';
-			}
-
-			// Color Theming
-			if ( isset( $instance[ 'color' ] ) ) {
-				$color = $instance[ 'color' ];
-			} else {
-				$color = 'divider--contrast-color';
-			}
-
-			// Size
-        	if ( isset( $instance[ 'size' ] ) ) {
-        		$size = $instance[ 'size' ];
-        	}
-        	else {
-        		$size = '2rem';
-        	}
-			
-			// Space
-        	if ( isset( $instance[ 'space' ] ) ) {
-        		$space = $instance[ 'space' ];
-        	}
-        	else {
-        		$space = '1rem';
-        	}
-        	
+			$axis = isset( $instance['axis'] ) ? $instance['axis'] : 'divider--horizontal';
+			$color = isset( $instance['color'] ) ? $instance['color'] : 'borderless-divider--primary';
+			$size = isset( $instance['size'] ) ? $instance['size'] : '2rem';
+			$space = isset( $instance['space'] ) ? $instance['space'] : '1rem';        	
         	?>
 
 			<p>
@@ -99,17 +104,18 @@ class Borderless_Divider extends WP_Widget {
 			<p>
 				<label for="<?php echo $this->get_field_id('axis'); ?>"><?php _e('Axis:', 'borderless') ?></label>
 				<select id="<?php echo $this->get_field_id('axis'); ?>" name="<?php echo $this->get_field_name('axis'); ?>" class="widefat">
-					<option value='divider--horizontal'<?php selected( $axis, 'divider--horizontal'); ?>><?php _e( 'Horizontal', 'borderless' ); ?></option>
-					<option value='divider--vertical'<?php selected( $axis, 'divider--vertical'); ?>><?php _e( 'Vertical', 'borderless' ); ?></option> 
+					<option value='borderless-divider--horizontal'<?php selected( $axis, 'divider--horizontal'); ?>><?php _e( 'Horizontal', 'borderless' ); ?></option>
+					<option value='borderless-divider--vertical'<?php selected( $axis, 'divider--vertical'); ?>><?php _e( 'Vertical', 'borderless' ); ?></option> 
 				</select>
 			</p>
 			<p>
 				<label for="<?php echo $this->get_field_id('color'); ?>"><?php _e('Color:', 'borderless') ?></label>
 				<select id="<?php echo $this->get_field_id('color'); ?>" name="<?php echo $this->get_field_name('color'); ?>" class="widefat">
-					<option value='divider--primary-color'<?php selected( $color, 'divider--primary-color'); ?>><?php _e( 'Primary Color', 'borderless' ); ?></option>
-					<option value='divider--secondary-color'<?php selected( $color, 'divider--secondary-color'); ?>><?php _e( 'Secondary Color', 'borderless' ); ?></option> 
-					<option value='divider--tertiary-color'<?php selected( $color, 'divider--tertiary-color'); ?>><?php _e( 'Tertiary Color', 'borderless' ); ?></option> 
-					<option value='divider--contrast-color'<?php selected( $color, 'divider--contrast-color'); ?>><?php _e( 'Contrast Color', 'borderless' ); ?></option> 
+					<option value='borderless-divider--primary'<?php selected( $color, 'borderless-divider--primary'); ?>><?php _e( 'Primary Color', 'borderless' ); ?></option>
+					<option value='borderless-divider--secondary'<?php selected( $color, 'borderless-divider--secondary'); ?>><?php _e( 'Secondary Color', 'borderless' ); ?></option> 
+					<option value='borderless-divider--tertiary'<?php selected( $color, 'borderless-divider--tertiary'); ?>><?php _e( 'Tertiary Color', 'borderless' ); ?></option> 
+					<option value='borderless-divider--light'<?php selected( $color, 'borderless-divider--light'); ?>><?php _e( 'Light Color', 'borderless' ); ?></option> 
+					<option value='borderless-divider--dark'<?php selected( $color, 'borderless-divider--dark'); ?>><?php _e( 'Dark Color', 'borderless' ); ?></option> 
 				</select>
 			</p>
         	
@@ -136,12 +142,12 @@ class Borderless_Divider extends WP_Widget {
    	return $instance;
    }
    
-} // class Borderless_Divider ends
+} // class Borderless_Widget_Divider ends
 
 
 
-// register Borderless_Divider widget
+// register Borderless_Widget_Divider widget
 function register_borderless_divider() {
-	register_widget( 'Borderless_Divider' );
+	register_widget( 'Borderless_Widget_Divider' );
 }
 add_action( 'widgets_init', 'register_borderless_divider' );

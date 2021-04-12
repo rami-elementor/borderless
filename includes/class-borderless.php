@@ -93,6 +93,11 @@ class Borderless {
 		require_once( BORDERLESS__INC . "/svg/svg.php" );
 		require_once( BORDERLESS__WPBAKERY . "/wpbakery.php" );
 		require_once( BORDERLESS__INC . "/widgets/button.php" );
+		require_once( BORDERLESS__INC . "/widgets/contact-info.php" );
+		require_once( BORDERLESS__INC . "/widgets/divider.php" );
+		require_once( BORDERLESS__INC . "/widgets/search.php" );
+		require_once( BORDERLESS__INC . "/widgets/social-media.php" );
+		require_once( BORDERLESS__INC . "/widgets/spacer.php" );
 		require_once( BORDERLESS__INC . "/helper.php" );
 		
 		if ( isset( $options['elementor'] ) ) { 

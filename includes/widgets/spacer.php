@@ -1,8 +1,8 @@
 <?php
 /**
- * Adds Borderless_Spacer widget.
+ * Adds Borderless_Widget_Spacer widget.
  */
-class Borderless_Spacer extends WP_Widget {
+class Borderless_Widget_Spacer extends WP_Widget {
 
 	/**
 	 * Register widget with WordPress.
@@ -72,12 +72,13 @@ class Borderless_Spacer extends WP_Widget {
    	return $instance;
    }
    
-} // class Borderless_Spacer ends
+} // class Borderless_Widget_Spacer ends
 
 
 
-// register Borderless_Spacer widget
+// register Borderless_Widget_Spacer widget
 function register_borderless_spacer() {
-	register_widget( 'Borderless_Spacer' );
+	register_widget( 'Borderless_Widget_Spacer' );
 }
+
 add_action( 'widgets_init', 'register_borderless_spacer' );
