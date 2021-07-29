@@ -2,9 +2,9 @@
 Contributors: Visualmodo
 Tags: page builder, editor, landing page, drag-and-drop, visual composer, WPBakery Page Builder, elementor, elementor widgets, related content, related posts, related, contextual related posts, similar posts, related posts for wordpress, easy related posts, visual composer addon, visual editor, wysiwyg, design, maintenance mode, coming soon, under construction, website builder, landing page builder, front-end builder, custom post types, CPT, post, types, post type, post types, taxonomy, tax, custom, content types, post types
 Requires at least: 4.7
-Tested up to: 5.7
+Tested up to: 5.8
 Requires PHP: 5.6
-Stable tag: 1.2.0
+Stable tag: 1.2.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -80,6 +80,9 @@ Sites must be built on PHP 5.6 or greater, but Borderless always supports the la
 4. Create a new Post Type in seconds with our exclusive Custom Post type Creator.
 
 == Changelog ==
+
+= 1.2.1 =
+* Dev - Tested up to WordPress 5.8.
 
 = 1.2.0 =
 * New - Widget Contact Info.
