@@ -4263,4 +4263,59 @@ jQuery(function ($) {
         });
       });
     });
+
+  /* ==================================================
+  Elementor - Semi Circular Progress Bar
+  ================================================== */
+
+  $(document).ready(function () {
+     $('.borderless-elementor-semi-circular-progress-bar').each(function () {
+       $(this).appear(function () {
+         const title = $(this).attr('title');
+         const counter_color = $(this).attr('counter_color');
+         const stroke_color_mode = $(this).attr('stroke_color_mode');
+         const stroke_color = $(this).attr('stroke_color');
+         const stroke_color_from = $(this).attr('stroke_color_from');
+         const stroke_color_to = $(this).attr('stroke_color_to');
+         const trail_color = $(this).attr('trail_color'); 
+         const stroke_width = $(this).attr('stroke_width');
+         const trail_width = $(this).attr('trail_width'); 
+         const animation_duration = parseFloat($(this).attr('animation_duration'));
+         const counter_value = $(this).attr('counter_value') / 100;
+         const bar = new ProgressBar.SemiCircle(this, {
+           strokeWidth: stroke_width,
+           easing: 'easeInOut',
+           duration: animation_duration,
+           color: stroke_color,
+           trailColor: trail_color,
+           trailWidth: trail_width,
+           svgStyle: null,
+           text: {
+             style: {
+               // Text color.
+               // Default: same as stroke color (options.color)
+               color: counter_color
+             },
+             autoStyleContainer: false
+           },
+           from: {color: stroke_color_from},
+           to: {color: stroke_color_to},
+           step: function(state, circle) {
+             if (stroke_color_mode == 'gradient') {
+                 circle.path.setAttribute('stroke', state.color);
+             }
+         
+             var value = '<span class="borderless-elementor-semi-circular-progress-bar-counter-value">' + Math.round(circle.value() * 100) + '</span>' + '<span class="borderless-elementor-semi-circular-progress-bar-counter-postfix">%</span>' + '<br /><span class="borderless-elementor-semi-circular-progress-bar-title">'+title+'</span>';
+             if (value === 0) {
+               circle.setText('');
+             } else {
+               circle.setText(value);
+             }
+         
+           }
+         });
+         bar.animate(counter_value); // Number from 0.0 to 1.0
+       });
+     });
+   });
 }); // End Strict

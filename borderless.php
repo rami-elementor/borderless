@@ -4,7 +4,7 @@
 Plugin Name: Borderless
 Plugin URI: https://wpborderless.com/
 Description: One service packed with powerful tools to help you reach your purposes.
-Version: 1.2.2
+Version: 1.2.3
 Author: Visualmodo
 Author URI: https://unicorp.global
 License: GPLv3 or later
@@ -20,7 +20,7 @@ defined( 'ABSPATH' ) || exit;
 /*  *.  Borderless Constants
 /*-----------------------------------------------------------------------------------*/
 
-define( 'BORDERLESS__VERSION', '1.2.2' );
+define( 'BORDERLESS__VERSION', '1.2.3' );
 define( 'BORDERLESS__DIR', plugin_dir_path( __FILE__ ) );
 define( 'BORDERLESS__URL', plugins_url( '/', __FILE__ ) );
 define( 'BORDERLESS__INC', BORDERLESS__DIR . '/includes' );
