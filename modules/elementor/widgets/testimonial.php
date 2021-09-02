@@ -55,7 +55,7 @@ class Testimonial extends Widget_Base {
 
 	public function get_custom_help_url()
 	{
-        return 'https://borderless.visualmodo.com';
+        return 'https://wpborderless.com/';
     }
 
 	public function get_style_depends()

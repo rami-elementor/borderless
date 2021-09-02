@@ -2913,7 +2913,7 @@ msgid "Select testimonial occupation color."
 msgstr ""
 
 #. Plugin URI of the plugin/theme
-msgid "https://borderless.visualmodo.com/"
+msgid "https://wpborderless.com/"
 msgstr ""
 
 #. Description of the plugin/theme

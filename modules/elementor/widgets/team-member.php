@@ -53,7 +53,7 @@ class Team_Member extends Widget_Base {
 
 	public function get_custom_help_url()
 	{
-        return 'https://borderless.visualmodo.com';
+        return 'https://wpborderless.com/';
     }
 	
 	protected function _register_controls() {

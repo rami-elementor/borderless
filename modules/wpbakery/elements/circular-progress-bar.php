@@ -11,7 +11,7 @@ class WPBakeryShortCode_borderless_wpbakery_circular_progress_bar extends WPBake
 	protected function content( $atts, $content = null ) {
 		extract( shortcode_atts( array(
 			'title' => '',
-			'percentage' => '',
+			'percentage' => '50',
 			'bar_thickness' => '16',
 			'track_thickness' => '16',
 			'corner' => 'butt',

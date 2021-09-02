@@ -16,7 +16,7 @@ class Contact_Form_7 extends Widget_Base {
 	}
 	
 	public function get_title() {
-		return 'Contact From 7';
+		return 'Contact Form 7';
 	}
 	
 	public function get_icon() {
