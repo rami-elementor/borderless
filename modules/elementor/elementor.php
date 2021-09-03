@@ -57,6 +57,7 @@ final class Borderless_Elementor {
 		require_once('helper.php');
 		require_once('widgets/circular-progress-bar.php');
         require_once('widgets/contact-form-7.php');
+		require_once('widgets/progress-bar.php');
 		require_once('widgets/semi-circular-progress-bar.php');
 		require_once('widgets/team-member.php');
 		require_once('widgets/testimonial.php');
@@ -64,6 +65,7 @@ final class Borderless_Elementor {
 		// Register widget
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Borderless\Widgets\Circular_Progress_Bar() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Borderless\Widgets\Contact_Form_7() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Borderless\Widgets\Progress_Bar() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Borderless\Widgets\Semi_Circular_Progress_Bar() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Borderless\Widgets\Team_Member() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Borderless\Widgets\Testimonial() );

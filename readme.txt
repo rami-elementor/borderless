@@ -4,7 +4,7 @@ Tags: page builder, editor, landing page, drag-and-drop, visual composer, WPBake
 Requires at least: 4.7
 Tested up to: 5.8
 Requires PHP: 5.6
-Stable tag: 1.2.3
+Stable tag: 1.2.4
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -80,6 +80,9 @@ Sites must be built on PHP 5.6 or greater, but Borderless always supports the la
 4. Create a new Post Type in seconds with our exclusive Custom Post type Creator.
 
 == Changelog ==
+
+= 1.2.4 - Sep 03 2021 =
+* Added - Elementor Widget - Progress Bar.
 
 = 1.2.3 - Sep 02 2021 =
 * Added - Elementor Widget - Semi Circular Progress Bar.

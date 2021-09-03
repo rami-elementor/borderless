@@ -11,14 +11,14 @@ use \Elementor\Group_Control_Typography;
 use \Elementor\Core\Schemes\Typography;
 use \Elementor\Widget_Base;
 
-class Semi_Circular_Progress_Bar extends Widget_Base {
+class Progress_Bar extends Widget_Base {
 	
 	public function get_name() {
-		return 'borderless-elementor-semi-circular-progress-bar';
+		return 'borderless-elementor-progress-bar';
 	}
 	
 	public function get_title() {
-		return esc_html__( 'Semi Circular Progress Bar', 'borderless');
+		return esc_html__( 'Progress Bar', 'borderless');
 	}
 	
 	public function get_icon() {
@@ -32,11 +32,9 @@ class Semi_Circular_Progress_Bar extends Widget_Base {
 	public function get_keywords()
 	{
         return [
-			'semi circular progress bar',
 			'progress bar',
 			'bar',
 			'borderless',
-			'borderless semi circular progress bar',
 			'borderless progress bar',
 			'borderless bar'
 		];
@@ -55,7 +53,7 @@ class Semi_Circular_Progress_Bar extends Widget_Base {
 		/*-----------------------------------------------------------------------------------*/
 
 		$this->start_controls_section(
-			'borderless_elementor_section_semi_circular_progress_bar_layout',
+			'borderless_elementor_section_progress_bar_layout',
 			[
 				'label' => esc_html__( 'Layout', 'borderless' ),
 				'tab' => Controls_Manager::TAB_CONTENT,
@@ -63,7 +61,7 @@ class Semi_Circular_Progress_Bar extends Widget_Base {
 		);
 
 		$this->add_control(
-			'borderless_elementor_semi_circular_progress_bar_title',
+			'borderless_elementor_progress_bar_title',
 			[
 				'label' => esc_html__( 'Title', 'borderless'),
 				'type' => Controls_Manager::TEXT,
@@ -74,7 +72,7 @@ class Semi_Circular_Progress_Bar extends Widget_Base {
 		);
 
 		$this->add_control(
-			'borderless_elementor_semi_circular_progress_bar_counter_value',
+			'borderless_elementor_progress_bar_counter_value',
 			[
 				'label' => esc_html__( 'Counter Value', 'borderless'),
 				'type' => Controls_Manager::SLIDER,
@@ -94,7 +92,7 @@ class Semi_Circular_Progress_Bar extends Widget_Base {
 		);
 
 		$this->add_control(
-            'borderless_elementor_semi_circular_progress_bar_animation_duration',
+            'borderless_elementor_progress_bar_animation_duration',
             [
                 'label' => __('Animation Duration', 'borderless'),
                 'type' => Controls_Manager::SLIDER,
@@ -122,7 +120,7 @@ class Semi_Circular_Progress_Bar extends Widget_Base {
 	/*-----------------------------------------------------------------------------------*/
 
 	$this->start_controls_section(
-		'borderless_elementor_section_semi_circular_progress_bar_styles_general',
+		'borderless_elementor_section_progress_bar_styles_general',
 		[
 			'label' => esc_html__( 'General', 'borderless'),
 			'tab' => Controls_Manager::TAB_STYLE
@@ -130,54 +128,54 @@ class Semi_Circular_Progress_Bar extends Widget_Base {
 	);
 
 	$this->add_control(
-		'borderless_elementor_semi_circular_progress_bar_alignment',
+		'borderless_elementor_progress_bar_alignment',
 		[
 			'label' => __('Alignment', 'borderless'),
 			'type' => \Elementor\Controls_Manager::CHOOSE,
 			'options' => [
-				'borderless-elementor-semi-circular-progress-bar-alignment-left' => [
+				'borderless-elementor-progress-bar-alignment-left' => [
 					'title' => __('Left', 'borderless'),
 					'icon' => 'fa fa-align-left',
 				],
-				'borderless-elementor-semi-circular-progress-bar-alignment-center' => [
+				'borderless-elementor-progress-bar-alignment-center' => [
 					'title' => __('Center', 'borderless'),
 					'icon' => 'fa fa-align-center',
 				],
-				'borderless-elementor-semi-circular-progress-bar-alignment-right' => [
+				'borderless-elementor-progress-bar-alignment-right' => [
 					'title' => __('Right', 'borderless'),
 					'icon' => 'fa fa-align-right',
 				],
 			],
-			'default' => 'borderless-elementor-semi-circular-progress-bar-alignment-center',
+			'default' => 'borderless-elementor-progress-bar-alignment-center',
 		]
 	);
 
 	$this->add_control(
-		'borderless_elementor_semi_circular_progress_bar_size',
+		'borderless_elementor_progress_bar_size',
 		[
 			'label' => __('Size', 'borderless'),
 			'type' => Controls_Manager::SLIDER,
-			'size_units' => ['px'],
+			'size_units' => ['%'],
 			'range' => [
-				'px' => [
-					'min' => 50,
-					'max' => 500,
+				'%' => [
+					'min' => 1,
+					'max' => 100,
 					'step' => 1,
 				],
 			],
 			'default' => [
-				'unit' => 'px',
-				'size' => 200,
+				'unit' => '%',
+				'size' => 100,
 			],
 			'selectors' => [
-				'{{WRAPPER}} .borderless-elementor-semi-circular-progress-bar' => 'width: {{SIZE}}{{UNIT}}; height: calc({{SIZE}}{{UNIT}} / 2);',
+				'{{WRAPPER}} .borderless-elementor-progress-bar' => 'width: {{SIZE}}{{UNIT}};',
 			],
 			'separator' => 'before',
 		]
 	);
 
 	$this->add_control(
-		'borderless_elementor_semi_circular_progress_bar_stroke_width',
+		'borderless_elementor_progress_bar_stroke_width',
 		[
 			'label' => __('Stroke Width', 'borderless'),
 			'type' => Controls_Manager::SLIDER,
@@ -191,63 +189,63 @@ class Semi_Circular_Progress_Bar extends Widget_Base {
 			],
 			'default' => [
 				'unit' => 'px',
-				'size' => 12,
+				'size' => 2,
 			],
 			'separator' => 'before',
 		]
 	);
 
 	$this->add_control(
-		'borderless_elementor_semi_circular_progress_bar_stroke_color_style',
+		'borderless_elementor_progress_bar_stroke_color_style',
 		[
 			'label' => __( 'Stroke Color Style', 'borderless' ),
 			'type' => \Elementor\Controls_Manager::SELECT,
-			'default' => 'borderless-elementor-semi-circular-progress-bar-stroke-solid-color',
+			'default' => 'borderless-elementor-progress-bar-stroke-solid-color',
 			'options' => [
-				'borderless-elementor-semi-circular-progress-bar-stroke-solid-color'  => __( 'Solid', 'borderless' ),
-				'borderless-elementor-semi-circular-progress-bar-stroke-gradient-color' => __( 'Gradient', 'borderless' ),
+				'borderless-elementor-progress-bar-stroke-solid-color'  => __( 'Solid', 'borderless' ),
+				'borderless-elementor-progress-bar-stroke-gradient-color' => __( 'Gradient', 'borderless' ),
 			],
 		]
 	);
 
 	$this->add_control(
-		'borderless_elementor_semi_circular_progress_bar_stroke_color',
+		'borderless_elementor_progress_bar_stroke_color',
 		[
 			'label' => __('Stroke Color', 'borderless'),
 			'type' => Controls_Manager::COLOR,
 			'default' => '#000',
 			'condition' => [
-				'borderless_elementor_semi_circular_progress_bar_stroke_color_style' => 'borderless-elementor-semi-circular-progress-bar-stroke-solid-color',
+				'borderless_elementor_progress_bar_stroke_color_style' => 'borderless-elementor-progress-bar-stroke-solid-color',
 			],
 		]
 	);
 
 	$this->add_control(
-		'borderless_elementor_semi_circular_progress_bar_stroke_color_from',
+		'borderless_elementor_progress_bar_stroke_color_from',
 		[
 			'label' => __('Stroke Color From', 'borderless'),
 			'type' => Controls_Manager::COLOR,
 			'default' => '#000',
 			'condition' => [
-				'borderless_elementor_semi_circular_progress_bar_stroke_color_style' => 'borderless-elementor-semi-circular-progress-bar-stroke-gradient-color',
+				'borderless_elementor_progress_bar_stroke_color_style' => 'borderless-elementor-progress-bar-stroke-gradient-color',
 			],
 		]
 	);
 
 	$this->add_control(
-		'borderless_elementor_semi_circular_progress_bar_stroke_color_to',
+		'borderless_elementor_progress_bar_stroke_color_to',
 		[
 			'label' => __('Stroke Color To', 'borderless'),
 			'type' => Controls_Manager::COLOR,
 			'default' => '#000',
 			'condition' => [
-				'borderless_elementor_semi_circular_progress_bar_stroke_color_style' => 'borderless-elementor-semi-circular-progress-bar-stroke-gradient-color',
+				'borderless_elementor_progress_bar_stroke_color_style' => 'borderless-elementor-progress-bar-stroke-gradient-color',
 			],
 		]
 	);
 
 	$this->add_control(
-		'borderless_elementor_semi_circular_progress_bar_trail_width',
+		'borderless_elementor_progress_bar_trail_width',
 		[
 			'label' => __('Trail Width', 'borderless'),
 			'type' => Controls_Manager::SLIDER,
@@ -261,30 +259,41 @@ class Semi_Circular_Progress_Bar extends Widget_Base {
 			],
 			'default' => [
 				'unit' => 'px',
-				'size' => 12,
+				'size' => 2,
 			],
 			'separator' => 'before',
 		]
 	);
 
 	$this->add_control(
-		'borderless_elementor_semi_circular_progress_bar_trail_color',
+		'borderless_elementor_progress_bar_trail_color',
 		[
 			'label' => __('Trail Color', 'borderless'),
 			'type' => Controls_Manager::COLOR,
 			'default' => '#eee',
 		]
-	);	
+	);
 
 	$this->add_control(
-		'borderless_elementor_semi_circular_progress_bar_background_color',
+		'borderless_elementor_progress_bar_background_color',
 		[
 			'label' => __('Background Color', 'borderless'),
 			'type' => Controls_Manager::COLOR,
 			'default' => '#fff',
 			'selectors' => [
-				'{{WRAPPER}} .borderless-elementor-semi-circular-progress-bar' => 'background-color: {{VALUE}}',
+				'{{WRAPPER}} .borderless-elementor-progress-bar' => 'background-color: {{VALUE}}',
 			],
+			'separator' => 'before',
+		]
+	);
+
+	$this->add_group_control(
+		Group_Control_Box_Shadow::get_type(),
+		[
+			'name' => 'borderless_elementor_progress_bar_box_shadow',
+			'label' => __('Box Shadow', 'borderless'),
+			'selector' => '{{WRAPPER}} .borderless-elementor-progress-bar',
+			'separator' => 'before',
 		]
 	);
 
@@ -305,21 +314,21 @@ class Semi_Circular_Progress_Bar extends Widget_Base {
 	$this->add_group_control(
 		Group_Control_Typography::get_type(),
 		[
-			'name' => 'borderless_elementor_semi_circular_progress_bar_title_typography',
+			'name' => 'borderless_elementor_progress_bar_title_typography',
 			'label' => __('Title', 'borderless'),
 			'scheme' => Typography::TYPOGRAPHY_1,
-			'selector' => '{{WRAPPER}} .borderless-elementor-semi-circular-progress-bar .progressbar-text .borderless-elementor-semi-circular-progress-bar-title',
+			'selector' => '{{WRAPPER}} .borderless-elementor-progress-bar .progressbar-text div .borderless-elementor-progress-bar-title',
 		]
 	);
 
 	$this->add_control(
-		'borderless_elementor_semi_circular_progress_bar_title_color',
+		'borderless_elementor_progress_bar_title_color',
 		[
 			'label' => __('Title Color', 'borderless'),
 			'type' => Controls_Manager::COLOR,
 			'default' => '',
 			'selectors' => [
-				'{{WRAPPER}} .borderless-elementor-semi-circular-progress-bar .progressbar-text .borderless-elementor-semi-circular-progress-bar-title' => 'color: {{VALUE}}',
+				'{{WRAPPER}} .borderless-elementor-progress-bar .progressbar-text div .borderless-elementor-progress-bar-title' => 'color: {{VALUE}}',
 			],
 			'separator' => 'after',
 		]
@@ -328,15 +337,15 @@ class Semi_Circular_Progress_Bar extends Widget_Base {
 	$this->add_group_control(
 		Group_Control_Typography::get_type(),
 		[
-			'name' => 'borderless_elementor_semi_circular_progress_bar_counter_typography',
+			'name' => 'borderless_elementor_progress_bar_counter_typography',
 			'label' => __('Counter', 'borderless'),
 			'scheme' => Typography::TYPOGRAPHY_1,
-			'selector' => '{{WRAPPER}} .borderless-elementor-semi-circular-progress-bar .progressbar-text .borderless-elementor-semi-circular-progress-bar-counter-value',
+			'selector' => '{{WRAPPER}} .borderless-elementor-progress-bar .progressbar-text div .borderless-elementor-progress-bar-counter-value',
 		]
 	);
 
 	$this->add_control(
-		'borderless_elementor_semi_circular_progress_bar_counter_color',
+		'borderless_elementor_progress_bar_counter_color',
 		[
 			'label' => __('Counter Color', 'borderless'),
 			'type' => Controls_Manager::COLOR,
@@ -348,21 +357,21 @@ class Semi_Circular_Progress_Bar extends Widget_Base {
 	$this->add_group_control(
 		Group_Control_Typography::get_type(),
 		[
-			'name' => 'borderless_elementor_semi_circular_progress_bar_postfix_typography',
+			'name' => 'borderless_elementor_progress_bar_postfix_typography',
 			'label' => __('Postfix', 'borderless'),
 			'scheme' => Typography::TYPOGRAPHY_1,
-			'selector' => '{{WRAPPER}} .borderless-elementor-semi-circular-progress-bar-counter-postfix',
+			'selector' => '{{WRAPPER}} .borderless-elementor-progress-bar .progressbar-text div .borderless-elementor-progress-bar-counter-postfix',
 		]
 	);
 
 	$this->add_control(
-		'borderless_elementor_semi_circular_progress_bar_postfix_color',
+		'borderless_elementor_progress_bar_postfix_color',
 		[
 			'label' => __('Postfix Color', 'borderless'),
 			'type' => Controls_Manager::COLOR,
 			'default' => '',
 			'selectors' => [
-				'{{WRAPPER}} .borderless-elementor-semi-circular-progress-bar-counter-postfix' => 'color: {{VALUE}}',
+				'{{WRAPPER}} .borderless-elementor-progress-bar .progressbar-text div .borderless-elementor-progress-bar-counter-postfix' => 'color: {{VALUE}}',
 			],
 		]
 	);
@@ -378,14 +387,14 @@ class Semi_Circular_Progress_Bar extends Widget_Base {
 	protected function render() {
 		$settings = $this->get_settings_for_display();
 
-		if ($settings['borderless_elementor_semi_circular_progress_bar_stroke_color_style'] == 'borderless-elementor-semi-circular-progress-bar-stroke-solid-color' ) {
-			$borderless_elementor_semi_circular_progress_bar_stroke_color_style = 'stroke_color_mode="solid" stroke_color="'.$settings['borderless_elementor_semi_circular_progress_bar_stroke_color'].'"';
+		if ($settings['borderless_elementor_progress_bar_stroke_color_style'] == 'borderless-elementor-progress-bar-stroke-solid-color' ) {
+			$borderless_elementor_progress_bar_stroke_color_style = 'stroke_color_mode="solid" stroke_color="'.$settings['borderless_elementor_progress_bar_stroke_color'].'"';
 
 		} else {
-			$borderless_elementor_semi_circular_progress_bar_stroke_color_style = 'stroke_color_mode="gradient" stroke_color="'.$settings['borderless_elementor_semi_circular_progress_bar_stroke_color'].'" stroke_color_from="'.$settings['borderless_elementor_semi_circular_progress_bar_stroke_color_from'].'" stroke_color_to="'.$settings['borderless_elementor_semi_circular_progress_bar_stroke_color_to'].'"';
+			$borderless_elementor_progress_bar_stroke_color_style = 'stroke_color_mode="gradient" stroke_color="'.$settings['borderless_elementor_progress_bar_stroke_color'].'" stroke_color_from="'.$settings['borderless_elementor_progress_bar_stroke_color_from'].'" stroke_color_to="'.$settings['borderless_elementor_progress_bar_stroke_color_to'].'"';
 		}
 
-		echo'<div class="borderless-elementor-semi-circular-progress-bar-widget '.$settings['borderless_elementor_semi_circular_progress_bar_alignment'].'"><div class="borderless-elementor-semi-circular-progress-bar" title="'.$settings['borderless_elementor_semi_circular_progress_bar_title'].'" counter_value="'.$settings['borderless_elementor_semi_circular_progress_bar_counter_value']['size'].'" '.$borderless_elementor_semi_circular_progress_bar_stroke_color_style.' trail_color="'.$settings['borderless_elementor_semi_circular_progress_bar_trail_color'].'" counter_color="'.$settings['borderless_elementor_semi_circular_progress_bar_counter_color'].'" stroke_width="'.$settings['borderless_elementor_semi_circular_progress_bar_stroke_width']['size'].'" trail_width="'.$settings['borderless_elementor_semi_circular_progress_bar_trail_width']['size'].'" animation_duration="'.$settings['borderless_elementor_semi_circular_progress_bar_animation_duration']['size'].'">
+		echo'<div class="borderless-elementor-progress-bar-widget '.$settings['borderless_elementor_progress_bar_alignment'].'"><div class="borderless-elementor-progress-bar '.$settings['borderless_elementor_progress_bar_shape'].'" title="'.$settings['borderless_elementor_progress_bar_title'].'" counter_value="'.$settings['borderless_elementor_progress_bar_counter_value']['size'].'" '.$borderless_elementor_progress_bar_stroke_color_style.' trail_color="'.$settings['borderless_elementor_progress_bar_trail_color'].'" counter_color="'.$settings['borderless_elementor_progress_bar_counter_color'].'" stroke_width="'.$settings['borderless_elementor_progress_bar_stroke_width']['size'].'" trail_width="'.$settings['borderless_elementor_progress_bar_trail_width']['size'].'" animation_duration="'.$settings['borderless_elementor_progress_bar_animation_duration']['size'].'">
 		</div></div>';
 
 	}

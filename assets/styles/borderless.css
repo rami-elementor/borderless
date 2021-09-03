@@ -3498,38 +3498,6 @@ body {
 .vi-zoom-out-2:before {
   content: ""; }
 
-@font-face {
-  font-family: 'borderless-icon-font';
-  src: url("../fonts/borderless-icon-font.ttf?wzznus") format("truetype"), url("../fonts/borderless-icon-font.woff?wzznus") format("woff"), url("../fonts/borderless-icon-font.svg?wzznus#borderless-icon-font") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: block; }
-
-[class^="borderless-"], [class*=" borderless-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'borderless-icon-font';
-  speak: never;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
-
-.borderless-circular-progress-bar:before {
-  content: "\e902"; }
-
-.borderless-testimonial:before {
-  content: "\e903"; }
-
-.borderless-team-member:before {
-  content: "\e901"; }
-
-.borderless-contact-form-7:before {
-  content: "\e900"; }
-
 /*! Flickity v2.2.1
 https://flickity.metafizzy.co
 ---------------------------------------------- */
@@ -5806,6 +5774,28 @@ ol, ul {
       text-align: center;
       padding: 0;
       margin: 0; }
+
+/*-----------------------------------------------------------------------------------*/
+/*  *.  Elementor - Component - Progress Bar
+/*-----------------------------------------------------------------------------------*/
+.borderless-elementor-progress-bar-widget {
+  display: flex; }
+  .borderless-elementor-progress-bar-widget.borderless-elementor-progress-bar-alignment-left {
+    justify-content: flex-start; }
+  .borderless-elementor-progress-bar-widget.borderless-elementor-progress-bar-alignment-center {
+    justify-content: space-around; }
+  .borderless-elementor-progress-bar-widget.borderless-elementor-progress-bar-alignment-right {
+    justify-content: flex-end; }
+  .borderless-elementor-progress-bar-widget .borderless-elementor-progress-bar {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center; }
+    .borderless-elementor-progress-bar-widget .borderless-elementor-progress-bar .progressbar-text {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.5em;
+      font-size: 1rem; }
 
 /*-----------------------------------------------------------------------------------*/
 /*  *.  Elementor - Component - Semi Circular Progress Bar
