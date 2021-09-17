@@ -4,7 +4,7 @@
 Plugin Name: Borderless
 Plugin URI: https://wpborderless.com/
 Description: One service packed with powerful tools to help you reach your purposes.
-Version: 1.2.5
+Version: 1.2.6
 Author: Visualmodo
 Author URI: https://unicorp.global
 License: GPLv3 or later
@@ -20,11 +20,13 @@ defined( 'ABSPATH' ) || exit;
 /*  *.  Borderless Constants
 /*-----------------------------------------------------------------------------------*/
 
-define( 'BORDERLESS__VERSION', '1.2.5' );
+define( 'BORDERLESS__VERSION', '1.2.6' );
 define( 'BORDERLESS__DIR', plugin_dir_path( __FILE__ ) );
 define( 'BORDERLESS__URL', plugins_url( '/', __FILE__ ) );
 define( 'BORDERLESS__INC', BORDERLESS__DIR . '/includes' );
-define( 'BORDERLESS__ASSETS', BORDERLESS__DIR . '/assets' );
+define( 'BORDERLESS__ASSETS', BORDERLESS__URL . 'assets/' );
+define( 'BORDERLESS__STYLES', BORDERLESS__ASSETS . 'styles/' );
+define( 'BORDERLESS__SCRIPTS', BORDERLESS__ASSETS . 'scripts/' );
 define( 'BORDERLESS__WPBAKERY', BORDERLESS__DIR . '/modules/wpbakery' );
 define( 'BORDERLESS__ELEMENTOR', BORDERLESS__DIR . '/modules/elementor' );
 define( 'BORDERLESS__RELATED_POSTS', BORDERLESS__DIR . '/modules/related-posts' );
