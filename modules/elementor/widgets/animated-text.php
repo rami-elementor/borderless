@@ -12,23 +12,23 @@ use \Elementor\Core\Schemes\Typography;
 use \Elementor\Repeater;
 use Elementor\Utils;
 
-class Fancy_Text extends Widget_Base {
+class Animated_Text extends Widget_Base {
 
 	public function __construct($data = [], $args = null) {
 		parent::__construct($data, $args);
 
-		wp_register_style( 'elementor-widget-fancy-text', BORDERLESS__STYLES . 'elementor-widget-fancy-text.css', false, BORDERLESS__VERSION);
+		wp_register_style( 'elementor-widget-animated-text', BORDERLESS__STYLES . 'elementor-widget-animated-text.css', false, BORDERLESS__VERSION);
   
 		wp_register_script( 'typewriterjs', BORDERLESS__SCRIPTS . 'typewriterjs.js', [ 'elementor-frontend' ], BORDERLESS__VERSION, true );
 
 	 }
 	
 	public function get_name() {
-		return 'fancy-text';
+		return 'borderless-elementor-animated-text';
 	}
 	
 	public function get_title() {
-		return esc_html__('Fancy Text', 'borderless');
+		return esc_html__('Animated Text', 'borderless');
 	}
 	
 	public function get_icon() {
@@ -40,7 +40,7 @@ class Fancy_Text extends Widget_Base {
 	}
 
 	public function get_style_depends() {
-		return [ 'elementor-widget-fancy-text' ];
+		return [ 'elementor-widget-animated-text' ];
 	}
 
 	public function get_script_depends() {
@@ -50,19 +50,19 @@ class Fancy_Text extends Widget_Base {
 	protected function _register_controls() {
 
 		/*-----------------------------------------------------------------------------------*/
-	/*  *.  Fancy Text - Content
+	/*  *.  Animated Text - Content
 	/*-----------------------------------------------------------------------------------*/
 
 		$this->start_controls_section(
-			'borderless_section_fancy_text',
+			'borderless_section_animated_text',
 			[
-				'label' => esc_html__( 'Fancy Text', 'borderless' ),
+				'label' => esc_html__( 'Animated Text', 'borderless' ),
 				'tab' => Controls_Manager::TAB_CONTENT,
 			]
 		);
 
 		$this->add_control(
-			'borderless_elementor_fancy_text_prefix',
+			'borderless_elementor_animated_text_prefix',
 			[
 				'label' => __( 'Prefix', 'borderless' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
@@ -75,9 +75,9 @@ class Fancy_Text extends Widget_Base {
 		$repeater = new Repeater();
 
 		$repeater->add_control(
-			'borderless_elementor_fancy_text_strings_text_field',
+			'borderless_elementor_animated_text_strings_text_field',
 			[
-				'label'			=> esc_html__( 'Fancy String', 'borderless'),
+				'label'			=> esc_html__( 'Animated String', 'borderless'),
 				'type'			=> Controls_Manager::TEXT,
 				'label_block'	=> true,
 				'dynamic'		=> [ 'active' => true ]
@@ -85,29 +85,29 @@ class Fancy_Text extends Widget_Base {
 		);
 
 		$this->add_control(
-			'borderless_elementor_fancy_text_strings',
+			'borderless_elementor_animated_text_strings',
 			[
-				'label'       => __( 'Fancy Text', 'borderless'),
+				'label'       => __( 'Animated Text', 'borderless'),
 				'type'        => Controls_Manager::REPEATER,
 				'show_label'  => true,
 				'fields'      =>  $repeater->get_controls(),
-				'title_field' => '{{ borderless_elementor_fancy_text_strings_text_field }}',
+				'title_field' => '{{ borderless_elementor_animated_text_strings_text_field }}',
 				'default'     => [
 					[
-						'borderless_elementor_fancy_text_strings_text_field' => __( 'First string', 'borderless'),
+						'borderless_elementor_animated_text_strings_text_field' => __( 'First string', 'borderless'),
 					],
 					[
-						'borderless_elementor_fancy_text_strings_text_field' => __( 'Second string', 'borderless'),
+						'borderless_elementor_animated_text_strings_text_field' => __( 'Second string', 'borderless'),
 					],
 					[
-						'borderless_elementor_fancy_text_strings_text_field' => __( 'Third string', 'borderless'),
+						'borderless_elementor_animated_text_strings_text_field' => __( 'Third string', 'borderless'),
 					]
 				],
 			]
 		);
 
 		$this->add_control(
-			'borderless_elementor_fancy_text_suffix',
+			'borderless_elementor_animated_text_suffix',
 			[
 				'label' => __( 'Suffix', 'borderless' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
@@ -120,19 +120,19 @@ class Fancy_Text extends Widget_Base {
 		$this->end_controls_section();
 
 		/*-----------------------------------------------------------------------------------*/
-	/*  *.  Fancy Text Settings - Content
+	/*  *.  Animated Text Settings - Content
 	/*-----------------------------------------------------------------------------------*/
 
 		$this->start_controls_section(
-			'borderless_section_fancy_text_settings',
+			'borderless_section_animated_text_settings',
 			[
-				'label' => esc_html__( 'Fancy Text Settings', 'borderless' ),
+				'label' => esc_html__( 'Animated Text Settings', 'borderless' ),
 				'tab' => Controls_Manager::TAB_CONTENT,
 			]
 		);
 
 		$this->add_responsive_control(
-			'borderless_elementor_fancy_text_alignment',
+			'borderless_elementor_animated_text_alignment',
 			[
 				'label' => esc_html__( 'Alignment', 'borderless'),
 				'type' => Controls_Manager::CHOOSE,
@@ -152,7 +152,7 @@ class Fancy_Text extends Widget_Base {
 				],
 				'default' => 'center',
 				'selectors' => [
-					'{{WRAPPER}} .borderless-elementor-fancy-text-widget' => 'text-align: {{VALUE}}',
+					'{{WRAPPER}} .borderless-elementor-animated-text-widget' => 'text-align: {{VALUE}}',
 				],
 			]
 		);
@@ -160,7 +160,7 @@ class Fancy_Text extends Widget_Base {
 		/*
 
 		$this->add_control(
-			'borderless_elementor_fancy_text_effect',
+			'borderless_elementor_animated_text_effect',
 			[
 				'label' => __( 'Direction', 'borderless' ),
 				'type' => \Elementor\Controls_Manager::SELECT,
@@ -179,7 +179,7 @@ class Fancy_Text extends Widget_Base {
 		*/
 
 		$this->add_control(
-			'borderless_elementor_fancy_text_type_speed',
+			'borderless_elementor_animated_text_type_speed',
 			[
 				'label' => __( 'Type Speed', 'borderless' ),
 				'type' => \Elementor\Controls_Manager::NUMBER,
@@ -191,7 +191,7 @@ class Fancy_Text extends Widget_Base {
 		);
 
 		$this->add_control(
-			'borderless_elementor_fancy_text_back_speed',
+			'borderless_elementor_animated_text_back_speed',
 			[
 				'label' => __( 'Back Speed', 'borderless' ),
 				'type' => \Elementor\Controls_Manager::NUMBER,
@@ -203,7 +203,7 @@ class Fancy_Text extends Widget_Base {
 		);
 
 		$this->add_control(
-			'borderless_elementor_fancy_text_pause_for',
+			'borderless_elementor_animated_text_pause_for',
 			[
 				'label' => __( 'Pause For', 'borderless' ),
 				'type' => \Elementor\Controls_Manager::NUMBER,
@@ -215,7 +215,7 @@ class Fancy_Text extends Widget_Base {
 		);
 
 		$this->add_control(
-			'borderless_elementor_fancy_text_loop',
+			'borderless_elementor_animated_text_loop',
 			[
 				'label' => __( 'Loop', 'borderless' ),
 				'type' => \Elementor\Controls_Manager::SWITCHER,
@@ -224,21 +224,21 @@ class Fancy_Text extends Widget_Base {
 		);
 
 		$this->add_control(
-			'borderless_elementor_fancy_text_show_cursor',
+			'borderless_elementor_animated_text_show_cursor',
 			[
 				'label' => __( 'Show Cursor', 'borderless' ),
 				'type' => \Elementor\Controls_Manager::SWITCHER,
 				'default' => 'yes',
 				/*
 				'condition' => array(
-					'borderless_elementor_fancy_text_effect' => 'typing',
+					'borderless_elementor_animated_text_effect' => 'typing',
 				),
 				*/
 			]
 		);
 
 		$this->add_control(
-			'borderless_elementor_fancy_text_cursor_mark',
+			'borderless_elementor_animated_text_cursor_mark',
 			[
 				'label' => __( 'Cursor Mark', 'borderless' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
@@ -246,8 +246,8 @@ class Fancy_Text extends Widget_Base {
 				'default'     => esc_html__( '|', 'borderless'),
 				'dynamic'     => [ 'active' => true ],
 				'condition' => array(
-					/* 'borderless_elementor_fancy_text_effect'      => 'typing', */
-					'borderless_elementor_fancy_text_show_cursor' => 'yes',
+					/* 'borderless_elementor_animated_text_effect'      => 'typing', */
+					'borderless_elementor_animated_text_show_cursor' => 'yes',
 				),
 			]
 		);
@@ -255,11 +255,11 @@ class Fancy_Text extends Widget_Base {
 		$this->end_controls_section();
 
 		/*-----------------------------------------------------------------------------------*/
-	/*  *.  Fancy Text Prefix - Style 
+	/*  *.  Animated Text Prefix - Style 
 	/*-----------------------------------------------------------------------------------*/
 
 		$this->start_controls_section(
-			'borderless_elementor_fancy_text_prefix_styles',
+			'borderless_elementor_animated_text_prefix_styles',
 			[
 				'label' => esc_html__( 'Prefix Text Styles', 'borderless'),
 				'tab' => Controls_Manager::TAB_STYLE
@@ -267,12 +267,12 @@ class Fancy_Text extends Widget_Base {
 		);
 
 		$this->add_control(
-			'borderless_elementor_fancy_text_prefix_color',
+			'borderless_elementor_animated_text_prefix_color',
 			[
 				'label' => esc_html__( 'Prefix Text Color', 'borderless'),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .borderless-elementor-fancy-text-prefix' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .borderless-elementor-animated-text-prefix' => 'color: {{VALUE}};',
 				],
 			]
 		);
@@ -280,7 +280,7 @@ class Fancy_Text extends Widget_Base {
 		$this->add_group_control(
 			Group_Control_Typography::get_type(),
 			[
-             'name' => 'borderless_elementor_fancy_text_prefix_typography',
+             'name' => 'borderless_elementor_animated_text_prefix_typography',
 				'scheme' => Typography::TYPOGRAPHY_1,
 				'fields_options' => [
 					'typography' => ['default' => 'yes'],
@@ -288,7 +288,7 @@ class Fancy_Text extends Widget_Base {
 					'font_weight' => ['default' => 600],
 					'line_height' => ['default' => ['size' => 1]],
 				],
-				'selector' => '{{WRAPPER}} .borderless-elementor-fancy-text-prefix',
+				'selector' => '{{WRAPPER}} .borderless-elementor-animated-text-prefix',
 			]
 		);
 
@@ -296,35 +296,35 @@ class Fancy_Text extends Widget_Base {
 		$this->end_controls_section();
 
 		/*-----------------------------------------------------------------------------------*/
-		/*  *.  Fancy Text - Style 
+		/*  *.  Animated Text - Style 
 		/*-----------------------------------------------------------------------------------*/
 
 		$this->start_controls_section(
-			'borderless_elementor_fancy_text_styles',
+			'borderless_elementor_animated_text_styles',
 			[
-				'label' => esc_html__( 'Fancy Text Styles', 'Borderless'),
+				'label' => esc_html__( 'Animated Text Styles', 'Borderless'),
 				'tab' => Controls_Manager::TAB_STYLE
 			]
 		);
 
 		$this->add_control(
-			'borderless_elementor_fancy_text_color',
+			'borderless_elementor_animated_text_color',
 			[
-				'label' => esc_html__( 'Fancy Text Color', 'borderless'),
+				'label' => esc_html__( 'Animated Text Color', 'borderless'),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .borderless-elementor-fancy-text-strings .Typewriter__wrapper' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .borderless-elementor-animated-text-strings .Typewriter__wrapper' => 'color: {{VALUE}};',
 				],
 			]
 		);
 
 		$this->add_control(
-			'borderless_elementor_fancy_text_cursor_color',
+			'borderless_elementor_animated_text_cursor_color',
 			[
-				'label' => esc_html__( 'Fancy Text Cursor Color', 'borderless'),
+				'label' => esc_html__( 'Animated Text Cursor Color', 'borderless'),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .borderless-elementor-fancy-text-strings .Typewriter__cursor' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .borderless-elementor-animated-text-strings .Typewriter__cursor' => 'color: {{VALUE}};',
 				],
 			]
 		);
@@ -332,8 +332,8 @@ class Fancy_Text extends Widget_Base {
 		$this->add_group_control(
 			Group_Control_Typography::get_type(),
 			[
-			'label' => esc_html__( 'Fancy Text Typography', 'borderless'),
-			'name' => 'borderless_elementor_fancy_text_typography',
+			'label' => esc_html__( 'Animated Text Typography', 'borderless'),
+			'name' => 'borderless_elementor_animated_text_typography',
 				'scheme' => Typography::TYPOGRAPHY_1,
 				'fields_options' => [
 					'typography' => ['default' => 'yes'],
@@ -341,15 +341,15 @@ class Fancy_Text extends Widget_Base {
 					'font_weight' => ['default' => 600],
 					'line_height' => ['default' => ['size' => 1]],
 				],
-				'selector' => '{{WRAPPER}} .borderless-elementor-fancy-text-strings .Typewriter__wrapper',
+				'selector' => '{{WRAPPER}} .borderless-elementor-animated-text-strings .Typewriter__wrapper',
 			]
 		);
 
 		$this->add_group_control(
 			Group_Control_Typography::get_type(),
 			[
-			'label' => esc_html__( 'Fancy Text Cursor Typography', 'borderless'),
-			'name' => 'borderless_elementor_fancy_text_cursor_typography',
+			'label' => esc_html__( 'Animated Text Cursor Typography', 'borderless'),
+			'name' => 'borderless_elementor_animated_text_cursor_typography',
 				'scheme' => Typography::TYPOGRAPHY_1,
 				'fields_options' => [
 					'typography' => ['default' => 'yes'],
@@ -357,7 +357,7 @@ class Fancy_Text extends Widget_Base {
 					'font_weight' => ['default' => 600],
 					'line_height' => ['default' => ['size' => 1]],
 				],
-				'selector' => '{{WRAPPER}} .borderless-elementor-fancy-text-strings .Typewriter__cursor',
+				'selector' => '{{WRAPPER}} .borderless-elementor-animated-text-strings .Typewriter__cursor',
 			]
 		);
 
@@ -365,11 +365,11 @@ class Fancy_Text extends Widget_Base {
 		$this->end_controls_section();
 
 		/*-----------------------------------------------------------------------------------*/
-		/*  *.  Fancy Text Suffix - Style 
+		/*  *.  Animated Text Suffix - Style 
 		/*-----------------------------------------------------------------------------------*/
 
 		$this->start_controls_section(
-			'borderless_elementor_fancy_text_suffix_styles',
+			'borderless_elementor_animated_text_suffix_styles',
 			[
 				'label' => esc_html__( 'Suffix Text Styles', 'Borderless'),
 				'tab' => Controls_Manager::TAB_STYLE
@@ -377,12 +377,12 @@ class Fancy_Text extends Widget_Base {
 		);
 
 		$this->add_control(
-			'borderless_elementor_fancy_text_suffix_color',
+			'borderless_elementor_animated_text_suffix_color',
 			[
 				'label' => esc_html__( 'Suffix Text Color', 'borderless'),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .borderless-elementor-fancy-text-suffix' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .borderless-elementor-animated-text-suffix' => 'color: {{VALUE}};',
 				],
 			]
 		);
@@ -390,7 +390,7 @@ class Fancy_Text extends Widget_Base {
 		$this->add_group_control(
 			Group_Control_Typography::get_type(),
 			[
-			'name' => 'borderless_elementor_fancy_text_suffix_typography',
+			'name' => 'borderless_elementor_animated_text_suffix_typography',
 				'scheme' => Typography::TYPOGRAPHY_1,
 				'fields_options' => [
 					'typography' => ['default' => 'yes'],
@@ -398,7 +398,7 @@ class Fancy_Text extends Widget_Base {
 					'font_weight' => ['default' => 600],
 					'line_height' => ['default' => ['size' => 1]],
 				],
-				'selector' => '{{WRAPPER}} .borderless-elementor-fancy-text-suffix',
+				'selector' => '{{WRAPPER}} .borderless-elementor-animated-text-suffix',
 			]
 		);
 
@@ -415,41 +415,41 @@ class Fancy_Text extends Widget_Base {
 			
 		$settings = $this->get_settings_for_display();
 
-		/* Start Fancy Text Strings Content */
+		/* Start Animated Text Strings Content */
 
 		$strings = array();
-		foreach ( $settings['borderless_elementor_fancy_text_strings'] as $item ) {
-			if ( ! empty( $item['borderless_elementor_fancy_text_strings_text_field'] ) ) {
-				array_push( $strings, str_replace( '\'', '&#39;', $item['borderless_elementor_fancy_text_strings_text_field'] ) );
+		foreach ( $settings['borderless_elementor_animated_text_strings'] as $item ) {
+			if ( ! empty( $item['borderless_elementor_animated_text_strings_text_field'] ) ) {
+				array_push( $strings, str_replace( '\'', '&#39;', $item['borderless_elementor_animated_text_strings_text_field'] ) );
 			}
 		}
 		$strings = implode("|",$strings);
 
-		/* End Fancy Text Strings Content */
+		/* End Animated Text Strings Content */
 
-		$this->add_render_attribute( 'fancy-text', 'data-fancy-text-strings', $strings );
-		$this->add_render_attribute( 'fancy-text', 'data-fancy-text-delay', $settings['borderless_elementor_fancy_text_type_speed'] );
-		$this->add_render_attribute( 'fancy-text', 'data-fancy-text-delete-speed', $settings['borderless_elementor_fancy_text_back_speed'] );
-		$this->add_render_attribute( 'fancy-text', 'data-fancy-text-pause-for', $settings['borderless_elementor_fancy_text_pause_for'] );
-		$this->add_render_attribute( 'fancy-text', 'data-fancy-text-cursor', $settings['borderless_elementor_fancy_text_cursor_mark'] );
-		$this->add_render_attribute( 'fancy-text', 'data-fancy-text-loop', $settings['borderless_elementor_fancy_text_loop'] );
+		$this->add_render_attribute( 'animated-text', 'data-animated-text-strings', $strings );
+		$this->add_render_attribute( 'animated-text', 'data-animated-text-delay', $settings['borderless_elementor_animated_text_type_speed'] );
+		$this->add_render_attribute( 'animated-text', 'data-animated-text-delete-speed', $settings['borderless_elementor_animated_text_back_speed'] );
+		$this->add_render_attribute( 'animated-text', 'data-animated-text-pause-for', $settings['borderless_elementor_animated_text_pause_for'] );
+		$this->add_render_attribute( 'animated-text', 'data-animated-text-cursor', $settings['borderless_elementor_animated_text_cursor_mark'] );
+		$this->add_render_attribute( 'animated-text', 'data-animated-text-loop', $settings['borderless_elementor_animated_text_loop'] );
 
 		?>
 
-		<div class="borderless-elementor-fancy-text-widget">
+		<div class="borderless-elementor-animated-text-widget">
 
-			<div class="borderless-elementor-fancy-text">
+			<div class="borderless-elementor-animated-text">
 
-				<?php if ( ! empty( $settings['borderless_elementor_fancy_text_prefix'] ) ) { ?>
-					<span class="borderless-elementor-fancy-text-prefix"><?php echo wp_kses( ( $settings['borderless_elementor_fancy_text_prefix'] ), true ); ?></span>
+				<?php if ( ! empty( $settings['borderless_elementor_animated_text_prefix'] ) ) { ?>
+					<span class="borderless-elementor-animated-text-prefix"><?php echo wp_kses( ( $settings['borderless_elementor_animated_text_prefix'] ), true ); ?></span>
 				<?php } ?>
 				
 				<?php if ( ! empty( $strings ) ) { ?>
-					<span class="borderless-elementor-fancy-text-strings" <?php echo $this->get_render_attribute_string( 'fancy-text' ) ?>></span>
+					<span class="borderless-elementor-animated-text-strings" <?php echo $this->get_render_attribute_string( 'animated-text' ) ?>></span>
 				<?php } ?>
 
-				<?php if ( ! empty( $settings['borderless_elementor_fancy_text_suffix'] ) ) { ?>
-					<span class="borderless-elementor-fancy-text-suffix"><?php echo wp_kses( ( $settings['borderless_elementor_fancy_text_suffix'] ), true ); ?></span>
+				<?php if ( ! empty( $settings['borderless_elementor_animated_text_suffix'] ) ) { ?>
+					<span class="borderless-elementor-animated-text-suffix"><?php echo wp_kses( ( $settings['borderless_elementor_animated_text_suffix'] ), true ); ?></span>
 				<?php } ?>
 
 			</div>

@@ -12,7 +12,7 @@ use Elementor\Utils;
 class Marquee_Text extends Widget_Base {
 	
 	public function get_name() {
-		return 'marquee-text';
+		return 'borderless-elementor-marquee-text';
 	}
 	
 	public function get_title() {
@@ -142,11 +142,23 @@ class Marquee_Text extends Widget_Base {
 	
 	protected function render() {
 
-		$settings = $this->get_settings();	 
+		$settings = $this->get_settings_for_display();	 
 
-		echo'<div class="borderless-elementor-marquee-text-widget"><div class="borderless-elementor-marquee-text" direction="'.$settings['borderless_marquee_text_direction'].'" duration="'.$settings['borderless_marquee_text_duration'].'" delay-before-start="'.$settings['borderless_marquee_text_delay_before_start'].'" gap="'.$settings['borderless_marquee_text_gap'].'" start-visible="'.$settings['borderless_marquee_text_start_visible'].'" duplicated="'.$settings['borderless_marquee_text_duplicated'].'" pause-on-hover="'.$settings['borderless_marquee_text_pause_on_hover'].'">
-		'.$settings['borderless_elementor_marquee_text_content'].'
-		</div></div>';
+		$this->add_render_attribute( 'marquee-text', 'direction', $settings['borderless_marquee_text_direction'] );
+		$this->add_render_attribute( 'marquee-text', 'duration', $settings['borderless_marquee_text_duration'] );
+		$this->add_render_attribute( 'marquee-text', 'delay-before-start', $settings['borderless_marquee_text_delay_before_start'] );
+		$this->add_render_attribute( 'marquee-text', 'gap', $settings['borderless_marquee_text_gap'] );
+		$this->add_render_attribute( 'marquee-text', 'start-visible', $settings['borderless_marquee_text_start_visible'] );
+		$this->add_render_attribute( 'marquee-text', 'duplicated', $settings['borderless_marquee_text_duplicated'] );
+		$this->add_render_attribute( 'marquee-text', 'pause-on-hover', $settings['borderless_marquee_text_pause_on_hover'] );
+
+		?>
+
+		<div class="borderless-elementor-marquee-text-widget">
+			<div class="borderless-elementor-marquee-text" <?php echo $this->get_render_attribute_string( 'marquee-text' ) ?>><?php echo wp_kses( ( $settings['borderless_elementor_marquee_text_content'] ), true ); ?></div>
+		</div>
+
+		<?php
 
 	}
 	

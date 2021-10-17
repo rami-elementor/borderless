@@ -14,7 +14,7 @@ use \Elementor\Widget_Base;
 class Circular_Progress_Bar extends Widget_Base {
 	
 	public function get_name() {
-		return 'borderless-circular-progress-bar';
+		return 'borderless-elementor-circular-progress-bar';
 	}
 	
 	public function get_title() {

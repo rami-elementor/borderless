@@ -13,14 +13,14 @@ Render
 jQuery(function ($) {
     'use strict';
     $(document).ready(function () {
-        $('.borderless-elementor-fancy-text-strings').each(function () {
-            const strings = ($(this).attr('data-fancy-text-strings')).split('|');
-            const delay = $(this).attr('data-fancy-text-delay');
-            const delete_speed = $(this).attr('data-fancy-text-delete-speed');
-            const pause_for = $(this).attr('data-fancy-text-pause-for');
-            const cursor = $(this).attr('data-fancy-text-cursor');
-            const loop = $(this).attr('data-fancy-text-loop') == "yes" ? true : false;
-            new Typewriter('.borderless-elementor-fancy-text-strings', {
+        $('.borderless-elementor-animated-text-strings').each(function () {
+            const strings = ($(this).attr('data-animated-text-strings')).split('|');
+            const delay = $(this).attr('data-animated-text-delay');
+            const delete_speed = $(this).attr('data-animated-text-delete-speed');
+            const pause_for = $(this).attr('data-animated-text-pause-for');
+            const cursor = $(this).attr('data-animated-text-cursor');
+            const loop = $(this).attr('data-animated-text-loop') == "yes" ? true : false;
+            new Typewriter('.borderless-elementor-animated-text-strings', {
                 strings: strings,
                 cursor: cursor,
                 delay: delay,

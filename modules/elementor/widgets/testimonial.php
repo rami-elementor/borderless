@@ -19,7 +19,7 @@ use Elementor\Utils;
 class Testimonial extends Widget_Base {
 	
 	public function get_name() {
-		return 'borderless-testimonial';
+		return 'borderless-elementor-testimonial';
 	}
 	
 	public function get_title() {

@@ -19,7 +19,7 @@ use Elementor\Utils;
 class Team_Member extends Widget_Base {
 	
 	public function get_name() {
-		return 'borderless-team-member';
+		return 'borderless-elementor-team-member';
 	}
 	
 	public function get_title() {
@@ -1098,7 +1098,7 @@ class Team_Member extends Widget_Base {
 			echo'
 			<div class="borderless-elementor-team-member-social-profiles">  
 				<figure>
-					<img src="'.$settings['borderless_team_member_avatar']['url'].'" alt="Girl in a jacket" width="500" height="600">
+					<img src="'.$settings['borderless_team_member_avatar']['url'].'" width="500" height="600">
 				</figure>
            	</div>
 			'; 

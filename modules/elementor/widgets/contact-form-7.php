@@ -12,7 +12,7 @@ use Elementor\Utils;
 class Contact_Form_7 extends Widget_Base {
 	
 	public function get_name() {
-		return 'contact-form-7';
+		return 'borderless-elementor-contact-form-7';
 	}
 	
 	public function get_title() {
@@ -54,13 +54,15 @@ class Contact_Form_7 extends Widget_Base {
 	
 	protected function render() {
 
-		$settings = $this->get_settings();
+		$settings = $this->get_settings_for_display();
 
-        if(!empty($settings['contact_form_7'])){
-    	   echo'<div class="borderless-elementor-contact-form-7" contact-form-7-id="'. $settings['contact_form_7'] .'">';
-                echo do_shortcode('[contact-form-7 id="'.$settings['contact_form_7'].'"]');    
-           echo '</div>';  
-    	}		 
+        if(!empty($settings['contact_form_7'])){ ?>
+			<div class="borderless-elementor-contact-form-7-widget">
+				<div class="borderless-elementor-contact-form-7" contact-form-7-id="<?php echo wp_kses( ( $settings['contact_form_7'] ), true ); ?>">
+				<?php  echo do_shortcode('[contact-form-7 id="'.wp_kses( ( $settings['contact_form_7'] ), true ).'"]'); ?>   
+				</div>  
+			</div>
+    	<?php }		 
 
 	}
 	
