@@ -4385,32 +4385,6 @@ jQuery(function ($) {
   ================================================== */
 
   $(document).ready(function () {
-     $('.borderless-elementor-marquee-text').each(function () {
-        $(this).appear(function () {
-           const direction = $(this).attr('direction');
-           const duration = $(this).attr('duration');
-           const gap = $(this).attr('gap');
-           const delay_before_start = $(this).attr('delay-before-start');
-           const duplicated = $(this).attr('duplicated') == "true" ? true : false;
-           const start_visible = $(this).attr('start-visible') == "true" ? true : false;
-           const pause_on_hover = $(this).attr('pause-on-hover') == "true" ? true : false;
-           $('.borderless-elementor-marquee-text').marquee({
-              //speed in milliseconds of the marquee
-              duration: duration,
-              //gap in pixels between the tickers
-              gap: gap,
-              //time in milliseconds before the marquee will start animating
-              delayBeforeStart: delay_before_start,
-              //'left' or 'right'
-              direction: direction,
-              //true or false - should the marquee be duplicated to show an effect of continues flow
-              duplicated: duplicated,
-              //The marquee will be visible from the start if set to true.
-              startVisible: start_visible,
-              //Pause the marquee on hover.
-              pauseOnHover: pause_on_hover
-           });
-        });
-     });
+    $('.borderless-elementor-marquee-text').marquee();
   });
 }); // End Strict

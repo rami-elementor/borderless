@@ -4,7 +4,7 @@ Tags: page builder, editor, landing page, drag-and-drop, visual composer, WPBake
 Requires at least: 4.7
 Tested up to: 5.8
 Requires PHP: 5.6
-Stable tag: 1.2.7
+Stable tag: 1.2.8
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -81,9 +81,13 @@ Sites must be built on PHP 5.6 or greater, but Borderless always supports the la
 
 == Changelog ==
 
+= 1.2.8 - Oct 19 2021 =
+* Added - Elementor Widget - Marquee Text - Typography and More Style Options.
+* Fixed - Elementor Widget - Marquee Text - Script.
+
 = 1.2.7 - Oct 15 2021 =
 * Added - Elementor Widget - Portfolio.
-* Improvements - Elementor Widget - Change Fancy Text for Animated Text name.
+* Improvements - Elementor Widget - Change Fancy Text for Animated Text Name.
 * Improvements - Elementor Widget - Contact Form 7.
 * Improvements - Elementor Widget - Marquee Text.
 
