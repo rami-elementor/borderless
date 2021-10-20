@@ -20,18 +20,8 @@ final class Borderless_Wpbakery {
             add_action( 'init', [ $this, 'wpbakery_init' ] );
             return;
         } else {
-            add_action('admin_notices', array( $this, 'wpbakery_notice' ));
             return;
         }   
-    }
-    
-    // Show notice if your plugin is activated but WPBakery is not
-    public function wpbakery_notice() {
-        $plugin_data = get_plugin_data(__FILE__);
-        echo '
-        <div class="updated">
-        <p>'.sprintf(__('<strong>%s</strong> requires <strong><a href="https://wpbakery.com/" target="_blank">WPBakery Page Builder</a></strong> plugin to be installed and activated on your site.', 'borderless'), $plugin_data['Name']).'</p>
-        </div>';
     }
     
     public function wpbakery_init() {
