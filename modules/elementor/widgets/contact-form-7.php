@@ -20,7 +20,7 @@ class Contact_Form_7 extends Widget_Base {
 	}
 	
 	public function get_icon() {
-		return 'fa fa-envelope-o';
+		return 'borderless-icon-contact-form-7';
 	}
 	
 	public function get_categories() {

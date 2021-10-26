@@ -19,6 +19,15 @@
 .borderless-transition-slower {
   transition: all 0.6s linear; }
 
+:root {
+  --borderless-viewport-xs: 32rem;
+  --borderless-viewport-sm: 48rem;
+  --borderless-viewport-md: 64rem;
+  --borderless-viewport-lg: 80rem;
+  --borderless-viewport-xl: 90rem;
+  --borderless-viewport-xxl: 100rem;
+  --borderless-viewport-xxxl: 150rem; }
+
 .borderless-btn {
   display: inline-block;
   font-weight: 400;
@@ -2024,6 +2033,516 @@
   .borderless-offset-1\@xl, .borderless-offset-2\@xl, .borderless-offset-3\@xl, .borderless-offset-4\@xl, .borderless-offset-5\@xl, .borderless-offset-6\@xl, .borderless-offset-7\@xl, .borderless-offset-8\@xl, .borderless-offset-9\@xl, .borderless-offset-10\@xl, .borderless-offset-11\@xl {
     margin-left: calc(((100% - (var(--borderless-grid-columns) - var(--borderless-gap-modifier, 1)) * var(--borderless-sub-gap-x)) * var(--borderless-offset) / var(--borderless-grid-columns)) + (var(--borderless-offset) + var(--borderless-offset-modifier, 0)) * var(--borderless-sub-gap-x)); }
   .borderless-offset-0\@xl {
+    margin-left: 0; } }
+
+@media (min-width: 100rem) {
+  .borderless-gap-xxxxs\@xxl {
+    --borderless-gap-x: var(--borderless-space-xxxxs);
+    --borderless-gap-y: var(--borderless-space-xxxxs); }
+    .borderless-gap-xxxxs\@xxl > * {
+      --borderless-sub-gap-x: var(--borderless-space-xxxxs);
+      --borderless-sub-gap-y: var(--borderless-space-xxxxs); }
+  .borderless-gap-xxxs\@xxl {
+    --borderless-gap-x: var(--borderless-space-xxxs);
+    --borderless-gap-y: var(--borderless-space-xxxs); }
+    .borderless-gap-xxxs\@xxl > * {
+      --borderless-sub-gap-x: var(--borderless-space-xxxs);
+      --borderless-sub-gap-y: var(--borderless-space-xxxs); }
+  .borderless-gap-xxs\@xxl {
+    --borderless-gap-x: var(--borderless-space-xxs);
+    --borderless-gap-y: var(--borderless-space-xxs); }
+    .borderless-gap-xxs\@xxl > * {
+      --borderless-sub-gap-x: var(--borderless-space-xxs);
+      --borderless-sub-gap-y: var(--borderless-space-xxs); }
+  .borderless-gap-xs\@xxl {
+    --borderless-gap-x: var(--borderless-space-xs);
+    --borderless-gap-y: var(--borderless-space-xs); }
+    .borderless-gap-xs\@xxl > * {
+      --borderless-sub-gap-x: var(--borderless-space-xs);
+      --borderless-sub-gap-y: var(--borderless-space-xs); }
+  .borderless-gap-sm\@xxl {
+    --borderless-gap-x: var(--borderless-space-sm);
+    --borderless-gap-y: var(--borderless-space-sm); }
+    .borderless-gap-sm\@xxl > * {
+      --borderless-sub-gap-x: var(--borderless-space-sm);
+      --borderless-sub-gap-y: var(--borderless-space-sm); }
+  .borderless-gap-md\@xxl {
+    --borderless-gap-x: var(--borderless-space-md);
+    --borderless-gap-y: var(--borderless-space-md); }
+    .borderless-gap-md\@xxl > * {
+      --borderless-sub-gap-x: var(--borderless-space-md);
+      --borderless-sub-gap-y: var(--borderless-space-md); }
+  .borderless-gap-lg\@xxl {
+    --borderless-gap-x: var(--borderless-space-lg);
+    --borderless-gap-y: var(--borderless-space-lg); }
+    .borderless-gap-lg\@xxl > * {
+      --borderless-sub-gap-x: var(--borderless-space-lg);
+      --borderless-sub-gap-y: var(--borderless-space-lg); }
+  .borderless-gap-xl\@xxl {
+    --borderless-gap-x: var(--borderless-space-xl);
+    --borderless-gap-y: var(--borderless-space-xl); }
+    .borderless-gap-xl\@xxl > * {
+      --borderless-sub-gap-x: var(--borderless-space-xl);
+      --borderless-sub-gap-y: var(--borderless-space-xl); }
+  .borderless-gap-xxl\@xxl {
+    --borderless-gap-x: var(--borderless-space-xxl);
+    --borderless-gap-y: var(--borderless-space-xxl); }
+    .borderless-gap-xxl\@xxl > * {
+      --borderless-sub-gap-x: var(--borderless-space-xxl);
+      --borderless-sub-gap-y: var(--borderless-space-xxl); }
+  .borderless-gap-xxxl\@xxl {
+    --borderless-gap-x: var(--borderless-space-xxxl);
+    --borderless-gap-y: var(--borderless-space-xxxl); }
+    .borderless-gap-xxxl\@xxl > * {
+      --borderless-sub-gap-x: var(--borderless-space-xxxl);
+      --borderless-sub-gap-y: var(--borderless-space-xxxl); }
+  .borderless-gap-xxxxl\@xxl {
+    --borderless-gap-x: var(--borderless-space-xxxxl);
+    --borderless-gap-y: var(--borderless-space-xxxxl); }
+    .borderless-gap-xxxxl\@xxl > * {
+      --borderless-sub-gap-x: var(--borderless-space-xxxxl);
+      --borderless-sub-gap-y: var(--borderless-space-xxxxl); }
+  .borderless-gap-0\@xxl {
+    --borderless-gap-x: 0;
+    --borderless-gap-y: 0; }
+    .borderless-gap-0\@xxl > * {
+      --borderless-sub-gap-x: 0;
+      --borderless-sub-gap-y: 0; }
+  .borderless-gap-x-xxxxs\@xxl {
+    --borderless-gap-x: var(--borderless-space-xxxxs); }
+    .borderless-gap-x-xxxxs\@xxl > * {
+      --borderless-sub-gap-x: var(--borderless-space-xxxxs); }
+  .borderless-gap-x-xxxs\@xxl {
+    --borderless-gap-x: var(--borderless-space-xxxs); }
+    .borderless-gap-x-xxxs\@xxl > * {
+      --borderless-sub-gap-x: var(--borderless-space-xxxs); }
+  .borderless-gap-x-xxs\@xxl {
+    --borderless-gap-x: var(--borderless-space-xxs); }
+    .borderless-gap-x-xxs\@xxl > * {
+      --borderless-sub-gap-x: var(--borderless-space-xxs); }
+  .borderless-gap-x-xs\@xxl {
+    --borderless-gap-x: var(--borderless-space-xs); }
+    .borderless-gap-x-xs\@xxl > * {
+      --borderless-sub-gap-x: var(--borderless-space-xs); }
+  .borderless-gap-x-sm\@xxl {
+    --borderless-gap-x: var(--borderless-space-sm); }
+    .borderless-gap-x-sm\@xxl > * {
+      --borderless-sub-gap-x: var(--borderless-space-sm); }
+  .borderless-gap-x-md\@xxl {
+    --borderless-gap-x: var(--borderless-space-md); }
+    .borderless-gap-x-md\@xxl > * {
+      --borderless-sub-gap-x: var(--borderless-space-md); }
+  .borderless-gap-x-lg\@xxl {
+    --borderless-gap-x: var(--borderless-space-lg); }
+    .borderless-gap-x-lg\@xxl > * {
+      --borderless-sub-gap-x: var(--borderless-space-lg); }
+  .borderless-gap-x-xl\@xxl {
+    --borderless-gap-x: var(--borderless-space-xl); }
+    .borderless-gap-x-xl\@xxl > * {
+      --borderless-sub-gap-x: var(--borderless-space-xl); }
+  .borderless-gap-x-xxl\@xxl {
+    --borderless-gap-x: var(--borderless-space-xxl); }
+    .borderless-gap-x-xxl\@xxl > * {
+      --borderless-sub-gap-x: var(--borderless-space-xxl); }
+  .borderless-gap-x-xxxl\@xxl {
+    --borderless-gap-x: var(--borderless-space-xxxl); }
+    .borderless-gap-x-xxxl\@xxl > * {
+      --borderless-sub-gap-x: var(--borderless-space-xxxl); }
+  .borderless-gap-x-xxxxl\@xxl {
+    --borderless-gap-x: var(--borderless-space-xxxxl); }
+    .borderless-gap-x-xxxxl\@xxl > * {
+      --borderless-sub-gap-x: var(--borderless-space-xxxxl); }
+  .borderless-gap-x-0\@xxl {
+    --borderless-gap-x: 0; }
+    .borderless-gap-x-0\@xxl > * {
+      --borderless-sub-gap-x: 0; }
+  .borderless-gap-y-xxxxs\@xxl {
+    --borderless-gap-y: var(--borderless-space-xxxxs); }
+    .borderless-gap-y-xxxxs\@xxl > * {
+      --borderless-sub-gap-y: var(--borderless-space-xxxxs); }
+  .borderless-gap-y-xxxs\@xxl {
+    --borderless-gap-y: var(--borderless-space-xxxs); }
+    .borderless-gap-y-xxxs\@xxl > * {
+      --borderless-sub-gap-y: var(--borderless-space-xxxs); }
+  .borderless-gap-y-xxs\@xxl {
+    --borderless-gap-y: var(--borderless-space-xxs); }
+    .borderless-gap-y-xxs\@xxl > * {
+      --borderless-sub-gap-y: var(--borderless-space-xxs); }
+  .borderless-gap-y-xs\@xxl {
+    --borderless-gap-y: var(--borderless-space-xs); }
+    .borderless-gap-y-xs\@xxl > * {
+      --borderless-sub-gap-y: var(--borderless-space-xs); }
+  .borderless-gap-y-sm\@xxl {
+    --borderless-gap-y: var(--borderless-space-sm); }
+    .borderless-gap-y-sm\@xxl > * {
+      --borderless-sub-gap-y: var(--borderless-space-sm); }
+  .borderless-gap-y-md\@xxl {
+    --borderless-gap-y: var(--borderless-space-md); }
+    .borderless-gap-y-md\@xxl > * {
+      --borderless-sub-gap-y: var(--borderless-space-md); }
+  .borderless-gap-y-lg\@xxl {
+    --borderless-gap-y: var(--borderless-space-lg); }
+    .borderless-gap-y-lg\@xxl > * {
+      --borderless-sub-gap-y: var(--borderless-space-lg); }
+  .borderless-gap-y-xl\@xxl {
+    --borderless-gap-y: var(--borderless-space-xl); }
+    .borderless-gap-y-xl\@xxl > * {
+      --borderless-sub-gap-y: var(--borderless-space-xl); }
+  .borderless-gap-y-xxl\@xxl {
+    --borderless-gap-y: var(--borderless-space-xxl); }
+    .borderless-gap-y-xxl\@xxl > * {
+      --borderless-sub-gap-y: var(--borderless-space-xxl); }
+  .borderless-gap-y-xxxl\@xxl {
+    --borderless-gap-y: var(--borderless-space-xxxl); }
+    .borderless-gap-y-xxxl\@xxl > * {
+      --borderless-sub-gap-y: var(--borderless-space-xxxl); }
+  .borderless-gap-y-xxxxl\@xxl {
+    --borderless-gap-y: var(--borderless-space-xxxxl); }
+    .borderless-gap-y-xxxxl\@xxl > * {
+      --borderless-sub-gap-y: var(--borderless-space-xxxxl); }
+  .borderless-gap-y-0\@xxl {
+    --borderless-gap-y: 0; }
+    .borderless-gap-y-0\@xxl > * {
+      --borderless-sub-gap-y: 0; }
+  .borderless-grid-cell-1\@xxl {
+    --borderless-grid-columns: 1; }
+  .borderless-cell-1\@xxl {
+    --borderless-span: 1; }
+  .borderless-grid-cell-2\@xxl {
+    --borderless-grid-columns: 2; }
+  .borderless-cell-2\@xxl {
+    --borderless-span: 2; }
+  .borderless-grid-cell-3\@xxl {
+    --borderless-grid-columns: 3; }
+  .borderless-cell-3\@xxl {
+    --borderless-span: 3; }
+  .borderless-grid-cell-4\@xxl {
+    --borderless-grid-columns: 4; }
+  .borderless-cell-4\@xxl {
+    --borderless-span: 4; }
+  .borderless-grid-cell-5\@xxl {
+    --borderless-grid-columns: 5; }
+  .borderless-cell-5\@xxl {
+    --borderless-span: 5; }
+  .borderless-grid-cell-6\@xxl {
+    --borderless-grid-columns: 6; }
+  .borderless-cell-6\@xxl {
+    --borderless-span: 6; }
+  .borderless-grid-cell-7\@xxl {
+    --borderless-grid-columns: 7; }
+  .borderless-cell-7\@xxl {
+    --borderless-span: 7; }
+  .borderless-grid-cell-8\@xxl {
+    --borderless-grid-columns: 8; }
+  .borderless-cell-8\@xxl {
+    --borderless-span: 8; }
+  .borderless-grid-cell-9\@xxl {
+    --borderless-grid-columns: 9; }
+  .borderless-cell-9\@xxl {
+    --borderless-span: 9; }
+  .borderless-grid-cell-10\@xxl {
+    --borderless-grid-columns: 10; }
+  .borderless-cell-10\@xxl {
+    --borderless-span: 10; }
+  .borderless-grid-cell-11\@xxl {
+    --borderless-grid-columns: 11; }
+  .borderless-cell-11\@xxl {
+    --borderless-span: 11; }
+  .borderless-grid-cell-12\@xxl {
+    --borderless-grid-columns: 12; }
+  .borderless-cell-12\@xxl {
+    --borderless-span: 12; }
+  .borderless-cell-1\@xxl, .borderless-cell-2\@xxl, .borderless-cell-3\@xxl, .borderless-cell-4\@xxl, .borderless-cell-5\@xxl, .borderless-cell-6\@xxl, .borderless-cell-7\@xxl, .borderless-cell-8\@xxl, .borderless-cell-9\@xxl, .borderless-cell-10\@xxl, .borderless-cell-11\@xxl, .borderless-cell-12\@xxl {
+    flex-basis: calc(((100% - (var(--borderless-grid-columns) - var(--borderless-gap-modifier, 1)) * var(--borderless-sub-gap-x)) * var(--borderless-span) / var(--borderless-grid-columns)) + (var(--borderless-span) - 1) * var(--borderless-sub-gap-x));
+    max-width: calc(((100% - (var(--borderless-grid-columns) - var(--borderless-gap-modifier, 1)) * var(--borderless-sub-gap-x)) * var(--borderless-span) / var(--borderless-grid-columns)) + (var(--borderless-span) - 1) * var(--borderless-sub-gap-x)); }
+  .borderless-cell\@xxl {
+    flex-grow: 1;
+    flex-basis: 0;
+    max-width: 100%; }
+  .borderless-cell-content\@xxl {
+    flex-grow: 0;
+    flex-basis: initial;
+    max-width: initial; }
+  .borderless-offset-1\@xxl {
+    --borderless-offset: 1; }
+  .borderless-offset-2\@xxl {
+    --borderless-offset: 2; }
+  .borderless-offset-3\@xxl {
+    --borderless-offset: 3; }
+  .borderless-offset-4\@xxl {
+    --borderless-offset: 4; }
+  .borderless-offset-5\@xxl {
+    --borderless-offset: 5; }
+  .borderless-offset-6\@xxl {
+    --borderless-offset: 6; }
+  .borderless-offset-7\@xxl {
+    --borderless-offset: 7; }
+  .borderless-offset-8\@xxl {
+    --borderless-offset: 8; }
+  .borderless-offset-9\@xxl {
+    --borderless-offset: 9; }
+  .borderless-offset-10\@xxl {
+    --borderless-offset: 10; }
+  .borderless-offset-11\@xxl {
+    --borderless-offset: 11; }
+  .borderless-offset-1\@xxl, .borderless-offset-2\@xxl, .borderless-offset-3\@xxl, .borderless-offset-4\@xxl, .borderless-offset-5\@xxl, .borderless-offset-6\@xxl, .borderless-offset-7\@xxl, .borderless-offset-8\@xxl, .borderless-offset-9\@xxl, .borderless-offset-10\@xxl, .borderless-offset-11\@xxl {
+    margin-left: calc(((100% - (var(--borderless-grid-columns) - var(--borderless-gap-modifier, 1)) * var(--borderless-sub-gap-x)) * var(--borderless-offset) / var(--borderless-grid-columns)) + (var(--borderless-offset) + var(--borderless-offset-modifier, 0)) * var(--borderless-sub-gap-x)); }
+  .borderless-offset-0\@xxl {
+    margin-left: 0; } }
+
+@media (min-width: 150rem) {
+  .borderless-gap-xxxxs\@xxxl {
+    --borderless-gap-x: var(--borderless-space-xxxxs);
+    --borderless-gap-y: var(--borderless-space-xxxxs); }
+    .borderless-gap-xxxxs\@xxxl > * {
+      --borderless-sub-gap-x: var(--borderless-space-xxxxs);
+      --borderless-sub-gap-y: var(--borderless-space-xxxxs); }
+  .borderless-gap-xxxs\@xxxl {
+    --borderless-gap-x: var(--borderless-space-xxxs);
+    --borderless-gap-y: var(--borderless-space-xxxs); }
+    .borderless-gap-xxxs\@xxxl > * {
+      --borderless-sub-gap-x: var(--borderless-space-xxxs);
+      --borderless-sub-gap-y: var(--borderless-space-xxxs); }
+  .borderless-gap-xxs\@xxxl {
+    --borderless-gap-x: var(--borderless-space-xxs);
+    --borderless-gap-y: var(--borderless-space-xxs); }
+    .borderless-gap-xxs\@xxxl > * {
+      --borderless-sub-gap-x: var(--borderless-space-xxs);
+      --borderless-sub-gap-y: var(--borderless-space-xxs); }
+  .borderless-gap-xs\@xxxl {
+    --borderless-gap-x: var(--borderless-space-xs);
+    --borderless-gap-y: var(--borderless-space-xs); }
+    .borderless-gap-xs\@xxxl > * {
+      --borderless-sub-gap-x: var(--borderless-space-xs);
+      --borderless-sub-gap-y: var(--borderless-space-xs); }
+  .borderless-gap-sm\@xxxl {
+    --borderless-gap-x: var(--borderless-space-sm);
+    --borderless-gap-y: var(--borderless-space-sm); }
+    .borderless-gap-sm\@xxxl > * {
+      --borderless-sub-gap-x: var(--borderless-space-sm);
+      --borderless-sub-gap-y: var(--borderless-space-sm); }
+  .borderless-gap-md\@xxxl {
+    --borderless-gap-x: var(--borderless-space-md);
+    --borderless-gap-y: var(--borderless-space-md); }
+    .borderless-gap-md\@xxxl > * {
+      --borderless-sub-gap-x: var(--borderless-space-md);
+      --borderless-sub-gap-y: var(--borderless-space-md); }
+  .borderless-gap-lg\@xxxl {
+    --borderless-gap-x: var(--borderless-space-lg);
+    --borderless-gap-y: var(--borderless-space-lg); }
+    .borderless-gap-lg\@xxxl > * {
+      --borderless-sub-gap-x: var(--borderless-space-lg);
+      --borderless-sub-gap-y: var(--borderless-space-lg); }
+  .borderless-gap-xl\@xxxl {
+    --borderless-gap-x: var(--borderless-space-xl);
+    --borderless-gap-y: var(--borderless-space-xl); }
+    .borderless-gap-xl\@xxxl > * {
+      --borderless-sub-gap-x: var(--borderless-space-xl);
+      --borderless-sub-gap-y: var(--borderless-space-xl); }
+  .borderless-gap-xxl\@xxxl {
+    --borderless-gap-x: var(--borderless-space-xxl);
+    --borderless-gap-y: var(--borderless-space-xxl); }
+    .borderless-gap-xxl\@xxxl > * {
+      --borderless-sub-gap-x: var(--borderless-space-xxl);
+      --borderless-sub-gap-y: var(--borderless-space-xxl); }
+  .borderless-gap-xxxl\@xxxl {
+    --borderless-gap-x: var(--borderless-space-xxxl);
+    --borderless-gap-y: var(--borderless-space-xxxl); }
+    .borderless-gap-xxxl\@xxxl > * {
+      --borderless-sub-gap-x: var(--borderless-space-xxxl);
+      --borderless-sub-gap-y: var(--borderless-space-xxxl); }
+  .borderless-gap-xxxxl\@xxxl {
+    --borderless-gap-x: var(--borderless-space-xxxxl);
+    --borderless-gap-y: var(--borderless-space-xxxxl); }
+    .borderless-gap-xxxxl\@xxxl > * {
+      --borderless-sub-gap-x: var(--borderless-space-xxxxl);
+      --borderless-sub-gap-y: var(--borderless-space-xxxxl); }
+  .borderless-gap-0\@xxxl {
+    --borderless-gap-x: 0;
+    --borderless-gap-y: 0; }
+    .borderless-gap-0\@xxxl > * {
+      --borderless-sub-gap-x: 0;
+      --borderless-sub-gap-y: 0; }
+  .borderless-gap-x-xxxxs\@xxxl {
+    --borderless-gap-x: var(--borderless-space-xxxxs); }
+    .borderless-gap-x-xxxxs\@xxxl > * {
+      --borderless-sub-gap-x: var(--borderless-space-xxxxs); }
+  .borderless-gap-x-xxxs\@xxxl {
+    --borderless-gap-x: var(--borderless-space-xxxs); }
+    .borderless-gap-x-xxxs\@xxxl > * {
+      --borderless-sub-gap-x: var(--borderless-space-xxxs); }
+  .borderless-gap-x-xxs\@xxxl {
+    --borderless-gap-x: var(--borderless-space-xxs); }
+    .borderless-gap-x-xxs\@xxxl > * {
+      --borderless-sub-gap-x: var(--borderless-space-xxs); }
+  .borderless-gap-x-xs\@xxxl {
+    --borderless-gap-x: var(--borderless-space-xs); }
+    .borderless-gap-x-xs\@xxxl > * {
+      --borderless-sub-gap-x: var(--borderless-space-xs); }
+  .borderless-gap-x-sm\@xxxl {
+    --borderless-gap-x: var(--borderless-space-sm); }
+    .borderless-gap-x-sm\@xxxl > * {
+      --borderless-sub-gap-x: var(--borderless-space-sm); }
+  .borderless-gap-x-md\@xxxl {
+    --borderless-gap-x: var(--borderless-space-md); }
+    .borderless-gap-x-md\@xxxl > * {
+      --borderless-sub-gap-x: var(--borderless-space-md); }
+  .borderless-gap-x-lg\@xxxl {
+    --borderless-gap-x: var(--borderless-space-lg); }
+    .borderless-gap-x-lg\@xxxl > * {
+      --borderless-sub-gap-x: var(--borderless-space-lg); }
+  .borderless-gap-x-xl\@xxxl {
+    --borderless-gap-x: var(--borderless-space-xl); }
+    .borderless-gap-x-xl\@xxxl > * {
+      --borderless-sub-gap-x: var(--borderless-space-xl); }
+  .borderless-gap-x-xxl\@xxxl {
+    --borderless-gap-x: var(--borderless-space-xxl); }
+    .borderless-gap-x-xxl\@xxxl > * {
+      --borderless-sub-gap-x: var(--borderless-space-xxl); }
+  .borderless-gap-x-xxxl\@xxxl {
+    --borderless-gap-x: var(--borderless-space-xxxl); }
+    .borderless-gap-x-xxxl\@xxxl > * {
+      --borderless-sub-gap-x: var(--borderless-space-xxxl); }
+  .borderless-gap-x-xxxxl\@xxxl {
+    --borderless-gap-x: var(--borderless-space-xxxxl); }
+    .borderless-gap-x-xxxxl\@xxxl > * {
+      --borderless-sub-gap-x: var(--borderless-space-xxxxl); }
+  .borderless-gap-x-0\@xxxl {
+    --borderless-gap-x: 0; }
+    .borderless-gap-x-0\@xxxl > * {
+      --borderless-sub-gap-x: 0; }
+  .borderless-gap-y-xxxxs\@xxxl {
+    --borderless-gap-y: var(--borderless-space-xxxxs); }
+    .borderless-gap-y-xxxxs\@xxxl > * {
+      --borderless-sub-gap-y: var(--borderless-space-xxxxs); }
+  .borderless-gap-y-xxxs\@xxxl {
+    --borderless-gap-y: var(--borderless-space-xxxs); }
+    .borderless-gap-y-xxxs\@xxxl > * {
+      --borderless-sub-gap-y: var(--borderless-space-xxxs); }
+  .borderless-gap-y-xxs\@xxxl {
+    --borderless-gap-y: var(--borderless-space-xxs); }
+    .borderless-gap-y-xxs\@xxxl > * {
+      --borderless-sub-gap-y: var(--borderless-space-xxs); }
+  .borderless-gap-y-xs\@xxxl {
+    --borderless-gap-y: var(--borderless-space-xs); }
+    .borderless-gap-y-xs\@xxxl > * {
+      --borderless-sub-gap-y: var(--borderless-space-xs); }
+  .borderless-gap-y-sm\@xxxl {
+    --borderless-gap-y: var(--borderless-space-sm); }
+    .borderless-gap-y-sm\@xxxl > * {
+      --borderless-sub-gap-y: var(--borderless-space-sm); }
+  .borderless-gap-y-md\@xxxl {
+    --borderless-gap-y: var(--borderless-space-md); }
+    .borderless-gap-y-md\@xxxl > * {
+      --borderless-sub-gap-y: var(--borderless-space-md); }
+  .borderless-gap-y-lg\@xxxl {
+    --borderless-gap-y: var(--borderless-space-lg); }
+    .borderless-gap-y-lg\@xxxl > * {
+      --borderless-sub-gap-y: var(--borderless-space-lg); }
+  .borderless-gap-y-xl\@xxxl {
+    --borderless-gap-y: var(--borderless-space-xl); }
+    .borderless-gap-y-xl\@xxxl > * {
+      --borderless-sub-gap-y: var(--borderless-space-xl); }
+  .borderless-gap-y-xxl\@xxxl {
+    --borderless-gap-y: var(--borderless-space-xxl); }
+    .borderless-gap-y-xxl\@xxxl > * {
+      --borderless-sub-gap-y: var(--borderless-space-xxl); }
+  .borderless-gap-y-xxxl\@xxxl {
+    --borderless-gap-y: var(--borderless-space-xxxl); }
+    .borderless-gap-y-xxxl\@xxxl > * {
+      --borderless-sub-gap-y: var(--borderless-space-xxxl); }
+  .borderless-gap-y-xxxxl\@xxxl {
+    --borderless-gap-y: var(--borderless-space-xxxxl); }
+    .borderless-gap-y-xxxxl\@xxxl > * {
+      --borderless-sub-gap-y: var(--borderless-space-xxxxl); }
+  .borderless-gap-y-0\@xxxl {
+    --borderless-gap-y: 0; }
+    .borderless-gap-y-0\@xxxl > * {
+      --borderless-sub-gap-y: 0; }
+  .borderless-grid-cell-1\@xxxl {
+    --borderless-grid-columns: 1; }
+  .borderless-cell-1\@xxxl {
+    --borderless-span: 1; }
+  .borderless-grid-cell-2\@xxxl {
+    --borderless-grid-columns: 2; }
+  .borderless-cell-2\@xxxl {
+    --borderless-span: 2; }
+  .borderless-grid-cell-3\@xxxl {
+    --borderless-grid-columns: 3; }
+  .borderless-cell-3\@xxxl {
+    --borderless-span: 3; }
+  .borderless-grid-cell-4\@xxxl {
+    --borderless-grid-columns: 4; }
+  .borderless-cell-4\@xxxl {
+    --borderless-span: 4; }
+  .borderless-grid-cell-5\@xxxl {
+    --borderless-grid-columns: 5; }
+  .borderless-cell-5\@xxxl {
+    --borderless-span: 5; }
+  .borderless-grid-cell-6\@xxxl {
+    --borderless-grid-columns: 6; }
+  .borderless-cell-6\@xxxl {
+    --borderless-span: 6; }
+  .borderless-grid-cell-7\@xxxl {
+    --borderless-grid-columns: 7; }
+  .borderless-cell-7\@xxxl {
+    --borderless-span: 7; }
+  .borderless-grid-cell-8\@xxxl {
+    --borderless-grid-columns: 8; }
+  .borderless-cell-8\@xxxl {
+    --borderless-span: 8; }
+  .borderless-grid-cell-9\@xxxl {
+    --borderless-grid-columns: 9; }
+  .borderless-cell-9\@xxxl {
+    --borderless-span: 9; }
+  .borderless-grid-cell-10\@xxxl {
+    --borderless-grid-columns: 10; }
+  .borderless-cell-10\@xxxl {
+    --borderless-span: 10; }
+  .borderless-grid-cell-11\@xxxl {
+    --borderless-grid-columns: 11; }
+  .borderless-cell-11\@xxxl {
+    --borderless-span: 11; }
+  .borderless-grid-cell-12\@xxxl {
+    --borderless-grid-columns: 12; }
+  .borderless-cell-12\@xxxl {
+    --borderless-span: 12; }
+  .borderless-cell-1\@xxxl, .borderless-cell-2\@xxxl, .borderless-cell-3\@xxxl, .borderless-cell-4\@xxxl, .borderless-cell-5\@xxxl, .borderless-cell-6\@xxxl, .borderless-cell-7\@xxxl, .borderless-cell-8\@xxxl, .borderless-cell-9\@xxxl, .borderless-cell-10\@xxxl, .borderless-cell-11\@xxxl, .borderless-cell-12\@xxxl {
+    flex-basis: calc(((100% - (var(--borderless-grid-columns) - var(--borderless-gap-modifier, 1)) * var(--borderless-sub-gap-x)) * var(--borderless-span) / var(--borderless-grid-columns)) + (var(--borderless-span) - 1) * var(--borderless-sub-gap-x));
+    max-width: calc(((100% - (var(--borderless-grid-columns) - var(--borderless-gap-modifier, 1)) * var(--borderless-sub-gap-x)) * var(--borderless-span) / var(--borderless-grid-columns)) + (var(--borderless-span) - 1) * var(--borderless-sub-gap-x)); }
+  .borderless-cell\@xxxl {
+    flex-grow: 1;
+    flex-basis: 0;
+    max-width: 100%; }
+  .borderless-cell-content\@xxxl {
+    flex-grow: 0;
+    flex-basis: initial;
+    max-width: initial; }
+  .borderless-offset-1\@xxxl {
+    --borderless-offset: 1; }
+  .borderless-offset-2\@xxxl {
+    --borderless-offset: 2; }
+  .borderless-offset-3\@xxxl {
+    --borderless-offset: 3; }
+  .borderless-offset-4\@xxxl {
+    --borderless-offset: 4; }
+  .borderless-offset-5\@xxxl {
+    --borderless-offset: 5; }
+  .borderless-offset-6\@xxxl {
+    --borderless-offset: 6; }
+  .borderless-offset-7\@xxxl {
+    --borderless-offset: 7; }
+  .borderless-offset-8\@xxxl {
+    --borderless-offset: 8; }
+  .borderless-offset-9\@xxxl {
+    --borderless-offset: 9; }
+  .borderless-offset-10\@xxxl {
+    --borderless-offset: 10; }
+  .borderless-offset-11\@xxxl {
+    --borderless-offset: 11; }
+  .borderless-offset-1\@xxxl, .borderless-offset-2\@xxxl, .borderless-offset-3\@xxxl, .borderless-offset-4\@xxxl, .borderless-offset-5\@xxxl, .borderless-offset-6\@xxxl, .borderless-offset-7\@xxxl, .borderless-offset-8\@xxxl, .borderless-offset-9\@xxxl, .borderless-offset-10\@xxxl, .borderless-offset-11\@xxxl {
+    margin-left: calc(((100% - (var(--borderless-grid-columns) - var(--borderless-gap-modifier, 1)) * var(--borderless-sub-gap-x)) * var(--borderless-offset) / var(--borderless-grid-columns)) + (var(--borderless-offset) + var(--borderless-offset-modifier, 0)) * var(--borderless-sub-gap-x)); }
+  .borderless-offset-0\@xxxl {
     margin-left: 0; } }
 
 .borderless-h-xxxxs {

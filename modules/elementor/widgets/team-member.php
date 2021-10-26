@@ -27,7 +27,7 @@ class Team_Member extends Widget_Base {
 	}
 	
 	public function get_icon() {
-		return 'fa fa-user-friends';
+		return 'borderless-icon-team-member';
 	}
 	
 	public function get_categories() {

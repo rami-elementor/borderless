@@ -22,7 +22,7 @@ class Semi_Circular_Progress_Bar extends Widget_Base {
 	}
 	
 	public function get_icon() {
-		return 'fa fa-newspaper';
+		return 'borderless-icon-semi-circular-progress-bar';
 	}
 	
 	public function get_categories() {

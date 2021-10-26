@@ -13,15 +13,6 @@ use \Elementor\Repeater;
 use Elementor\Utils;
 
 class Animated_Text extends Widget_Base {
-
-	public function __construct($data = [], $args = null) {
-		parent::__construct($data, $args);
-
-		wp_register_style( 'elementor-widget-animated-text', BORDERLESS__STYLES . 'elementor-widget-animated-text.css', false, BORDERLESS__VERSION);
-  
-		wp_register_script( 'typewriterjs', BORDERLESS__SCRIPTS . 'typewriterjs.js', [ 'elementor-frontend' ], BORDERLESS__VERSION, true );
-
-	 }
 	
 	public function get_name() {
 		return 'borderless-elementor-animated-text';
@@ -32,7 +23,7 @@ class Animated_Text extends Widget_Base {
 	}
 	
 	public function get_icon() {
-		return 'fa fa-envelope-o';
+		return 'borderless-icon-animated-text';
 	}
 	
 	public function get_categories() {

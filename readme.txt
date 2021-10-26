@@ -4,7 +4,7 @@ Tags: page builder, editor, landing page, drag-and-drop, visual composer, WPBake
 Requires at least: 4.7
 Tested up to: 5.8
 Requires PHP: 5.6
-Stable tag: 1.2.9
+Stable tag: 1.3.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -81,33 +81,38 @@ Sites must be built on PHP 5.6 or greater, but Borderless always supports the la
 
 == Changelog ==
 
+= 1.3.0 - Oct 26 2021 =
+* Improvements - Elementor - Assets Were Merged Into a Single File.
+* Fixed - Elementor - Widget Icons Are Now Visible.
+* Fixed - Elementor - Call javascript in the live preview.
+
 = 1.2.9 - Oct 20 2021 =
-* Improvements - Remove WPBakery Notice.
+* Improvements - Removed WPBakery Notice.
 
 = 1.2.8 - Oct 19 2021 =
 * Added - Elementor Widget - Marquee Text - Typography and More Style Options.
 * Fixed - Elementor Widget - Marquee Text - Script.
 
 = 1.2.7 - Oct 15 2021 =
-* Added - Elementor Widget - Portfolio.
+* New - Elementor Widget - Portfolio.
 * Improvements - Elementor Widget - Change Fancy Text for Animated Text Name.
 * Improvements - Elementor Widget - Contact Form 7.
 * Improvements - Elementor Widget - Marquee Text.
 
 = 1.2.6 - Sep 17 2021 =
-* Added - Elementor Widget - Fancy Text.
+* New - Elementor Widget - Fancy Text.
 
 = 1.2.5 - Sep 06 2021 =
-* Added - Elementor Widget - Marquee Text.
+* New - Elementor Widget - Marquee Text.
 
 = 1.2.4 - Sep 03 2021 =
-* Added - Elementor Widget - Progress Bar.
+* New - Elementor Widget - Progress Bar.
 
 = 1.2.3 - Sep 02 2021 =
-* Added - Elementor Widget - Semi Circular Progress Bar.
+* New - Elementor Widget - Semi Circular Progress Bar.
 
 = 1.2.2 - Sep 02 2021 =
-* Added - Elementor Widget - Circular Progress Bar.
+* New - Elementor Widget - Circular Progress Bar.
 * Updated - ProgressBar.js - v1.1.0
 
 = 1.2.1 =

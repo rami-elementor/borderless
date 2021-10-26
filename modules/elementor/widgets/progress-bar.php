@@ -22,7 +22,7 @@ class Progress_Bar extends Widget_Base {
 	}
 	
 	public function get_icon() {
-		return 'fa fa-newspaper';
+		return 'borderless-icon-progress-bar';
 	}
 	
 	public function get_categories() {

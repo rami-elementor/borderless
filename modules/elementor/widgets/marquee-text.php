@@ -22,11 +22,15 @@ class Marquee_Text extends Widget_Base {
 	}
 	
 	public function get_icon() {
-		return 'fa fa-envelope-o';
+		return 'borderless-icon-marquee-text';
 	}
 	
 	public function get_categories() {
 		return [ 'borderless' ];
+	}
+
+	public function get_script_depends() {
+		return [ 'elementor-widget-marquee' ];
 	}
 	
 	protected function _register_controls() {

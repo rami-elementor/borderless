@@ -27,7 +27,7 @@ class Testimonial extends Widget_Base {
 	}
 	
 	public function get_icon() {
-		return 'fas fa-quote-left';
+		return 'borderless-icon-testimonial';
 	}
 	
 	public function get_categories() {
@@ -58,12 +58,9 @@ class Testimonial extends Widget_Base {
         return 'https://wpborderless.com/';
     }
 
-	public function get_style_depends()
-    {
-        return [
-            'font-awesome-5',
-        ];
-    }
+	public function get_style_depends() {
+		return [ 'font-awesome-5' ];
+	}
 	
 	protected function _register_controls() {
 

@@ -19,15 +19,6 @@ use Elementor\Utils;
 
 class Portfolio extends Widget_Base {
 	
-	public function __construct($data = [], $args = null) {
-		parent::__construct($data, $args);
-		
-		wp_register_style( 'elementor-widget-portfolio', BORDERLESS__STYLES . 'elementor-widget-portfolio.css', false, BORDERLESS__VERSION);
-		
-		wp_register_script( 'elementor-widget-isotope', BORDERLESS__SCRIPTS . 'isotope.js', [ 'elementor-frontend' ], BORDERLESS__VERSION, true );
-		
-	}
-	
 	public function get_name() {
 		return 'borderless-elementor-portfolio';
 	}
@@ -37,7 +28,7 @@ class Portfolio extends Widget_Base {
 	}
 	
 	public function get_icon() {
-		return 'fa fa-envelope-o';
+		return 'borderless-icon-portfolio';
 	}
 	
 	public function get_categories() {
