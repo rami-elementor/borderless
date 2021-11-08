@@ -606,11 +606,115 @@ class Slider extends Widget_Base {
 				$repeater->start_controls_tab( 'borderless_elementor_slider_style_tab', [ 'label' => __( 'Style', 'borderless' ) ] );
 
 					$repeater->add_control(
-						'custom_style',
+						'borderless_elementor_slider_slide_custom_style',
 						[
 							'label' => __( 'Custom', 'borderless' ),
 							'type' => Controls_Manager::SWITCHER,
 							'description' => __( 'Set custom style that will only affect this specific slide.', 'borderless' ),
+						]
+					);
+
+					$repeater->add_control(
+						'borderless_elementor_slider_slides_horizontal_position_custom',
+						[
+							'label' => __( 'Horizontal Position', 'borderless' ),
+							'type' => Controls_Manager::CHOOSE,
+							'default' => 'center',
+							'options' => [
+								'flex-start' => [
+									'title' => __( 'Left', 'borderless' ),
+									'icon' => 'eicon-h-align-left',
+								],
+								'center' => [
+									'title' => __( 'Center', 'borderless' ),
+									'icon' => 'eicon-h-align-center',
+								],
+								'flex-end' => [
+									'title' => __( 'Right', 'borderless' ),
+									'icon' => 'eicon-h-align-right',
+								],
+							],
+							'default' => 'center',
+							'selectors' => [
+								'{{WRAPPER}} {{CURRENT_ITEM}} .borderless-elementor-slide-content' => 'align-items: {{VALUE}}',
+							],
+							'conditions' => [
+								'terms' => [
+									[
+										'name' => 'borderless_elementor_slider_slide_custom_style',
+										'value' => 'yes',
+									],
+								],
+							],
+						]
+					);
+		
+					$repeater->add_control(
+						'borderless_elementor_slider_slides_vertical_position_custom',
+						[
+							'label' => __( 'Vertical Position', 'borderless' ),
+							'type' => Controls_Manager::CHOOSE,
+							'default' => 'middle',
+							'options' => [
+								'flex-start' => [
+									'title' => __( 'Top', 'borderless' ),
+									'icon' => 'eicon-v-align-top',
+								],
+								'center' => [
+									'title' => __( 'Middle', 'borderless' ),
+									'icon' => 'eicon-v-align-middle',
+								],
+								'flex-end' => [
+									'title' => __( 'Bottom', 'borderless' ),
+									'icon' => 'eicon-v-align-bottom',
+								],
+							],
+							'default' => 'center',
+							'selectors' => [
+								'{{WRAPPER}} {{CURRENT_ITEM}} .borderless-elementor-slide-content' => 'justify-content: {{VALUE}}',
+							],
+							'conditions' => [
+								'terms' => [
+									[
+										'name' => 'borderless_elementor_slider_slide_custom_style',
+										'value' => 'yes',
+									],
+								],
+							],
+						]
+					);
+		
+					$repeater->add_control(
+						'borderless_elementor_slider_slides_text_align_custom',
+						[
+							'label' => __( 'Text Align', 'borderless' ),
+							'type' => Controls_Manager::CHOOSE,
+							'options' => [
+								'left' => [
+									'title' => __( 'Left', 'borderless' ),
+									'icon' => 'eicon-text-align-left',
+								],
+								'center' => [
+									'title' => __( 'Center', 'borderless' ),
+									'icon' => 'eicon-text-align-center',
+								],
+								'right' => [
+									'title' => __( 'Right', 'borderless' ),
+									'icon' => 'eicon-text-align-right',
+								],
+							],
+							'default' => 'center',
+							'selectors' => [
+								'{{WRAPPER}} {{CURRENT_ITEM}} .borderless-elementor-slide-content' => 'text-align: {{VALUE}}',
+							],
+							'conditions' => [
+								'terms' => [
+									[
+										'name' => 'borderless_elementor_slider_slide_custom_style',
+										'value' => 'yes',
+									],
+								],
+							],
 						]
 					);
 
