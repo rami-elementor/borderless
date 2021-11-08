@@ -132,13 +132,6 @@ class Borderless_Dashboard {
             'borderless_section'
         );
         add_settings_field(
-            'elementor',
-            __( 'Elementor', 'borderless' ),
-            array( $this, 'render_elementor_field' ),
-            'borderless',
-            'borderless_section'
-        );
-        add_settings_field(
             'related_posts',
             __( 'Related Posts', 'borderless' ),
             array( $this, 'render_related_posts_field' ),
@@ -270,20 +263,6 @@ class Borderless_Dashboard {
         // Field output.
         echo '<input type="color" name="borderless[text_color]" class="regular-text text_color_field" placeholder="' . esc_attr__( '', 'borderless' ) . '" value="' . esc_attr( $value ) . '">';
         echo '<span class="description">' . __( 'Pick a text color for the elements.', 'borderless' ) . '</span>';
-        
-    }
-    
-    function render_elementor_field() {
-        
-        // Retrieve data from the database.
-        $options = get_option( 'borderless' );
-        
-        // Set default value.
-        $value = isset( $options['elementor'] ) ? $options['elementor'] : '';
-        
-        // Field output.
-        echo '<input type="checkbox" name="borderless[elementor]" class="switch elementor_field" value="checked" ' . checked( $value, 'checked', false ) . '> ' . __( '', 'borderless' );
-        echo '<span class="description">' . __( 'Elementor Website Builder', 'borderless' ) . '</span>';
         
     }
     

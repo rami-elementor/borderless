@@ -24,6 +24,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.borderless-icon-borderless:before {
+  content: "\e90b";
+}
+.borderless-icon-slider:before {
+  content: "\e90a";
+}
 .borderless-icon-marquee-text:before {
   content: "\e907";
 }

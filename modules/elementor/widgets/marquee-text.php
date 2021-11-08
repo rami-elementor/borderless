@@ -29,8 +29,12 @@ class Marquee_Text extends Widget_Base {
 		return [ 'borderless' ];
 	}
 
+	public function get_style_depends() {
+		return [ 'borderless-elementor-style' ];
+	}
+
 	public function get_script_depends() {
-		return [ 'elementor-widget-marquee' ];
+		return [ 'borderless-elementor-marquee-script' ];
 	}
 	
 	protected function _register_controls() {

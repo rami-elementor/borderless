@@ -45,6 +45,14 @@ class WPBakeryShortCode_borderless_wpbakery_team_member extends WPBakeryShortCod
 		), $atts ) );
 		$output = '';
 
+		// Assets.
+		wp_enqueue_style(
+			'borderless-wpbakery-style',
+			BORDERLESS__STYLES . 'wpbakery.min.css', 
+			false, 
+			BORDERLESS__VERSION
+		);
+
 
 		// Retrieve data from the database.
 		$options = get_option( 'borderless' );

@@ -46,6 +46,21 @@ class Semi_Circular_Progress_Bar extends Widget_Base {
 	{
         return 'https://wpborderless.com/';
     }
+
+	public function get_style_depends() {
+		return 
+			[ 
+				'borderless-elementor-style'
+			];
+	}
+	
+	public function get_script_depends() {
+		return 
+			[ 
+				'borderless-elementor-appear-script',
+				'borderless-elementor-progressbar-script'
+			];
+	}
 	
 	protected function _register_controls() {
 

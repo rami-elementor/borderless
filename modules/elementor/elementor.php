@@ -146,6 +146,7 @@ final class Borderless_Elementor {
 		require_once('widgets/portfolio.php');
 		require_once('widgets/progress-bar.php');
 		require_once('widgets/semi-circular-progress-bar.php');
+		require_once('widgets/slider.php');
 		require_once('widgets/team-member.php');
 		require_once('widgets/testimonial.php');
 
@@ -157,6 +158,7 @@ final class Borderless_Elementor {
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Borderless\Widgets\Portfolio() );
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Borderless\Widgets\Progress_Bar() );
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Borderless\Widgets\Semi_Circular_Progress_Bar() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Borderless\Widgets\Slider() );
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Borderless\Widgets\Team_Member() );
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Borderless\Widgets\Testimonial() );
 
@@ -167,7 +169,7 @@ final class Borderless_Elementor {
             'borderless',
             [
                 'title' => __( 'Borderless', 'borderless' ),
-                'icon' => 'fa fa-plug',
+                'icon' => 'borderless-icon-borderless',
             ]
         );
     }

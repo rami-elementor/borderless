@@ -20,6 +20,14 @@ class WPBakeryShortCode_borderless_wpbakery_icon_group extends WPBakeryShortCode
 		), $atts ) );
 		$output = '';
 
+		// Assets.
+		wp_enqueue_style(
+			'borderless-wpbakery-style',
+			BORDERLESS__STYLES . 'wpbakery.min.css', 
+			false, 
+			BORDERLESS__VERSION
+		);
+
 
 		// Retrieve data from the database.
 		$options = get_option( 'borderless' );

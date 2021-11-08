@@ -98,6 +98,14 @@ class WPBakeryShortCode_borderless_wpbakery_pricing extends WPBakeryShortCode {
 		), $atts ) );
 		$output = '';
 
+		// Assets.
+		wp_enqueue_style(
+			'borderless-wpbakery-style',
+			BORDERLESS__STYLES . 'wpbakery.min.css', 
+			false, 
+			BORDERLESS__VERSION
+		);
+
 
 		// Retrieve data from the database.
 		$options = get_option( 'borderless' );
@@ -150,7 +158,7 @@ class WPBakeryShortCode_borderless_wpbakery_pricing extends WPBakeryShortCode {
 			$src = $img[0];
 			$custom_src = $src ? esc_attr( $src ) : $default_src;
 			
-			$icon_content = '<div class="elvn" style="'.$icon_alignment.'"><img class="vesvg" src="'.$custom_src.'" ></div>';
+			$icon_content = '<div class="elvn" style="'.$icon_alignment.'"><img class="borderless-svg-img" src="'.$custom_src.'" ></div>';
 			
 		} else {
 			

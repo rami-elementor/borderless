@@ -35,7 +35,7 @@ class Animated_Text extends Widget_Base {
 	}
 
 	public function get_script_depends() {
-		return [ 'typewriterjs' ];
+		return [ 'borderless-elementor-typewriterjs-script' ];
 	}
 	
 	protected function _register_controls() {

@@ -24,16 +24,53 @@ if ( ! class_exists( 'Borderless_Elementor_Assets' ) ) {
 		
 		public function register_styles() {
 
+			// Start Temp Style
+			wp_register_style( 
+				'borderless-elementor-style', 
+				BORDERLESS__STYLES . 'elementor.min.css', 
+				false, 
+				BORDERLESS__VERSION
+			);
+			// End Temp Style
+
 			wp_register_style( 
 				'elementor-widget-animated-text', 
-				BORDERLESS__STYLES . 'elementor-widget-animated-text.css', 
+				BORDERLESS__STYLES . 'elementor/elementor-widget-animated-text.css', 
 				false, 
 				BORDERLESS__VERSION
 			);
 
 			wp_register_style( 
 				'elementor-widget-portfolio',
-				BORDERLESS__STYLES . 'elementor-widget-portfolio.css', 
+				BORDERLESS__STYLES . 'elementor/elementor-widget-portfolio.css', 
+				false, 
+				BORDERLESS__VERSION
+			);
+
+			wp_register_style( 
+				'elementor-widget-slider',
+				BORDERLESS__STYLES . 'elementor/elementor-widget-slider.css', 
+				false, 
+				BORDERLESS__VERSION
+			);
+
+			wp_register_style( 
+				'borderless-elementor-flickity-style',
+				BORDERLESS__LIB . 'flickity/flickity.css', 
+				false, 
+				BORDERLESS__VERSION
+			);
+
+			wp_register_style( 
+				'borderless-elementor-flickity-fullscreen-style',
+				BORDERLESS__LIB . 'flickity/flickity-fullscreen.css', 
+				false, 
+				BORDERLESS__VERSION
+			);
+
+			wp_register_style( 
+				'borderless-elementor-flickity-fade-style',
+				BORDERLESS__LIB . 'flickity/flickity-fade.css', 
 				false, 
 				BORDERLESS__VERSION
 			);
@@ -50,23 +87,65 @@ if ( ! class_exists( 'Borderless_Elementor_Assets' ) ) {
 
 		public function register_scripts() {
 
-			wp_register_script( 
-				'elementor-widget-marquee', 
-				BORDERLESS__SCRIPTS . '/lib/marquee.js', [ 'elementor-frontend' ], 
-				'1.5.2', 
+			wp_register_script(
+				'borderless-elementor-appear-script',
+				BORDERLESS__LIB . 'appear.js', [ 'elementor-frontend' ], 
+				'1.0.0', 
 				true 
 			);
 
 			wp_register_script( 
-				'elementor-widget-isotope', 
-				BORDERLESS__SCRIPTS . '/lib/isotope.js', [ 'elementor-frontend' ], 
+				'borderless-elementor-flickity-script', 
+				BORDERLESS__LIB . 'flickity/flickity.js', [ 'elementor-frontend' ], 
+				'2.2.2', 
+				true 
+			);
+
+			wp_register_script( 
+				'borderless-elementor-flickity-fullscreen-script', 
+				BORDERLESS__LIB . 'flickity/flickity-fullscreen.js', [ 'elementor-frontend' ], 
+				'1.1.1', 
+				true 
+			);
+
+			wp_register_script( 
+				'borderless-elementor-flickity-fade-script', 
+				BORDERLESS__LIB . 'flickity/flickity-fade.js', [ 'elementor-frontend' ], 
+				'1.0.0', 
+				true 
+			);
+
+			wp_register_script( 
+				'borderless-elementor-flickity-as-nav-for-script', 
+				BORDERLESS__LIB . 'flickity/flickity-as-nav-for.js', [ 'elementor-frontend' ], 
+				'2.0.2', 
+				true 
+			);
+
+			wp_register_script( 
+				'borderless-elementor-isotope-script', 
+				BORDERLESS__LIB . 'isotope.js', [ 'elementor-frontend' ], 
 				'3.0.6', 
 				true 
 			);
 
 			wp_register_script( 
-				'typewriterjs', 
-				BORDERLESS__SCRIPTS . '/lib/typewriterjs.js', [ 'elementor-frontend' ], 
+				'borderless-elementor-marquee-script', 
+				BORDERLESS__LIB . 'marquee.js', [ 'elementor-frontend' ], 
+				'1.5.2', 
+				true 
+			);
+
+			wp_register_script(
+				'borderless-elementor-progressbar-script',
+				BORDERLESS__LIB . 'progressbar.js', [ 'elementor-frontend' ], 
+				'1.1.0', 
+				true 
+			);
+
+			wp_register_script( 
+				'borderless-elementor-typewriterjs-script', 
+				BORDERLESS__LIB . 'typewriterjs.js', [ 'elementor-frontend' ], 
 				'2.18.0', 
 				true 
 			);
@@ -76,7 +155,7 @@ if ( ! class_exists( 'Borderless_Elementor_Assets' ) ) {
 		public function enqueue_scripts() {
 
 			wp_enqueue_script(
-				'borderless-elementor',
+				'borderless-elementor-script',
 				BORDERLESS__SCRIPTS . 'borderless-elementor.min.js', [ 'elementor-frontend' ], 
 				BORDERLESS__VERSION, 
 				true 

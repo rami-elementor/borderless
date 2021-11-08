@@ -21,6 +21,14 @@ class WPBakeryShortCode_borderless_wpbakery_list_group extends WPBakeryShortCode
 			'css_animation' => ''
 		), $atts ) );
 		$output = '';
+
+		// Assets.
+		wp_enqueue_style(
+			'borderless-wpbakery-style',
+			BORDERLESS__STYLES . 'wpbakery.min.css', 
+			false, 
+			BORDERLESS__VERSION
+		);
 		
 		
 		// Retrieve data from the database.

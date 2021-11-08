@@ -31,6 +31,32 @@ class WPBakeryShortCode_borderless_wpbakery_circular_progress_bar extends WPBake
 		$output = '';
 		$borderless_global_color = 'borderless-global-color'; //General Color
 
+		// Assets.
+		wp_enqueue_style(
+			'borderless-wpbakery-style',
+			BORDERLESS__STYLES . 'wpbakery.min.css', 
+			false, 
+			BORDERLESS__VERSION
+		);
+		wp_enqueue_script(
+			'borderless-wpbakery-appear-script',
+			BORDERLESS__LIB . 'appear.js', array('jquery'), 
+			'1.0.0', 
+			true 
+		);
+		wp_enqueue_script(
+			'borderless-wpbakery-progressbar-script',
+			BORDERLESS__LIB . 'progressbar.js', array('jquery'), 
+			'1.1.0', 
+			true 
+		);
+		wp_enqueue_script(
+			'borderless-wpbakery-script',
+			BORDERLESS__SCRIPTS . 'borderless-wpbakery.min.js', array('jquery'), 
+			BORDERLESS__VERSION, 
+			true 
+		);
+
 
 		// Retrieve data from the database.
 		$options = get_option( 'borderless' );
@@ -125,14 +151,14 @@ return array(
 			'type' => 'textfield',
 			'heading' => __( 'Bar Thickness', 'borderless' ),
 			'param_name' => 'bar_thickness',
-			'description' => __( 'Enter a value for height. Ex: 16px.', 'borderless' ),
+			'description' => __( 'Enter a value for height. Ex: 16.', 'borderless' ),
 		),
 
 		array(
 			'type' => 'textfield',
 			'heading' => __( 'Track Thickness', 'borderless' ),
 			'param_name' => 'track_thickness',
-			'description' => __( 'Enter a value for height. Ex: 16px.', 'borderless' ),
+			'description' => __( 'Enter a value for height. Ex: 16.', 'borderless' ),
 		),
 		
 		array(

@@ -91,6 +91,7 @@ class Borderless {
 		require_once( BORDERLESS__INC . "/icon-manager/icon-manager.php" );
 		require_once( BORDERLESS__INC . "/custom-post-types/custom-post-types.php" );
 		require_once( BORDERLESS__INC . "/svg/svg.php" );
+		require_once( BORDERLESS__ELEMENTOR . "/elementor.php" );
 		require_once( BORDERLESS__WPBAKERY . "/wpbakery.php" );
 		require_once( BORDERLESS__INC . "/widgets/button.php" );
 		require_once( BORDERLESS__INC . "/widgets/contact-info.php" );
@@ -99,10 +100,7 @@ class Borderless {
 		require_once( BORDERLESS__INC . "/widgets/social-media.php" );
 		require_once( BORDERLESS__INC . "/widgets/spacer.php" );
 		require_once( BORDERLESS__INC . "/helper.php" );
-		
-		if ( isset( $options['elementor'] ) ) { 
-			require_once( BORDERLESS__ELEMENTOR . "/elementor.php" ); 
-		}
+		 
 		if ( isset( $options['related_posts'] ) ) { 
 			require_once( BORDERLESS__RELATED_POSTS . "/related-posts.php" ); 
 		}

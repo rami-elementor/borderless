@@ -51,7 +51,7 @@ class Portfolio extends Widget_Base {
 	}
 	
 	public function get_script_depends() {
-		return [ 'elementor-widget-isotope' ];
+		return [ 'borderless-elementor-isotope-script' ];
 	}
 	
 	protected function _register_controls() {

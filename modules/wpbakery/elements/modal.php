@@ -47,6 +47,20 @@ class WPBakeryShortCode_borderless_wpbakery_modal extends WPBakeryShortCodesCont
 		), $atts ) );
 		$output = '';
 
+		// Assets.
+		wp_enqueue_style(
+			'borderless-wpbakery-style',
+			BORDERLESS__STYLES . 'wpbakery.min.css', 
+			false, 
+			BORDERLESS__VERSION
+		);
+		wp_enqueue_script(
+			'borderless-wpbakery-script',
+			BORDERLESS__SCRIPTS . 'borderless-wpbakery.min.js', array('jquery'), 
+			BORDERLESS__VERSION, 
+			true 
+		);
+
 		// Retrieve data from the database.
 		$options = get_option( 'borderless' );
 		

@@ -24,6 +24,32 @@ class WPBakeryShortCode_borderless_wpbakery_testimonial_section extends WPBakery
 			'css_animation' => ''
 		), $atts ) );
 		$output = '';
+
+		// Assets.
+		wp_enqueue_style(
+			'borderless-wpbakery-style',
+			BORDERLESS__STYLES . 'wpbakery.min.css', 
+			false, 
+			BORDERLESS__VERSION
+		);
+		wp_enqueue_style(
+			'borderless-flickity-style',
+			BORDERLESS__LIB . 'flickity/flickity.css',
+			false, 
+			BORDERLESS__VERSION
+		);
+		wp_enqueue_script(
+			'borderless-wpbakery-script',
+			BORDERLESS__SCRIPTS . 'borderless-wpbakery.min.js', array('jquery'), 
+			BORDERLESS__VERSION, 
+			true 
+		);
+		wp_enqueue_script(
+			'borderless-flickity-script',
+			BORDERLESS__LIB . 'flickity/flickity.js', array('jquery'), 
+			'2.2.2', 
+			true 
+		);
 		
 		
 		// Retrieve data from the database.
@@ -146,6 +172,7 @@ vc_map( array(
 	"is_container" => true,
 	'category' => __( 'Borderless', 'borderless' ),
 	'description' => __( 'Display testimonials', 'borderless' ),
+	'admin_enqueue_js' => array(BORDERLESS__LIB . 'flickity/flickity.js'),
 	'params' => array(
 		
 		vc_map_add_css_animation(),

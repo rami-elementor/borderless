@@ -59,7 +59,11 @@ class Testimonial extends Widget_Base {
     }
 
 	public function get_style_depends() {
-		return [ 'font-awesome-5' ];
+		return 
+			[ 
+				'font-awesome-5',
+				'borderless-elementor-style'
+			];
 	}
 	
 	protected function _register_controls() {
