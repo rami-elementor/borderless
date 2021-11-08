@@ -4,7 +4,7 @@ Tags: page builder, editor, landing page, drag-and-drop, visual composer, WPBake
 Requires at least: 4.7
 Tested up to: 5.8
 Requires PHP: 5.6
-Stable tag: 1.3.1
+Stable tag: 1.3.2
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -81,7 +81,10 @@ Sites must be built on PHP 5.6 or greater, but Borderless always supports the la
 
 == Changelog ==
 
-= 1.3.1 - Nov 06 2021 =
+= 1.3.2 - Nov 08 2021 =
+* Improvements - Removed Admin Notice That Required the Elementor Plugin to be Enabled. 
+
+= 1.3.1 - Nov 08 2021 =
 * New - Elementor Widget - Slider.
 * Improvements - Assets Management.
 * Tweaks - Removed Dashboard Elementor Button Enable/Disable Switch.

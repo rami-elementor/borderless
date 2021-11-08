@@ -94,7 +94,7 @@ final class Borderless_Elementor {
 
 		// Check if Elementor installed and activated
 		if ( ! did_action( 'elementor/loaded' ) ) {
-			add_action( 'admin_notices', [ $this, 'admin_notice_missing_main_plugin' ] );
+			//add_action( 'admin_notices', [ $this, 'admin_notice_missing_main_plugin' ] );
 			return false;
 		}
 
@@ -186,7 +186,7 @@ final class Borderless_Elementor {
 		$message = sprintf(
 			/* translators: 1: Plugin name 2: Elementor */
 			esc_html__( '"%1$s" requires "%2$s" to be installed and activated.', 'borderless' ),
-			'<strong>' . esc_html__( 'Elementor Test Extension', 'borderless' ) . '</strong>',
+			'<strong>' . esc_html__( 'Borderless', 'borderless' ) . '</strong>',
 			'<strong>' . esc_html__( 'Elementor', 'borderless' ) . '</strong>'
 		);
 
