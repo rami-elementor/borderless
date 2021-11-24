@@ -3447,14 +3447,6 @@
   --borderless-spacer-xxxl:  calc(8.5 * var(--borderless-spacer-unit));
   --borderless-spacer-xxxxl: calc(13.75 * var(--borderless-spacer-unit)); }
 
-body {
-  font-family: charter, Georgia, Cambria, 'Times New Roman', Times, serif;
-  font-size: 1rem;
-  line-height: 2rem;
-  font-weight: 400;
-  letter-spacing: -0.003rem;
-  font-style: normal; }
-
 :root {
   --borderless-unit:       1rem;
   --borderless-unit-xxxxs: calc(0.125 * var(--borderless-unit));
