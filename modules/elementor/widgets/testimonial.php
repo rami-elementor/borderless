@@ -654,6 +654,69 @@ class Testimonial extends Widget_Base {
 	);
 
 	$this->add_control(
+		'borderless_testimonial_content_color_name',
+		[
+			'label' => esc_html__( 'Color Name', 'borderless'),
+			'type' => Controls_Manager::COLOR,
+			'default' => '#000',
+			'selectors' => [
+				'{{WRAPPER}} .borderless-elementor-testimonial-name' => 'color: {{VALUE}};',
+			],
+		]
+	);
+
+	$this->add_group_control(
+		Group_Control_Typography::get_type(),
+		[
+			'label' => esc_html__( 'Typography Name', 'borderless'),
+		 	'name' => 'borderless_testimonial_typography_name',
+			'selector' => '{{WRAPPER}} .borderless-elementor-testimonial-name',
+		]
+	);
+
+	$this->add_control(
+		'borderless_testimonial_content_color_job_position',
+		[
+			'label' => esc_html__( 'Color Job Position', 'borderless'),
+			'type' => Controls_Manager::COLOR,
+			'default' => '#000',
+			'selectors' => [
+				'{{WRAPPER}} .borderless-elementor-testimonial-job' => 'color: {{VALUE}};',
+			],
+		]
+	);
+
+	$this->add_group_control(
+		Group_Control_Typography::get_type(),
+		[
+			'label' => esc_html__( 'Typography Job Position', 'borderless'),
+		 	'name' => 'borderless_testimonial_typography_job',
+			'selector' => '{{WRAPPER}} .borderless-elementor-testimonial-job',
+		]
+	);
+
+	$this->add_control(
+		'borderless_testimonial_content_color_description',
+		[
+			'label' => esc_html__( 'Color Description', 'borderless'),
+			'type' => Controls_Manager::COLOR,
+			'default' => '#000',
+			'selectors' => [
+				'{{WRAPPER}} .borderless-elementor-testimonial-description' => 'color: {{VALUE}};',
+			],
+		]
+	);
+
+	$this->add_group_control(
+		Group_Control_Typography::get_type(),
+		[
+			'label' => esc_html__( 'Typography Description', 'borderless'),
+		 	'name' => 'borderless_testimonial_typography_description',
+			'selector' => '{{WRAPPER}} .borderless-elementor-testimonial-description',
+		]
+	);
+
+	$this->add_control(
 		'borderless_section_testimonial_content_background',
 		[
 			'label' => esc_html__( 'Content Background Color', 'borderless'),
