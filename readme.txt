@@ -4,7 +4,7 @@ Tags: page builder, editor, landing page, drag-and-drop, visual composer, WPBake
 Requires at least: 5.0
 Tested up to: 6.0
 Requires PHP: 7.4
-Stable tag: 1.3.6
+Stable tag: 1.3.7
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -81,7 +81,10 @@ Sites must be built on PHP 5.6 or greater, but Borderless always supports the la
 
 == Changelog ==
 
-= 1.3.6 - May 11 2022 =
+= 1.3.7 - May 14 2022 =
+* Fixed - Elementor Marquee Widget - Gap and Style.
+
+= 1.3.6 - May 14 2022 =
 * Improvements - Elementor Marquee Widget - Style Options and New Content Input Mode.
 * Dev - Tested up to WordPress 6.0.
 

@@ -39,7 +39,9 @@
   white-space: nowrap;
   overflow: hidden; }
   .borderless-elementor-marquee-text-widget .js-marquee {
-    display: flex; }
+    display: grid;
+    grid-auto-flow: column;
+    gap: 20px; }
 
 /*-----------------------------------------------------------------------------------*/
 /*  *.  Elementor - Component - Progress Bar

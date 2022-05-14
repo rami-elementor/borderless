@@ -89,16 +89,6 @@ class Marquee_Text extends Widget_Base {
 				]
 			);
 
-			$this->add_control(
-				'borderless_elementor_marquee_text_content',
-				[
-					'label' => __( 'Text', 'borderless' ),
-					'type' => \Elementor\Controls_Manager::WYSIWYG,
-					'default' => __( 'Default description', 'borderless' ),
-					'placeholder' => __( 'Type your description here', 'borderless' ),
-				]
-			);
-
 		$this->end_controls_section();
 
 		/*-----------------------------------------------------------------------------------*/
@@ -168,7 +158,7 @@ class Marquee_Text extends Widget_Base {
 				]
 			);
 
-			$this->add_control(
+			$this->add_responsive_control(
 				'borderless_elementor_marquee_text_gap',
 				[
 					'label' => __( 'Gap', 'borderless' ),
@@ -177,6 +167,9 @@ class Marquee_Text extends Widget_Base {
 					'max' => 99999,
 					'step' => 1,
 					'default' => 50,
+					'selectors' => [
+						'{{WRAPPER}} .borderless-elementor-marquee-text .js-marquee' => 'gap: {{VALUE}}px',
+					],
 				]
 			);
 
