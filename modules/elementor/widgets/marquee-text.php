@@ -6,9 +6,13 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 use Elementor\Widget_Base;
 use Elementor\Controls_Manager;
+use Elementor\Group_Control_Border;
+use Elementor\Group_Control_Box_Shadow;
 use Elementor\Group_Control_Image_Size;
 use \Elementor\Group_Control_Typography;
+use \Elementor\Group_Control_Background;
 use \Elementor\Core\Schemes\Typography;
+use \Elementor\Repeater;
 use Elementor\Utils;
 
 class Marquee_Text extends Widget_Base {
@@ -50,6 +54,40 @@ class Marquee_Text extends Widget_Base {
 				'tab' => Controls_Manager::TAB_CONTENT,
 			]
 		);
+
+			$repeater = new Repeater();
+
+			$repeater->add_control(
+				'borderless_elementor_marquee_item',
+				[
+					'label'			=> esc_html__( 'Content', 'borderless'),
+					'type'			=> Controls_Manager::TEXT,
+					'label_block'	=> true,
+					'dynamic'		=> [ 'active' => true ]
+				]
+			);
+
+			$this->add_control(
+				'borderless_elementor_marquee_item_strings',
+				[
+					'type'        => Controls_Manager::REPEATER,
+					'show_label'  => true,
+					'fields'      =>  $repeater->get_controls(),
+					'title_field' => '{{ borderless_elementor_marquee_item }}',
+					'default'     => [
+						['borderless_elementor_marquee_item' => esc_html__('Item #1', 'borderless')],
+						['borderless_elementor_marquee_item' => esc_html__('Item #2', 'borderless')],
+						['borderless_elementor_marquee_item' => esc_html__('Item #3', 'borderless')],
+						['borderless_elementor_marquee_item' => esc_html__('Item #4', 'borderless')],
+						['borderless_elementor_marquee_item' => esc_html__('Item #5', 'borderless')],
+						['borderless_elementor_marquee_item' => esc_html__('Item #6', 'borderless')],
+						['borderless_elementor_marquee_item' => esc_html__('Item #7', 'borderless')],
+						['borderless_elementor_marquee_item' => esc_html__('Item #8', 'borderless')],
+						['borderless_elementor_marquee_item' => esc_html__('Item #9', 'borderless')],
+						['borderless_elementor_marquee_item' => esc_html__('Item #10', 'borderless')],
+					],
+				]
+			);
 
 			$this->add_control(
 				'borderless_elementor_marquee_text_content',
@@ -168,17 +206,6 @@ class Marquee_Text extends Widget_Base {
 			]
 		);
 
-			$this->add_control(
-				'borderless_elementor_marquee_text_color',
-				[
-					'label' => __( 'Color', 'borderless' ),
-					'type' => Controls_Manager::COLOR,
-					'selectors' => [
-						'{{WRAPPER}} .borderless-elementor-marquee-text *' => 'color: {{VALUE}};',
-					],
-				]
-			);
-
 			$this->add_group_control(
 				Group_Control_Typography::get_type(),
 				[
@@ -195,6 +222,82 @@ class Marquee_Text extends Widget_Base {
 					'name' => 'borderless_elementor_marquee_text_shadow',
 					'label' => __( 'Text Shadow', 'borderless' ),
 					'selector' => '{{WRAPPER}} .borderless-elementor-marquee-text *',
+				]
+			);
+
+			$this->add_control(
+				'borderless_elementor_marquee_text_color',
+				[
+					'label' => __( 'Color', 'borderless' ),
+					'type' => Controls_Manager::COLOR,
+					'selectors' => [
+						'{{WRAPPER}} .borderless-elementor-marquee-text *' => 'color: {{VALUE}};',
+					],
+				]
+			);
+
+			$this->add_group_control(
+				Group_Control_Background::get_type(),
+				[
+					'name' => 'borderless_elementor_marquee_text_background',
+					'label' => __( 'Background', 'borderless' ),
+					'types' => [ 'classic', 'gradient' ],
+					'selector' => '{{WRAPPER}} .borderless-elementor-marquee-text .js-marquee .borderless-elementor-marquee-text-item',
+				]
+			);
+
+			$this->add_responsive_control(
+				'borderless_elementor_marquee_text_padding',
+				[
+					'label' => esc_html__( 'Padding', 'borderless'),
+					'type' => Controls_Manager::DIMENSIONS,
+					'size_units' => [ 'px', 'em', '%', 'rem' ],
+					'selectors' => [
+						'{{WRAPPER}} .borderless-elementor-marquee-text .js-marquee .borderless-elementor-marquee-text-item' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					],
+				]
+			);
+
+			$this->add_responsive_control(
+				'borderless_elementor_marquee_text_margin',
+				[
+					'label' => esc_html__( 'Margin', 'borderless'),
+					'type' => Controls_Manager::DIMENSIONS,
+					'size_units' => [ 'px', 'em', '%', 'rem' ],
+					'selectors' => [
+						'{{WRAPPER}} .borderless-elementor-marquee-text .js-marquee .borderless-elementor-marquee-text-item' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					],
+				]
+			);
+
+			$this->add_group_control(
+				Group_Control_Border::get_type(),
+				[
+					'name' => 'borderless_elementor_marquee_text_border',
+					'label' => esc_html__( 'Border', 'borderless'),
+					'selector' => '{{WRAPPER}} .borderless-elementor-marquee-text .js-marquee .borderless-elementor-marquee-text-item',
+				]
+			);
+		
+			$this->add_responsive_control(
+				'borderless_elementor_marquee_text_radius',
+				[
+					'label' => esc_html__( 'Border Radius', 'borderless'),
+					'type' => Controls_Manager::DIMENSIONS,
+					'selectors' => [
+						'{{WRAPPER}} .borderless-elementor-marquee-text .js-marquee .borderless-elementor-marquee-text-item' => 'border-radius: {{TOP}}px {{RIGHT}}px {{BOTTOM}}px {{LEFT}}px;',
+					],
+				]
+			);
+
+			$this->add_group_control(
+				Group_Control_Box_Shadow::get_type(),
+				[
+					'name' => 'borderless_elementor_marquee_text_box_shadow',
+					'exclude' => [
+						'box_shadow_position',
+					],
+					'selector' => '{{WRAPPER}} .borderless-elementor-marquee-text .js-marquee .borderless-elementor-marquee-text-item',
 				]
 			);
 
@@ -215,9 +318,11 @@ class Marquee_Text extends Widget_Base {
 
 		?>
 
-		<div class="borderless-elementor-marquee-text-widget">
-			<div class="borderless-elementor-marquee-text" <?php echo $this->get_render_attribute_string( 'marquee-text' ) ?>><?php echo wp_kses( ( $settings['borderless_elementor_marquee_text_content'] ), true ); ?></div>
-		</div>
+			<div class="borderless-elementor-marquee-text-widget">
+				<div class="borderless-elementor-marquee-text" <?php echo $this->get_render_attribute_string( 'marquee-text' ) ?>>
+					<?php foreach (  $settings['borderless_elementor_marquee_item_strings'] as $marquee_string ) { echo '<span class="borderless-elementor-marquee-text-item">'.wp_kses( ( $marquee_string['borderless_elementor_marquee_item'] ), true ).'</span>'; } ?>
+				</div>
+			</div>
 
 		<?php
 

@@ -38,6 +38,8 @@
   width: 100%;
   white-space: nowrap;
   overflow: hidden; }
+  .borderless-elementor-marquee-text-widget .js-marquee {
+    display: flex; }
 
 /*-----------------------------------------------------------------------------------*/
 /*  *.  Elementor - Component - Progress Bar

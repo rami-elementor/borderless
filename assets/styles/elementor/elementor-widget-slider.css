@@ -38,7 +38,7 @@
 .borderless-elementor-slider-widget {
     position: relative;
     display: block;
-    z-index: 999;
+    z-index: 1;
 }
 
 .borderless-elementor-slider-widget .borderless-elementor-slider.is-fullscreen .borderless-elementor-slide-background-overlay,
