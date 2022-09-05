@@ -41,6 +41,13 @@ if ( ! class_exists( 'Borderless_Elementor_Assets' ) ) {
 			);
 
 			wp_register_style( 
+				'elementor-widget-hero', 
+				BORDERLESS__STYLES . 'elementor/elementor-widget-hero.css', 
+				false, 
+				BORDERLESS__VERSION
+			);
+
+			wp_register_style( 
 				'elementor-widget-portfolio',
 				BORDERLESS__STYLES . 'elementor/elementor-widget-portfolio.css', 
 				false, 
@@ -50,6 +57,13 @@ if ( ! class_exists( 'Borderless_Elementor_Assets' ) ) {
 			wp_register_style( 
 				'elementor-widget-slider',
 				BORDERLESS__STYLES . 'elementor/elementor-widget-slider.css', 
+				false, 
+				BORDERLESS__VERSION
+			);
+
+			wp_register_style( 
+				'elementor-widget-split-hero', 
+				BORDERLESS__STYLES . 'elementor/elementor-widget-split-hero.css', 
 				false, 
 				BORDERLESS__VERSION
 			);

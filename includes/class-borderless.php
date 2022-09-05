@@ -87,6 +87,9 @@ class Borderless {
 		require_once( BORDERLESS__INC . "/class-borderless-public.php" );
 		
 		require_once( BORDERLESS__INC . "/templates/dashboard.php" );
+
+		require_once( BORDERLESS__INC . "/license/license.php" );
+		
 		require_once( BORDERLESS__INC . "/templates/system-info.php" );
 		require_once( BORDERLESS__INC . "/icon-manager/icon-manager.php" );
 		require_once( BORDERLESS__INC . "/custom-post-types/custom-post-types.php" );
@@ -100,6 +103,8 @@ class Borderless {
 		require_once( BORDERLESS__INC . "/widgets/social-media.php" );
 		require_once( BORDERLESS__INC . "/widgets/spacer.php" );
 		require_once( BORDERLESS__INC . "/helper.php" );
+
+		require_once( BORDERLESS__INC . "/library/templates/templates.php" );
 		 
 		if ( isset( $options['related_posts'] ) ) { 
 			require_once( BORDERLESS__RELATED_POSTS . "/related-posts.php" ); 

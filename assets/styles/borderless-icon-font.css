@@ -23,8 +23,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.borderless-icon-borderless:before {
-  content: "\e90b";
+.borderless-icon-split-hero:before {
+  content: "\e901";
+}
+.borderless-icon-hero:before {
+  content: "\e900";
 }
 .borderless-icon-slider:before {
   content: "\e90a";
@@ -45,17 +48,17 @@
   content: "\e905";
 }
 .borderless-icon-animated-text:before {
-  content: "\e904";
+  content: "\e90b";
 }
 .borderless-icon-circular-progress-bar:before {
-  content: "\e902";
+  content: "\e90c";
 }
 .borderless-icon-testimonial:before {
-  content: "\e903";
+  content: "\e90d";
 }
 .borderless-icon-team-member:before {
-  content: "\e901";
+  content: "\e90e";
 }
 .borderless-icon-contact-form-7:before {
-  content: "\e900";
+  content: "\e90f";
 }

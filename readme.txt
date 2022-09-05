@@ -1,17 +1,17 @@
-=== Borderless ===
+=== Borderless – Widgets, Elements, Templates and Toolkit for Elementor & Gutenberg ===
 Contributors: Visualmodo
-Tags: page builder, editor, landing page, drag-and-drop, visual composer, WPBakery Page Builder, elementor, elementor widgets, related content, related posts, related, contextual related posts, similar posts, related posts for wordpress, easy related posts, visual composer addon, visual editor, wysiwyg, design, maintenance mode, coming soon, under construction, website builder, landing page builder, front-end builder, custom post types, CPT, post, types, post type, post types, taxonomy, tax, custom, content types, post types
+Tags: Gutenberg, Elementor, elements, widgets, templates
 Requires at least: 5.0
 Tested up to: 6.0
 Requires PHP: 7.4
-Stable tag: 1.3.7
+Stable tag: 1.3.8
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 
 == Description ==
 
-<strong>Design tools made for WordPress sites by WordPress experts. Elementor Widgets, WPBakery Elements, Custom Post Types Creator, Related Posts and much more!</strong>
+<strong>Extend your favorite page builder and site design with the best free Elements, Widgets, Templates, and Toolkit for Block Editor, Elementor & WPBakery!</strong>
 
 <h3><strong>PAGE BUILDER ADDONS</strong></h3>
 
@@ -80,6 +80,12 @@ Sites must be built on PHP 5.6 or greater, but Borderless always supports the la
 4. Create a new Post Type in seconds with our exclusive Custom Post type Creator.
 
 == Changelog ==
+
+= 1.3.8 - Ago 05 2022 =
+* New - Pro Version.
+* New - License Manager For Pro Version.
+* New - Elementor Widget - Hero.
+* New - Elementor Widget - Split Hero.
 
 = 1.3.7 - May 14 2022 =
 * Fixed - Elementor Marquee Widget - Gap and Style.
