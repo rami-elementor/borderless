@@ -8,7 +8,7 @@ use Elementor\Widget_Base;
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Image_Size;
 use \Elementor\Group_Control_Typography;
-use \Elementor\Core\Schemes\Typography;
+use Elementor\Core\Kits\Documents\Tabs\Global_Typography;
 use \Elementor\Repeater;
 use Elementor\Utils;
 
@@ -272,7 +272,9 @@ class Animated_Text extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
              'name' => 'borderless_elementor_animated_text_prefix_typography',
-				'scheme' => Typography::TYPOGRAPHY_1,
+				'global' => [
+					'default' => Global_Typography::TYPOGRAPHY_PRIMARY,
+				],
 				'fields_options' => [
 					'typography' => ['default' => 'yes'],
 					'font_size' => ['default' => ['size' => 24]],
@@ -325,7 +327,9 @@ class Animated_Text extends Widget_Base {
 			[
 			'label' => esc_html__( 'Animated Text Typography', 'borderless'),
 			'name' => 'borderless_elementor_animated_text_typography',
-				'scheme' => Typography::TYPOGRAPHY_1,
+				'global' => [
+					'default' => Global_Typography::TYPOGRAPHY_PRIMARY,
+				],
 				'fields_options' => [
 					'typography' => ['default' => 'yes'],
 					'font_size' => ['default' => ['size' => 24]],
@@ -341,7 +345,9 @@ class Animated_Text extends Widget_Base {
 			[
 			'label' => esc_html__( 'Animated Text Cursor Typography', 'borderless'),
 			'name' => 'borderless_elementor_animated_text_cursor_typography',
-				'scheme' => Typography::TYPOGRAPHY_1,
+				'global' => [
+					'default' => Global_Typography::TYPOGRAPHY_PRIMARY,
+				],
 				'fields_options' => [
 					'typography' => ['default' => 'yes'],
 					'font_size' => ['default' => ['size' => 24]],
@@ -382,7 +388,9 @@ class Animated_Text extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 			'name' => 'borderless_elementor_animated_text_suffix_typography',
-				'scheme' => Typography::TYPOGRAPHY_1,
+				'global' => [
+					'default' => Global_Typography::TYPOGRAPHY_PRIMARY,
+				],
 				'fields_options' => [
 					'typography' => ['default' => 'yes'],
 					'font_size' => ['default' => ['size' => 24]],

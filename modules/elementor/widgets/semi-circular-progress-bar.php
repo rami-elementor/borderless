@@ -8,7 +8,7 @@ use \Elementor\Controls_Manager;
 use \Elementor\Group_Control_Background;
 use \Elementor\Group_Control_Box_Shadow;
 use \Elementor\Group_Control_Typography;
-use \Elementor\Core\Schemes\Typography;
+use \Elementor\Core\Kits\Documents\Tabs\Global_Typography;
 use \Elementor\Widget_Base;
 
 class Semi_Circular_Progress_Bar extends Widget_Base {
@@ -322,7 +322,9 @@ class Semi_Circular_Progress_Bar extends Widget_Base {
 		[
 			'name' => 'borderless_elementor_semi_circular_progress_bar_title_typography',
 			'label' => __('Title', 'borderless'),
-			'scheme' => Typography::TYPOGRAPHY_1,
+			'global' => [
+				'default' => Global_Typography::TYPOGRAPHY_PRIMARY,
+			],
 			'selector' => '{{WRAPPER}} .borderless-elementor-semi-circular-progress-bar .progressbar-text .borderless-elementor-semi-circular-progress-bar-title',
 		]
 	);
@@ -345,7 +347,9 @@ class Semi_Circular_Progress_Bar extends Widget_Base {
 		[
 			'name' => 'borderless_elementor_semi_circular_progress_bar_counter_typography',
 			'label' => __('Counter', 'borderless'),
-			'scheme' => Typography::TYPOGRAPHY_1,
+			'global' => [
+				'default' => Global_Typography::TYPOGRAPHY_PRIMARY,
+			],
 			'selector' => '{{WRAPPER}} .borderless-elementor-semi-circular-progress-bar .progressbar-text .borderless-elementor-semi-circular-progress-bar-counter-value',
 		]
 	);
@@ -365,7 +369,9 @@ class Semi_Circular_Progress_Bar extends Widget_Base {
 		[
 			'name' => 'borderless_elementor_semi_circular_progress_bar_postfix_typography',
 			'label' => __('Postfix', 'borderless'),
-			'scheme' => Typography::TYPOGRAPHY_1,
+			'global' => [
+				'default' => Global_Typography::TYPOGRAPHY_PRIMARY,
+			],
 			'selector' => '{{WRAPPER}} .borderless-elementor-semi-circular-progress-bar-counter-postfix',
 		]
 	);

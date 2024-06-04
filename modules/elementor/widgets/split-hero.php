@@ -14,7 +14,6 @@ use \Elementor\Group_Control_Background;
 use \Elementor\Group_Control_Text_Stroke;
 use \Elementor\Group_Control_Text_Shadow;
 use \Elementor\Group_Control_Css_Filter;
-use \Elementor\Core\Schemes\Typography;
 use Elementor\Icons_Manager;
 use \Elementor\Repeater;
 use Elementor\Utils;

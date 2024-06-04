@@ -11,7 +11,7 @@ use Elementor\Group_Control_Box_Shadow;
 use Elementor\Group_Control_Image_Size;
 use \Elementor\Group_Control_Typography;
 use \Elementor\Group_Control_Background;
-use \Elementor\Core\Schemes\Typography;
+use \Elementor\Core\Kits\Documents\Tabs\Global_Typography;
 use \Elementor\Repeater;
 use Elementor\Utils;
 
@@ -204,7 +204,9 @@ class Marquee_Text extends Widget_Base {
 				[
 					'name' => 'borderless_elementor_marquee_text_typography',
 					'label' => __('Typography', 'borderless'),
-					'scheme' => Typography::TYPOGRAPHY_1,
+					'global' => [
+						'default' => Global_Typography::TYPOGRAPHY_PRIMARY,
+					],		
 					'selector' => '{{WRAPPER}} .borderless-elementor-marquee-text *',
 				]
 			);

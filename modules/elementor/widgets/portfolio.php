@@ -10,10 +10,9 @@ use Elementor\Group_Control_Border;
 use Elementor\Group_Control_Box_Shadow;
 use Elementor\Group_Control_Image_Size;
 use \Elementor\Group_Control_Typography;
-use \Elementor\Core\Schemes\Typography;
 use \Elementor\Group_Control_Background;
 use \Elementor\Group_Control_Css_Filter;
-use \Elementor\Core\Schemes\Color;
+use \Elementor\Core\Kits\Documents\Tabs\Global_Typography;
 use \Elementor\Repeater;
 use Elementor\Utils;
 
@@ -598,7 +597,9 @@ class Portfolio extends Widget_Base {
 				[
 					'name' => 'borderless_elementor_item_content_title_typography',
 					'label' => __('Typography', 'borderless'),
-					'scheme' => Typography::TYPOGRAPHY_1,
+					'global' => [
+						'default' => Global_Typography::TYPOGRAPHY_PRIMARY,
+					],		
 					'selector' => '{{WRAPPER}} .borderless-elementor-portfolio-item-title',
 				]
 			);
@@ -679,7 +680,9 @@ class Portfolio extends Widget_Base {
 				[
 					'name' => 'borderless_elementor_item_content_description_typography',
 					'label' => __('Typography', 'borderless'),
-					'scheme' => Typography::TYPOGRAPHY_1,
+					'global' => [
+						'default' => Global_Typography::TYPOGRAPHY_PRIMARY,
+					],		
 					'selector' => '{{WRAPPER}} .borderless-elementor-portfolio-item-description',
 				]
 			);
@@ -802,7 +805,9 @@ class Portfolio extends Widget_Base {
 						[
 							'name' => 'borderless_elementor_item_content_button_typography',
 							'label' => __('Typography', 'borderless'),
-							'scheme' => Typography::TYPOGRAPHY_1,
+							'global' => [
+								'default' => Global_Typography::TYPOGRAPHY_PRIMARY,
+							],				
 							'selector' => '{{WRAPPER}} .borderless-elementor-portfolio-item-button',
 						]
 					);
@@ -872,7 +877,9 @@ class Portfolio extends Widget_Base {
 						[
 							'name' => 'borderless_elementor_item_content_button_typography_hover',
 							'label' => __('Typography', 'borderless'),
-							'scheme' => Typography::TYPOGRAPHY_1,
+							'global' => [
+								'default' => Global_Typography::TYPOGRAPHY_PRIMARY,
+							],				
 							'selector' => '{{WRAPPER}} .borderless-elementor-portfolio-item-button:hover',
 						]
 					);
@@ -1061,7 +1068,9 @@ class Portfolio extends Widget_Base {
 						[
 							'name' => 'borderless_elementor_filter_item_typography',
 							'label' => __('Typography', 'borderless'),
-							'scheme' => Typography::TYPOGRAPHY_1,
+							'global' => [
+								'default' => Global_Typography::TYPOGRAPHY_PRIMARY,
+							],				
 							'selector' => '{{WRAPPER}} .borderless-elementor-portfolio-filter-item',
 						]
 					);
@@ -1131,7 +1140,9 @@ class Portfolio extends Widget_Base {
 						[
 							'name' => 'borderless_elementor_filter_item_typography_hover',
 							'label' => __('Typography', 'borderless'),
-							'scheme' => Typography::TYPOGRAPHY_1,
+							'global' => [
+								'default' => Global_Typography::TYPOGRAPHY_PRIMARY,
+							],				
 							'selector' => '{{WRAPPER}} .borderless-elementor-portfolio-filter-item:hover',
 						]
 					);
@@ -1201,7 +1212,9 @@ class Portfolio extends Widget_Base {
 						[
 							'name' => 'borderless_elementor_filter_item_typography_active',
 							'label' => __('Typography', 'borderless'),
-							'scheme' => Typography::TYPOGRAPHY_1,
+							'global' => [
+								'default' => Global_Typography::TYPOGRAPHY_PRIMARY,
+							],				
 							'selector' => '{{WRAPPER}} .borderless-elementor-portfolio-filter-item.is-checked',
 						]
 					);
